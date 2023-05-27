@@ -1,0 +1,18 @@
+1 modo admin
+1 modo cliente
+
+Yo agrego:
+	las sucus
+	cajeros
+	clientes
+		
+cliente quiera reitar plata
+ponga cajero o sucursal y despliege lista de cajeros
+valide atm
+valide datos del cliente
+valide que tenga plata
+retire
+un .dat de las operaciones de los cajeros
+	de las opereciones de la sucursal
+	de datos de sucus y cajeros
+	de los datos del cajero
