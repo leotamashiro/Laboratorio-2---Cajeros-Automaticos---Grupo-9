@@ -38,8 +38,14 @@
 		<Unit filename="Direccion.h" />
 		<Unit filename="Fecha.cpp" />
 		<Unit filename="Fecha.h" />
+		<Unit filename="MenuAdmin.cpp" />
+		<Unit filename="MenuCajeros.cpp" />
+		<Unit filename="MenuClientes.cpp" />
+		<Unit filename="MenuSucursales.cpp" />
 		<Unit filename="Sucursal.cpp" />
 		<Unit filename="Sucursal.h" />
+		<Unit filename="funciones.cpp" />
+		<Unit filename="funciones.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
