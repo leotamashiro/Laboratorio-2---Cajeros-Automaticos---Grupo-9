@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1 modo admin
 1 modo cliente
 
@@ -15,4 +16,23 @@ retire
 un .dat de las operaciones de los cajeros
 	de las opereciones de la sucursal
 	de datos de sucus y cajeros
+=======
+1 modo admin
+1 modo cliente
+
+Yo agrego:
+	las sucus
+	cajeros
+	clientes
+		
+cliente quiera reitar plata
+ponga cajero o sucursal y despliege lista de cajeros
+valide atm
+valide datos del cliente
+valide que tenga plata
+retire
+un .dat de las operaciones de los cajeros
+	de las opereciones de la sucursal
+	de datos de sucus y cajeros
+>>>>>>> 31fe2cdf8a0a6147fbefc10458eb52d7ed64714b
 	de los datos del cajero
