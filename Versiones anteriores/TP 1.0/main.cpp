@@ -2,14 +2,12 @@
 #include <string>
 #include <cstring>
 #include "Direccion.h"
-#include "funciones.h"
-
-
-
 using namespace std;
 
 int main()
 {
-    menuSucursales();
+    Direccion obj;
+    obj.Cargar();
+    obj.Mostrar();
     return 0;
 }

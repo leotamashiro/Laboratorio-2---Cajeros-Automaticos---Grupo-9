@@ -1,27 +1,23 @@
 #include <iostream>
 #include <string>
 #include <cstring>
-#include "Direccion.h"
-#include "Sucursal.h"
-#include "funciones.h"
-
 using namespace std;
 
-void menuSucursales ()
+void menuCajeros ()
 {
 
     int opcion;
     do
     {
         cout << "---------------------------------" << endl;
-        cout << "---------MENU SUCURSALES---------" << endl;
+        cout << "---------MENU CAJEROS---------" << endl;
         cout << "---------------------------" << endl;
         cout << "1. Cargar" << endl;
         cout << "2. Editar" << endl;
         cout << "3. Borrar" << endl;
-        cout << "4. Listar Sucursal por Numero" << endl;
-        cout << "5. Listar Sucursal por Nombre" << endl;
-        cout << "6. Listar Todas las Sucursales" << endl;
+        cout << "4. Listar Cajero por ID" << endl;
+        cout << "5. Listar Cajero por Sucursal" << endl;
+        cout << "6. Listar Todos los Cajero" << endl;
         cout << endl;
         cout << "0. Salir" << endl;
         cout << "---------------------------------" << endl;
@@ -31,11 +27,10 @@ void menuSucursales ()
         switch(opcion)
         {
         case 1:
-            Sucursal sucu;
-            sucu.Cargar();
+
             break;
-            /*
         case 2:
+
             break;
         case 3:
 
@@ -49,11 +44,9 @@ void menuSucursales ()
         case 6:
 
             break;
-
         default:
             cout << "Debe ingresar una opcion correcta" << endl;
             break;
-            */
         }
 
     }

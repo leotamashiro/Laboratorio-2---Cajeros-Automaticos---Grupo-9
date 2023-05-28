@@ -6,18 +6,63 @@
 
 1683488017 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\fecha.h
 
-1683488261 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\main.cpp
+1685228191 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\main.cpp
 	<iostream>
 	<string>
 	<cstring>
 	"Direccion.h"
+	"funciones.h"
 
-1683489654 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\direccion.cpp
+1685230839 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\direccion.cpp
 	<iostream>
 	<string>
 	<cstring>
 	<climits>
 	"Direccion.h"
 
-1683488168 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\direccion.h
+1685286940 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\direccion.h
+	<string>
+	<cstring>
+
+1685228191 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menuadmin.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1685224926 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\funciones.cpp
+
+1685225038 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menucajeros.cpp
+	<iostream>
+	<string>
+	<cstring>
+
+1685225038 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menuclientes.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1685228049 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menusucursales.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+	"Sucursal.h"
+	"funciones.h"
+
+1685229846 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\sucursal.cpp
+	"Sucursal.h"
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1685228645 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\sucursal.h
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1685228191 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\funciones.h
 

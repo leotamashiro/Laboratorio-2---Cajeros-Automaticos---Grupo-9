@@ -2,9 +2,6 @@
 #include <string>
 #include <cstring>
 #include "Direccion.h"
-#include "Sucursal.h"
-#include "funciones.h"
-
 using namespace std;
 
 void menuSucursales ()
@@ -31,11 +28,10 @@ void menuSucursales ()
         switch(opcion)
         {
         case 1:
-            Sucursal sucu;
-            sucu.Cargar();
+
             break;
-            /*
         case 2:
+
             break;
         case 3:
 
@@ -49,11 +45,9 @@ void menuSucursales ()
         case 6:
 
             break;
-
         default:
             cout << "Debe ingresar una opcion correcta" << endl;
             break;
-            */
         }
 
     }

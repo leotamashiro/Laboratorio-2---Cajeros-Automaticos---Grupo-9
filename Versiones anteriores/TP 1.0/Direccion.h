@@ -1,24 +1,23 @@
 #ifndef DIRECCION_H
 #define DIRECCION_H
-#include <string>
-#include <cstring>
 
-using namespace std;
 
 class Direccion
 {
     private:
-        string calle;
+        char calle[40];
         int numero;
         int codPostal;
-        std::string localidad;
-        std::string provincia;
-        std::string pais;
+        char localidad[40];
+        char provincia[40];
+        char pais[40];
 
     public:
+        Direccion();
+        Direccion(std::string _calle, int _numero, int _codPostal, std::string _localidad, std::string _provincia, std::string _pais);
 
         ///gets
-        string getCalle();
+        std::string getCalle();
         int getNumero();
         int getCodPostal();
         std::string getLocalidad();
@@ -26,7 +25,7 @@ class Direccion
         std::string getPais();
 
         ///sets
-        void setCalle(string _calle);
+        void setCalle(std::string _calle);
         void setNumero(int _numero);
         void setCodPostal(int _codPostal);
         void setLocalidad(std::string _localidad);

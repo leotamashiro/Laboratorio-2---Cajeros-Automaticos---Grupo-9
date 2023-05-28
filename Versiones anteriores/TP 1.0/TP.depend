@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1683488017 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\fecha.cpp
+	<iostream>
+	<string>
+	"Fecha.h"
+
+1683488017 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\fecha.h
+
+1683488261 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\main.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1683489654 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\direccion.cpp
+	<iostream>
+	<string>
+	<cstring>
+	<climits>
+	"Direccion.h"
+
+1683488168 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\direccion.h
+
