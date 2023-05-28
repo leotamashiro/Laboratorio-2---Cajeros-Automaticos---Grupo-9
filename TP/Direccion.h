@@ -8,30 +8,30 @@ using namespace std;
 class Direccion
 {
     private:
-        string calle;
+        char calle[100];
         int numero;
         int codPostal;
-        std::string localidad;
-        std::string provincia;
-        std::string pais;
+        char localidad[100];
+        char provincia[100];
+        char pais[100];
 
     public:
 
         ///gets
-        string getCalle();
+        char *getCalle();
         int getNumero();
         int getCodPostal();
-        std::string getLocalidad();
-        std::string getProvincia();
-        std::string getPais();
+        char *getLocalidad();
+        char *getProvincia();
+        char *getPais();
 
         ///sets
-        void setCalle(string _calle);
+        void setCalle(char *_calle);
         void setNumero(int _numero);
         void setCodPostal(int _codPostal);
-        void setLocalidad(std::string _localidad);
-        void setProvincia(std::string _provincia);
-        void setPais(std::string _pais);
+        void setLocalidad(char *_localidad);
+        void setProvincia(char *_provincia);
+        void setPais(char *_pais);
 
         void Cargar();
         void Mostrar();

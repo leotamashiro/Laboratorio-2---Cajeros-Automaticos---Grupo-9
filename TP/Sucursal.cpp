@@ -11,11 +11,9 @@ int Sucursal::getNumeroSucursal()
     return numSucursal;
 }
 
-std::string Sucursal::getNombreSucursal()
+char *Sucursal::getNombreSucursal()
 {
-    std::string _nombreSucursal;
-    _nombreSucursal = nombreSucursal;
-    return _nombreSucursal;
+    return nombreSucursal;
 }
 
 bool Sucursal::getEstadoSucursal()
@@ -33,9 +31,9 @@ void Sucursal::setNumeroSucursal(int _numSucursal)
     numSucursal = _numSucursal;
 }
 
-void Sucursal::setNombreSucursal(std::string _nombreSucursal)
+void Sucursal::setNombreSucursal(char *_nombreSucursal)
 {
-   strcpy(nombreSucursal, _nombreSucursal.c_str());
+   strcpy(nombreSucursal, _nombreSucursal);
 }
 
 void Sucursal::setEstadoSucursal(bool _estadoSucursal)
@@ -56,8 +54,9 @@ void Sucursal::Cargar()
     cin >> numSucursal;
 
     cout << "Ingrese el Nombre de la Sucursal: ";
-    getline(cin, _nombreSucursal);
     cin.ignore();
+    cin.getline(nombreSucursal,60);
+
 
     direcSucursal.Cargar();
 

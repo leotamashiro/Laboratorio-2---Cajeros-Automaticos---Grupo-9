@@ -33,6 +33,7 @@ void menuSucursales ()
         case 1:
             Sucursal sucu;
             sucu.Cargar();
+            sucu.grabarEnDisco();
             break;
             /*
         case 2:

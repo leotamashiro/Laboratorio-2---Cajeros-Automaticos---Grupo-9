@@ -8,7 +8,7 @@ using namespace std;
 
 ///get
 
-string Direccion::getCalle()
+char *Direccion::getCalle()
 {
    return calle;
 }
@@ -23,25 +23,26 @@ int Direccion::getCodPostal()
     return codPostal;
 }
 
-std::string Direccion::getLocalidad()
+char *Direccion::getLocalidad()
 {
    return localidad;
 }
 
-std::string Direccion::getProvincia()
+char *Direccion::getProvincia()
 {
    return provincia;
 }
 
-std::string Direccion::getPais()
+char *Direccion::getPais()
 {
    return pais;
 }
 
 ///set
 
-void Direccion::setCalle(string _calle){
-   calle=_calle;
+void Direccion::setCalle(char *_calle)
+{
+    strcpy(calle, _calle);
 }
 
 void Direccion::setNumero(int _numero){
@@ -53,27 +54,27 @@ void Direccion::setCodPostal(int _codPostal)
    codPostal = _codPostal;
 }
 
-void Direccion::setLocalidad(std::string _localidad)
+void Direccion::setLocalidad(char *_localidad)
 {
-   localidad=_localidad;
+    strcpy(localidad, _localidad);
 }
 
-void Direccion::setProvincia(std::string _provincia)
+void Direccion::setProvincia(char *_provincia)
 {
-    provincia=_provincia;
+    strcpy(provincia, _provincia);
 }
 
-void Direccion::setPais(std::string _pais)
+void Direccion::setPais(char *_pais)
 {
-    pais=_pais;
+    strcpy(pais, _pais);
 }
 
 void Direccion::Cargar()
 {
 
     cout << "Ingrese la calle: ";
-    getline(cin, calle);
     cin.ignore();
+    cin.getline(calle,100);
 
     cout << "Ingrese numero: ";
     cin >> numero;
@@ -82,16 +83,17 @@ void Direccion::Cargar()
     cin >> codPostal;
 
     cout << "Ingrese la localidad: ";
-    getline(cin, localidad);
     cin.ignore();
+    cin.getline(localidad,100);
+
 
     cout << "Ingrese la provincia: ";
-    getline(cin, provincia);
     cin.ignore();
+    cin.getline(provincia,100);
 
     cout << "Ingrese la pais: ";
-    getline(cin, pais);
     cin.ignore();
+    cin.getline(pais,100);
 
 }
 

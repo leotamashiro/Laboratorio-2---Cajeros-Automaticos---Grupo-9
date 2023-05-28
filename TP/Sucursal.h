@@ -11,20 +11,20 @@ class Sucursal
     private:
         int numSucursal;
         Direccion direcSucursal;
-        char nombreSucursal [40];
+        char nombreSucursal [60];
         bool estadoSucursal;
     public:
 
         ///gets
 
         int getNumeroSucursal();
-        std::string getNombreSucursal();
+        char *getNombreSucursal();
         bool getEstadoSucursal();
         Direccion getDirecSucursal();
 
         ///sets
         void setNumeroSucursal(int _numSucursal);
-        void setNombreSucursal(std::string _nombreSucursal);
+        void setNombreSucursal(char *_nombreSucursal);
         void setDirecSucursal(Direccion _direcSucursal);
         void setEstadoSucursal(bool _estadoSucursal);
 
