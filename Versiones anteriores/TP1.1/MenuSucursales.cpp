@@ -9,18 +9,18 @@ using namespace std;
 
 void menuSucursales ()
 {
-    int opcion, numSucEditar, numSucMostar;
+    int opcion, numSucEditar;
 
     do
     {
         cout << "---------------------------------" << endl;
         cout << "---------MENU SUCURSALES---------" << endl;
-        cout << "---------------------------------" << endl;
+        cout << "---------------------------" << endl;
         cout << "1. Cargar" << endl;
         cout << "2. Editar" << endl;
         cout << "3. Borrar" << endl;
-        cout << "4. Ordenar Sucursales de Menor a Mayor" << endl;
-        cout << "5. Listar Sucursal por Numero" << endl;
+        cout << "4. Listar Sucursal por Numero" << endl;
+        cout << "5. Listar Sucursal por Nombre" << endl;
         cout << "6. Listar Todas las Sucursales" << endl;
         cout << endl;
         cout << "0. Salir" << endl;
@@ -64,12 +64,6 @@ void menuSucursales ()
                 editarSucursal(numSucEditar);
             }
 
-            break;
-
-        case 5:
-            cout << "El numero de sucursal que de desea mostar:" << endl;
-            cin >> numSucMostar;
-            listarSucuNumero(numSucMostar);
             break;
 
         case 6:

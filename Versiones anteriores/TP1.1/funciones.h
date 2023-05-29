@@ -7,7 +7,6 @@ void mostarSucursales();
 bool validarSucursal(int);
 void editarSucursal(int);
 bool buscarSuc(int );
-void listarSucuNumero(int numSucMostar);
 
 
 #endif // FUNCIONES_H_INCLUDED
