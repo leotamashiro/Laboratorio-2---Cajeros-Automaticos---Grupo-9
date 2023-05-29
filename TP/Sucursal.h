@@ -31,9 +31,10 @@ class Sucursal
         void Cargar();
         void Mostrar();
 
-        bool grabarEnDisco(int);
+        bool editarEnDisco(int);
         void grabarEnDisco();
         bool leerDeDisco(int);
+        int contarRegistros();
 
 };
 

@@ -48,7 +48,6 @@ void Sucursal::setDirecSucursal(Direccion _direcSucursal)
 
 void Sucursal::Cargar()
 {
-    string _nombreSucursal;
 
     cout << "Ingrese numero de Sucursal: ";
     cin >> numSucursal;
@@ -75,7 +74,7 @@ void Sucursal::Mostrar()
     cout << "Estado Sucursal: " << estadoSucursal << endl;
 }
 
-bool Sucursal::grabarEnDisco(int pos){
+bool Sucursal::editarEnDisco(int pos){
     bool guardo;
     FILE *p;
     p = fopen("sucursales.dat", "rb+");
@@ -107,4 +106,15 @@ void Sucursal::grabarEnDisco(){
     }
     fwrite(this, sizeof *this, 1, p);
     fclose(p);
+}
+
+int Sucursal::contarRegistros()
+{
+        FILE *p;
+        p=fopen("sucursales.dat", "rb");
+        if(p==NULL) return -1;
+        fseek(p, 0,2);
+        int tam=ftell(p);
+        fclose(p);
+        return tam/sizeof(Sucursal);
 }

@@ -1,0 +1,58 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+#include "Direccion.h"
+#include "funciones.h"
+#include "Sucursal.h"
+
+using namespace std;
+
+void mostarSucursales()
+{
+    Sucursal sucu;
+    int pos=0;
+    while (sucu.leerDeDisco(pos++))
+    {
+        sucu.Mostrar();
+        cout << "--------------------------"<< endl;
+    }
+}
+
+bool buscarSuc(int sucEditar){
+    Sucursal suc;
+    int pos=0;
+    while(suc.leerDeDisco(pos++))
+    {
+        if(sucEditar == suc.getNumeroSucursal())
+        {
+        return true;
+        }
+    }
+}
+
+bool validarSucursal(int SucEditar)
+{
+    Sucursal sucu;
+    int pos = 0;
+    while(sucu.leerDeDisco(pos++)){
+        if(SucEditar == sucu.getNumeroSucursal()){
+            return true;
+        }
+    }
+    return false;
+}
+
+void editarSucursal(int SucEditar)
+{
+    Sucursal sucu;
+    int pos=0, posEdit;
+    while(sucu.leerDeDisco(pos++)){
+        if(SucEditar == sucu.getNumeroSucursal()){
+            cout << "\n" << "\n";
+            cout << "INFORMACION A EDITAR" << endl;
+            sucu.Cargar();
+            posEdit=pos;
+            sucu.editarEnDisco(posEdit);
+        }
+    }
+}

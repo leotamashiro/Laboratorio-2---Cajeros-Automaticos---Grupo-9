@@ -9,8 +9,8 @@ using namespace std;
 
 void menuSucursales ()
 {
+    int opcion, numSucEditar;
 
-    int opcion;
     do
     {
         cout << "---------------------------------" << endl;
@@ -35,26 +35,45 @@ void menuSucursales ()
             sucu.Cargar();
             sucu.grabarEnDisco();
             break;
-            /*
+
         case 2:
-            break;
-        case 3:
+
+            bool validSucu;
+            mostarSucursales();
+            bool flag;
+            flag=false;
+            while (validSucu == false)
+            {
+                if (flag==false)
+                {
+                    cout << "El numero de sucursal a editar:" << endl;
+                    cin >> numSucEditar;
+                    flag=true;
+                }
+                else
+                {
+                    cout << "El numero de sucursal ingresado no existe:" << endl;
+                    cout << "Vuelva a ingresar el numero:" << endl;
+                    cin >> numSucEditar;
+                }
+
+                validSucu=validarSucursal(numSucEditar);
+            }
+            if (validSucu==true)
+            {
+                editarSucursal(numSucEditar);
+            }
 
             break;
-        case 4:
 
-            break;
-        case 5:
-
-            break;
         case 6:
-
+            mostarSucursales();
             break;
 
-        default:
+        /*default:
             cout << "Debe ingresar una opcion correcta" << endl;
-            break;
-            */
+            break;*/
+
         }
 
     }
