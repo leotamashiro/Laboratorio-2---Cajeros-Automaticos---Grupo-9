@@ -18,34 +18,6 @@ void mostarSucursales()
     }
 }
 
-void mostarSucursalesActivas()
-{
-    Sucursal sucu;
-    int pos=0;
-    while (sucu.leerDeDisco(pos++))
-    {
-        if (sucu.getEstadoSucursal()==1)
-        {
-            sucu.Mostrar();
-            cout << "---------------------------------" << endl;
-        }
-    }
-}
-
-void mostarSucursalesInactivas()
-{
-    Sucursal sucu;
-    int pos=0;
-    while (sucu.leerDeDisco(pos++))
-    {
-        if (sucu.getEstadoSucursal()==0)
-        {
-            sucu.Mostrar();
-            cout << "---------------------------------" << endl;
-        }
-    }
-}
-
 bool buscarSuc(int sucEditar){
     Sucursal suc;
     int pos=0;
@@ -103,42 +75,6 @@ void listarSucuNumero(int numSucMostar)
         {
             cout << "La sucursal que desea mostrar no esta registrada" << endl;
             break;
-        }
-    }
-}
-
-void borrarSucursal(int numBorrarSucu)
-{
-    Sucursal sucu;
-    int pos=0, posEdit;
-    while(sucu.leerDeDisco(pos++))
-    {
-        if(numBorrarSucu == sucu.getNumeroSucursal())
-        {
-            cout << "\n" << "\n";
-            cout << "INFORMACION A Borrar" << endl;
-            sucu.Mostrar();
-            sucu.setEstadoSucursal(0);
-            posEdit=pos-1;
-            sucu.editarEnDisco(posEdit);
-        }
-    }
-}
-
-void darAltaSucursal(int numAltaSucu)
-{
-    Sucursal sucu;
-    int pos=0, posEdit;
-    while(sucu.leerDeDisco(pos++))
-    {
-        if(numAltaSucu == sucu.getNumeroSucursal())
-        {
-            cout << "\n" << "\n";
-            cout << "INFORMACION A Borrar" << endl;
-            sucu.Mostrar();
-            sucu.setEstadoSucursal(1);
-            posEdit=pos-1;
-            sucu.editarEnDisco(posEdit);
         }
     }
 }

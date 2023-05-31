@@ -14,7 +14,6 @@ class Sucursal
         char nombreSucursal [60];
         bool estadoSucursal;
     public:
-        //Sucursal();
 
         ///gets
 

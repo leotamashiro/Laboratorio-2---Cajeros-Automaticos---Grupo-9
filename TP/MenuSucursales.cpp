@@ -1,3 +1,6 @@
+/**
+validar que no tenga un num repetido de sucursal al cargar
+*/
 #include <iostream>
 #include <string>
 #include <cstring>
@@ -9,8 +12,9 @@ using namespace std;
 
 void menuSucursales ()
 {
-    int opcion, numSucEditar, numSucMostar;
-
+    int opcion, numSucEditar, numSucMostar, numSucuEstado;
+    bool validSucu;
+    bool flag;
     do
     {
         cout << "---------------------------------" << endl;
@@ -19,9 +23,11 @@ void menuSucursales ()
         cout << "1. Cargar" << endl;
         cout << "2. Editar" << endl;
         cout << "3. Borrar" << endl;
-        cout << "4. Ordenar Sucursales de Menor a Mayor" << endl;
+        cout << "4. Dar de Alta Sucursal" << endl;
         cout << "5. Listar Sucursal por Numero" << endl;
-        cout << "6. Listar Todas las Sucursales" << endl;
+        cout << "6. Listar Todas las Sucursales Activas" << endl;
+        cout << "7. Listar Todas las Sucursales Inactivas" << endl;
+        cout << "8. Listar Todas las Sucursales" << endl;
         cout << endl;
         cout << "0. Salir" << endl;
         cout << "---------------------------------" << endl;
@@ -38,10 +44,9 @@ void menuSucursales ()
 
         case 2:
 
-            bool validSucu;
-            mostarSucursales();
-            bool flag;
+            mostarSucursalesActivas();
             flag=false;
+            validSucu == false;
             while (validSucu == false)
             {
                 if (flag==false)
@@ -66,6 +71,60 @@ void menuSucursales ()
 
             break;
 
+        case 3:
+            mostarSucursalesActivas();
+            flag=false;
+            validSucu == false;
+            while (validSucu == false)
+            {
+                if (flag==false)
+                {
+                    cout << "Ingrese el numero de Sucursal que desea Borrar:" << endl;
+                    cin >> numSucuEstado;
+                    flag=true;
+                }
+                else
+                {
+                    cout << "El numero de sucursal ingresado no existe:" << endl;
+                    cout << "Vuelva a ingresar el numero:" << endl;
+                    cin >> numSucuEstado;
+                }
+
+                validSucu=validarSucursal(numSucuEstado);
+            }
+            if (validSucu==true)
+            {
+                borrarSucursal(numSucuEstado);
+            }
+            break;
+
+        case 4:
+            mostarSucursalesInactivas();
+            flag=false;
+            validSucu == false;
+            while (validSucu == false)
+            {
+                if (flag==false)
+                {
+                    cout << "Ingrese el numero de Sucursal que desea dar de Alta:" << endl;
+                    cin >> numSucuEstado;
+                    flag=true;
+                }
+                else
+                {
+                    cout << "El numero de sucursal ingresado no existe:" << endl;
+                    cout << "Vuelva a ingresar el numero:" << endl;
+                    cin >> numSucuEstado;
+                }
+
+                validSucu=validarSucursal(numSucuEstado);
+            }
+            if (validSucu==true)
+            {
+                darAltaSucursal(numSucuEstado);
+            }
+            break;
+
         case 5:
             cout << "El numero de sucursal que de desea mostar:" << endl;
             cin >> numSucMostar;
@@ -73,6 +132,14 @@ void menuSucursales ()
             break;
 
         case 6:
+            mostarSucursalesActivas();
+            break;
+
+        case 7:
+            mostarSucursalesInactivas();
+            break;
+
+        case 8:
             mostarSucursales();
             break;
 

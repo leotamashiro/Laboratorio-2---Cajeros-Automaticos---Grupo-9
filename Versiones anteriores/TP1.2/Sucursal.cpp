@@ -6,11 +6,6 @@
 
 using namespace std;
 
-/*Sucursal::Sucursal()
-{
-    estadoSucursal=1;
-}*/
-
 int Sucursal::getNumeroSucursal()
 {
     return numSucursal;
@@ -56,9 +51,9 @@ void Sucursal::Cargar()
 
     cout << "Ingrese numero de Sucursal: ";
     cin >> numSucursal;
-    cin.ignore();
-    cout << "Ingrese el Nombre de la Sucursal: ";
 
+    cout << "Ingrese el Nombre de la Sucursal: ";
+    cin.ignore();
     cin.getline(nombreSucursal,60);
 
 
@@ -76,7 +71,6 @@ void Sucursal::Mostrar()
     std::cout << nombreSucursal;
     cout << endl;
     direcSucursal.Mostrar();
-    cout << endl;
     cout << "Estado Sucursal: " << estadoSucursal << endl;
 }
 

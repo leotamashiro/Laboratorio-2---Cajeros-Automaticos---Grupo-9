@@ -6,11 +6,6 @@
 
 using namespace std;
 
-/*Direccion::Direccion()
-{
-    strcpy(pais,"Argentina");
-}
-*/
 ///get
 
 char *Direccion::getCalle()
@@ -78,7 +73,7 @@ void Direccion::Cargar()
 {
 
     cout << "Ingrese la calle: ";
-    cin.ignore(0, '\n');
+    cin.ignore();
     cin.getline(calle,100);
 
     cout << "Ingrese numero: ";
@@ -87,18 +82,18 @@ void Direccion::Cargar()
     cout << "Ingrese Cod Postal: ";
     cin >> codPostal;
 
-    cin.ignore();
     cout << "Ingrese la localidad: ";
+    cin.ignore();
     cin.getline(localidad,100);
 
 
     cout << "Ingrese la provincia: ";
-    cin.ignore(0, '\n');
+    cin.ignore();
     cin.getline(provincia,100);
 
-    /*cout << "Ingrese la pais: ";
-    cin.ignore(0, '\n');
-    cin.getline(pais,100);*/
+    cout << "Ingrese la pais: ";
+    cin.ignore();
+    cin.getline(pais,100);
 
 }
 
@@ -109,6 +104,6 @@ void Direccion::Mostrar()
     cout << ". ";
     cout << codPostal << " CP." << "\n";
     cout << localidad <<", ";
-    cout <<provincia;
-    //cout << pais;
+    cout <<provincia << ", ";
+    cout << pais;
 }

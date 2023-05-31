@@ -1,6 +1,5 @@
 #ifndef DIRECCION_H
 #define DIRECCION_H
-#include <iostream>
 #include <string>
 #include <cstring>
 
