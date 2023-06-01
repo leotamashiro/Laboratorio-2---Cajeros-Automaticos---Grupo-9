@@ -2,6 +2,7 @@
 #define FUNCIONES_H_INCLUDED
 
 void menuSucursales();
+void menuCajeros();
 
 void mostarSucursales();
 void mostarSucursalesActivas();

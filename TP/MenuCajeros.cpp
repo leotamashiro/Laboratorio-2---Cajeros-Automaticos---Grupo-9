@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <cstring>
+#include "Cajero.h"
+
 using namespace std;
 
 void menuCajeros ()
@@ -27,9 +29,11 @@ void menuCajeros ()
         switch(opcion)
         {
         case 1:
-
+            Cajero cajero;
+            cajero.Cargar();
+            cajero.grabarEnDisco();
             break;
-        case 2:
+        /*case 2:
 
             break;
         case 3:
@@ -46,7 +50,7 @@ void menuCajeros ()
             break;
         default:
             cout << "Debe ingresar una opcion correcta" << endl;
-            break;
+            break;*/
         }
 
     }

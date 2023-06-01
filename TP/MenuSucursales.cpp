@@ -1,5 +1,6 @@
 /**
 validar que no tenga un num repetido de sucursal al cargar
+Al cambiar el estado de la sucursal los cajeros de la sucursales hay que cambiar el estado
 */
 #include <iostream>
 #include <string>

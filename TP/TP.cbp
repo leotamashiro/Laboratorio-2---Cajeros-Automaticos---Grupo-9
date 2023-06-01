@@ -36,6 +36,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Cajero.cpp" />
+		<Unit filename="Cajero.h" />
 		<Unit filename="Direccion.cpp" />
 		<Unit filename="Direccion.h" />
 		<Unit filename="Fecha.cpp" />

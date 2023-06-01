@@ -10,6 +10,7 @@ using namespace std;
 
 int main()
 {
-    menuSucursales();
+    //menuSucursales();
+    menuCajeros();
     return 0;
 }
