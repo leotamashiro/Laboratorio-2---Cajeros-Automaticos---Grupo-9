@@ -53,8 +53,6 @@ void Cajero::Cargar()
 {
     bool flag=false;
     bool validSucu=false;
-    bool validCajeroID=true;
-    bool validCajeroNSerie=true;
     while (validSucu==false)
     {
         if (flag==false)
@@ -71,39 +69,8 @@ void Cajero::Cargar()
         validSucu = validarSucursal(numSucursal);
     }
 
-    flag=false;
-    while (validCajeroID==true)
-    {
-        if (flag==false)
-        {
-            cout << "Ingrese el ID del Cajero: ";
-            cin >> idCajero;
-            flag=true;
-        }
-        else
-        {
-            cout << "ID del Cajero ya ingresa, por favor ingrese otro: ";
-            cin >> idCajero;
-        }
-        validCajeroID = validarCajeroID(idCajero);
-    }
-
-    flag=false;
-    while (validCajeroNSerie==true)
-    {
-        if (flag==false)
-        {
-            cout << "Ingrese el N de Serie del Cajero: ";
-            cin >> numSerie;
-            flag=true;
-        }
-        else
-        {
-            cout << "N de Serie del Cajero ya ingresado, por favor ingrese otro: ";
-            cin >> numSerie;
-        }
-        validCajeroNSerie = validarCajeroNSerie(numSerie);
-    }
+    cout << "Ingrese el ID del Cajero: ";
+    cin >> idCajero;
 
     cout << "Ingrese la fecha de Instalacion: ";
     fechaInstalacion.Cargar();

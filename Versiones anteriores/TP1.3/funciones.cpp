@@ -4,11 +4,8 @@
 #include "Direccion.h"
 #include "funciones.h"
 #include "Sucursal.h"
-#include "Cajero.h"
 
 using namespace std;
-
-/// Funciones para Sucursales
 
 void mostarSucursales()
 {
@@ -49,8 +46,7 @@ void mostarSucursalesInactivas()
     }
 }
 
-bool buscarSuc(int sucEditar)///devuelve true si encuentra Sucursal
-{
+bool buscarSuc(int sucEditar){
     Sucursal suc;
     int pos=0;
     while(suc.leerDeDisco(pos++))
@@ -62,7 +58,7 @@ bool buscarSuc(int sucEditar)///devuelve true si encuentra Sucursal
     }
 }
 
-bool validarSucursal(int SucEditar)///devuelve true si encuentra Sucursal
+bool validarSucursal(int SucEditar)
 {
     Sucursal sucu;
     int pos = 0;
@@ -74,13 +70,12 @@ bool validarSucursal(int SucEditar)///devuelve true si encuentra Sucursal
     return false;
 }
 
-
-void editarSucursal(int sucEditar)
+void editarSucursal(int SucEditar)
 {
     Sucursal sucu;
     int pos=0, posEdit;
     while(sucu.leerDeDisco(pos++)){
-        if(sucEditar == sucu.getNumeroSucursal()){
+        if(SucEditar == sucu.getNumeroSucursal()){
             cout << "\n" << "\n";
             cout << "INFORMACION A EDITAR" << endl;
             sucu.Mostrar();
@@ -147,73 +142,3 @@ void darAltaSucursal(int numAltaSucu)
         }
     }
 }
-
-/// Funciones para Cajeros
-
-bool validarCajeroID(int cajEditar) ///devuleve true si encuentra el ID del Cajero
-{
-    Cajero objcajero;
-    int pos = 0;
-    while(objcajero.leerDeDisco(pos++))
-    {
-        if(cajEditar == objcajero.getIdCajero())
-        {
-            return true;
-        }
-    }
-    return false;
-}
-
-bool validarCajeroNSerie(int cajEditar) ///devuleve true si encuentra el Num Serie del Cajero
-{
-    Cajero objcajero;
-    int pos = 0;
-    while(objcajero.leerDeDisco(pos++))
-    {
-        if(cajEditar == objcajero.getNumeroSerie())
-        {
-            return true;
-        }
-    }
-    return false;
-}
-
-void mostarCajeros()
-{
-    Cajero objcajero;
-    int pos=0;
-    while (objcajero.leerDeDisco(pos++))
-    {
-        objcajero.Mostrar();
-        cout << "---------------------------------" << endl;
-    }
-}
-
-void mostarCajerosActivos()
-{
-    Cajero objcajero;
-    int pos=0;
-    while (objcajero.leerDeDisco(pos++))
-    {
-        if (objcajero.getEstadoCajero()==1)
-        {
-            objcajero.Mostrar();
-            cout << "---------------------------------" << endl;
-        }
-    }
-}
-
-void mostarCajerosInactivos()
-{
-    Cajero objcajero;
-    int pos=0;
-    while (objcajero.leerDeDisco(pos++))
-    {
-        if (objcajero.getEstadoCajero()==0)
-        {
-            objcajero.Mostrar();
-            cout << "---------------------------------" << endl;
-        }
-    }
-}
-

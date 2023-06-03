@@ -3,7 +3,6 @@
 #include <string>
 #include <cstring>
 #include "Direccion.h"
-#include "funciones.h"
 
 using namespace std;
 
@@ -54,28 +53,14 @@ void Sucursal::setDirecSucursal(Direccion _direcSucursal)
 
 void Sucursal::Cargar()
 {
-    bool flag=false;
-    bool validSucu=true;
-    while (validSucu==true)
-    {
-        if (flag==false)
-        {
-            cout << "Ingrese numero de Sucursal: ";
-            cin >> numSucursal;
-            flag=true;
-        }
-        else
-        {
-            cout << "Sucursal repetida, por favor ingrese otro numero de Sucursal: ";
-            cin >> numSucursal;
-        }
-        validSucu = validarSucursal(numSucursal);
-    }
 
+    cout << "Ingrese numero de Sucursal: ";
+    cin >> numSucursal;
     cin.ignore();
     cout << "Ingrese el Nombre de la Sucursal: ";
 
     cin.getline(nombreSucursal,60);
+
 
     direcSucursal.Cargar();
 

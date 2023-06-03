@@ -8,7 +8,7 @@
 	<string>
 	<cstring>
 
-1685748096 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\main.cpp
+1685579226 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\main.cpp
 	<iostream>
 	<string>
 	<cstring>
@@ -33,21 +33,19 @@
 	<cstring>
 	"Direccion.h"
 
-1685749811 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\funciones.cpp
+1685560942 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\funciones.cpp
 	<iostream>
 	<string>
 	<cstring>
 	"Direccion.h"
 	"funciones.h"
 	"Sucursal.h"
-	"Cajero.h"
 
-1685750693 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menucajeros.cpp
+1685579276 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menucajeros.cpp
 	<iostream>
 	<string>
 	<cstring>
 	"Cajero.h"
-	"funciones.h"
 
 1685225038 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menuclientes.cpp
 	<iostream>
@@ -55,7 +53,7 @@
 	<cstring>
 	"Direccion.h"
 
-1685749421 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menusucursales.cpp
+1685566828 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menusucursales.cpp
 	<iostream>
 	<string>
 	<cstring>
@@ -63,13 +61,12 @@
 	"Sucursal.h"
 	"funciones.h"
 
-1685748073 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\sucursal.cpp
+1685558949 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\sucursal.cpp
 	"Sucursal.h"
 	<iostream>
 	<string>
 	<cstring>
 	"Direccion.h"
-	"funciones.h"
 
 1685558867 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\sucursal.h
 	<iostream>
@@ -77,7 +74,7 @@
 	<cstring>
 	"Direccion.h"
 
-1685749798 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\funciones.h
+1685579226 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\funciones.h
 
 1685559049 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\direccion.cpp
 	<iostream>
@@ -153,7 +150,7 @@
 	<cstring>
 	"Direccion.h"
 
-1685748242 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\cajero.cpp
+1685579070 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\cajero.cpp
 	"Cajero.h"
 
 1685578900 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\cajero.h
