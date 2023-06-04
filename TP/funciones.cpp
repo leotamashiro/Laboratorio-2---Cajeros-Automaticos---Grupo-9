@@ -49,7 +49,7 @@ void mostarSucursalesInactivas()
     }
 }
 
-bool buscarSuc(int sucEditar)///devuelve true si encuentra Sucursal
+bool validarSucursalEstado(int sucEditar)///devuelve true si encuentra Sucursal
 {
     Sucursal suc;
     int pos=0;
@@ -57,9 +57,13 @@ bool buscarSuc(int sucEditar)///devuelve true si encuentra Sucursal
     {
         if(sucEditar == suc.getNumeroSucursal())
         {
-        return true;
+            cout << "el estado de la sucursal es: " << suc.getEstadoSucursal() << endl;
+            return suc.getEstadoSucursal();
+            break;
         }
     }
+    cout << "sucursal no encontrada : " << suc.getEstadoSucursal() << endl;
+    return suc.getEstadoSucursal();
 }
 
 bool validarSucursal(int SucEditar)///devuelve true si encuentra Sucursal
@@ -104,12 +108,8 @@ void listarSucuNumero(int numSucMostar)
             suc.Mostrar();
             break;
         }
-        else
-        {
-            cout << "La sucursal que desea mostrar no esta registrada" << endl;
-            break;
-        }
     }
+    cout << "La sucursal que desea mostrar no esta registrada" << endl;
 }
 
 void borrarSucursal(int numBorrarSucu)
@@ -130,6 +130,24 @@ void borrarSucursal(int numBorrarSucu)
     }
 }
 
+void borrarCajerosXSucursal(int numBorrarSucu)
+{
+    Cajero objcajero;
+    int pos=0, posEdit;
+    while(objcajero.leerDeDisco(pos++))
+    {
+        if(numBorrarSucu == objcajero.getNumSucursal())
+        {
+            cout << "\n" << "\n";
+            cout << "Cajero de Sucursal: " << numBorrarSucu << " a sido Borrado." << endl;
+            objcajero.Mostrar();
+            objcajero.setEstadoCajero(0);
+            posEdit=pos-1;
+            objcajero.editarEnDisco(posEdit);
+        }
+    }
+}
+
 void darAltaSucursal(int numAltaSucu)
 {
     Sucursal sucu;
@@ -139,7 +157,7 @@ void darAltaSucursal(int numAltaSucu)
         if(numAltaSucu == sucu.getNumeroSucursal())
         {
             cout << "\n" << "\n";
-            cout << "INFORMACION A Borrar" << endl;
+            cout << "INFORMACION A Activar" << endl;
             sucu.Mostrar();
             sucu.setEstadoSucursal(1);
             posEdit=pos-1;
@@ -176,6 +194,19 @@ bool validarCajeroNSerie(int cajEditar) ///devuleve true si encuentra el Num Ser
         }
     }
     return false;
+}
+
+bool validarCajeroEstado(int cajEditar) ///devuleve true si encuentra el Estado del Cajero es True
+{
+    Cajero objcajero;
+    int pos = 0;
+    while(objcajero.leerDeDisco(pos++))
+    {
+        if(cajEditar == objcajero.getIdCajero())
+        {
+            return objcajero.getEstadoCajero();
+        }
+    }
 }
 
 void mostarCajeros()
@@ -217,3 +248,90 @@ void mostarCajerosInactivos()
     }
 }
 
+void editarCajeroID(int cajEditar)
+{
+    Cajero objcajero;
+    int pos=0, posEdit;
+    while(objcajero.leerDeDisco(pos++)){
+        if(cajEditar == objcajero.getIdCajero()){
+            cout << "\n" << "\n";
+            cout << "INFORMACION A EDITAR" << endl;
+            objcajero.Mostrar();
+            objcajero.CargarEditar();
+            cout << "Nuevos datos: " << endl;
+            objcajero.Mostrar();
+            posEdit=pos-1;
+            objcajero.editarEnDisco(posEdit);
+        }
+    }
+}
+
+void borrarCajero(int numBorrarCajero)
+{
+    Cajero objcajero;
+    int pos=0, posEdit;
+    while(objcajero.leerDeDisco(pos++))
+    {
+        if(numBorrarCajero == objcajero.getIdCajero())
+        {
+            cout << "\n" << "\n";
+            cout << "INFORMACION A Borrar" << endl;
+            objcajero.Mostrar();
+            objcajero.setEstadoCajero(0);
+            posEdit=pos-1;
+            objcajero.editarEnDisco(posEdit);
+        }
+    }
+}
+
+void darAltaCajero(int numAltaCajero)
+{
+    Cajero objcajero;
+    int pos=0, posEdit;
+    while(objcajero.leerDeDisco(pos++))
+    {
+        if(numAltaCajero == objcajero.getIdCajero())
+        {
+            cout << "\n" << "\n";
+            cout << "INFORMACION a Activar" << endl;
+            objcajero.Mostrar();
+            objcajero.setEstadoCajero(1);
+            posEdit=pos-1;
+            objcajero.editarEnDisco(posEdit);
+        }
+    }
+}
+
+void mostrarCajeroID(int idCajeroMostar)
+{
+    Cajero objcajero;
+    int pos=0;
+    while(objcajero.leerDeDisco(pos++))
+    {
+        if(idCajeroMostar == objcajero.getIdCajero())
+        {
+            cout << "El Cajero tiene los siguientes datos: " << endl;
+            objcajero.Mostrar();
+            break;
+        }
+    }
+    cout << "El Cajero que desea mostrar no esta registrado" << endl;
+}
+void mostarCajeroSucursal(int numSucuMostrar)
+{
+    Cajero objcajero;
+    int pos=0;
+    cout << "La sucursal: " << numSucuMostrar  << " tiene los siguiente Cajeros: "<< endl;
+    while(objcajero.leerDeDisco(pos++))
+    {
+        if(numSucuMostrar == objcajero.getNumSucursal())
+        {
+            objcajero.Mostrar();
+        }
+        else
+        {
+            cout << "La Sucursal " << endl;
+            break;
+        }
+    }
+}

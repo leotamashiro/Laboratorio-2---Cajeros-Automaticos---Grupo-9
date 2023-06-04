@@ -112,10 +112,41 @@ void Cajero::Cargar()
     cin >> estadoCajero;
 
 }
+
+void Cajero::CargarEditar()
+{
+    bool flag=false;
+    bool validSucu=false;
+    while (validSucu==false)
+    {
+        if (flag==false)
+        {
+            cout << "Ingrese numero de Sucursal: ";
+            cin >> numSucursal;
+            flag=true;
+        }
+        else
+        {
+            cout << "Sucursal no Cargada, por favor ingrese una sucursal valida: ";
+            cin >> numSucursal;
+        }
+        validSucu = validarSucursal(numSucursal);
+    }
+
+    cout << "Ingrese la fecha de Instalacion: ";
+    fechaInstalacion.Cargar();
+
+    cout << "Ingrese el Estado delCajero: ";
+    cin >> estadoCajero;
+
+
+
+}
+
 void Cajero::Mostrar()
 {
-    cout << "Numero sucursal: " << numSucursal << endl;
     cout << "ID del Cajero: " << idCajero << endl;
+    cout << "Numero sucursal: " << numSucursal << endl;
     cout << "Numero de Serie: " << numSerie << endl;
     fechaInstalacion.Mostrar();
     cout << endl;

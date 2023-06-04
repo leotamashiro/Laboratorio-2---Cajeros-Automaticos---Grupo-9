@@ -8,7 +8,7 @@
 	<string>
 	<cstring>
 
-1685748096 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\main.cpp
+1685906530 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\main.cpp
 	<iostream>
 	<string>
 	<cstring>
@@ -33,7 +33,7 @@
 	<cstring>
 	"Direccion.h"
 
-1685749811 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\funciones.cpp
+1685906959 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\funciones.cpp
 	<iostream>
 	<string>
 	<cstring>
@@ -42,7 +42,7 @@
 	"Sucursal.h"
 	"Cajero.h"
 
-1685750693 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menucajeros.cpp
+1685896392 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menucajeros.cpp
 	<iostream>
 	<string>
 	<cstring>
@@ -55,7 +55,7 @@
 	<cstring>
 	"Direccion.h"
 
-1685749421 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menusucursales.cpp
+1685906519 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menusucursales.cpp
 	<iostream>
 	<string>
 	<cstring>
@@ -77,7 +77,7 @@
 	<cstring>
 	"Direccion.h"
 
-1685749798 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\funciones.h
+1685906501 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\funciones.h
 
 1685559049 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\direccion.cpp
 	<iostream>
@@ -153,10 +153,10 @@
 	<cstring>
 	"Direccion.h"
 
-1685748242 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\cajero.cpp
+1685836655 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\cajero.cpp
 	"Cajero.h"
 
-1685578900 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\cajero.h
+1685833346 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\cajero.h
 	<iostream>
 	"Fecha.h"
 	"Sucursal.h"

@@ -1,7 +1,10 @@
 /**
-Funciona el cargar cajero,
-mostrar cajero
-pero no todo junto, ver el de tema de los case
+Arreglar el cargar cajero, funciona solo,
+
+Funciona el editar cajero, solo se puede editar la sucursal y la fecha.
+        El ID y el N° de Serie lo mantiene
+
+Despues creo que funciona todo
 */
 #include <iostream>
 #include <string>
@@ -13,9 +16,9 @@ using namespace std;
 
 void menuCajeros ()
 {
-    int opcion, idCajeroEditar;
-    // idCajeroMostar, numCajeroEstado;
+    int opcion, idCajeroEditar, numCajeroEstado, idCajeroMostar, numSucuMostrar;
     bool existeCajero=false;
+    bool estadoCajero=false;
     bool flag=false;
     do
     {
@@ -38,12 +41,14 @@ void menuCajeros ()
 
         switch(opcion)
         {
-        case 1:
+
+        /*case 1:
             Cajero objcajero;
             objcajero.Cargar();
             objcajero.grabarEnDisco();
             break;
-/*
+        */
+
         case 2:
             mostarCajerosActivos();
             flag=false;
@@ -63,35 +68,103 @@ void menuCajeros ()
                     cin >> idCajeroEditar;
                 }
                 existeCajero = validarCajeroID(idCajeroEditar);
+                estadoCajero = validarCajeroEstado(numCajeroEstado);
             }
-            if (existeCajero==true)
+            if ((existeCajero==true) && (estadoCajero==true))
             {
                 editarCajeroID(idCajeroEditar);
-                ///Aca va la parte de editar Cajero por ID
+            }
+            else
+            {
+                cout << "El cajero esta Inactivo, por favor dar de Alta para Editarlo:" << endl;
             }
             break;
 
-        /*
         case 3:
+            mostarCajerosActivos();
+            flag=false;
+            existeCajero= false;
+            while (existeCajero == false)
+            {
+                if (flag==false)
+                {
+                    cout << "El ID del Cajero a borrar:" << endl;
+                    cin >> numCajeroEstado;
+                    flag=true;
+                }
+                else
+                {
+                    cout << "El ID del Cajero ingresado no existe:" << endl;
+                    cout << "Vuelva a ingresar el ID:" << endl;
+                    cin >> numCajeroEstado;
+                }
+                existeCajero = validarCajeroID(numCajeroEstado);
+                estadoCajero = validarCajeroEstado(numCajeroEstado);
+            }
+            if ((existeCajero==true) && (estadoCajero==true))
+            {
+                borrarCajero(numCajeroEstado);
+            }
+            else
+            {
+                cout << "El Cajero ya fue borrado:" << endl;
+            }
 
             break;
+
         case 4:
+            mostarCajerosInactivos();
+            flag=false;
+            existeCajero= false;
+            while (existeCajero == false)
+            {
+                if (flag==false)
+                {
+                    cout << "El ID del Cajero a borrar:" << endl;
+                    cin >> numCajeroEstado;
+                    flag=true;
+                }
+                else
+                {
+                    cout << "El ID del Cajero ingresado no existe:" << endl;
+                    cout << "Vuelva a ingresar el ID:" << endl;
+                    cin >> numCajeroEstado;
+                }
+                existeCajero = validarCajeroID(numCajeroEstado);
+                estadoCajero = validarCajeroEstado(numCajeroEstado);
 
+            }
+            if ((existeCajero==true) && (estadoCajero==false))
+            {
+                darAltaCajero(numCajeroEstado);
+            }
+            else
+            {
+                cout << "El Cajero ya esta Activado:" << endl;
+            }
             break;
+        ///Listar por ID
         case 5:
-
+            cout << "Ingrese el ID del Cajero a Mostar:" << endl;
+            cin >> idCajeroMostar;
+            mostrarCajeroID(idCajeroMostar);
             break;
+
+        ///Listar Cajero por Sucursal
         case 6:
-
+            cout << "Ingrese el Numero de Sucursal de la que desee mostrar todos los Cajeros:" << endl;
+            cin >> numSucuMostrar;
+            mostarCajeroSucursal(numSucuMostrar);
             break;
+
         case 7:
-
+            mostarCajerosInactivos();
             break;
-            */
-        /*case 8:
+
+        case 8:
             mostarCajeros();
             break;
-       /*
+    /*
         default:
             cout << "Debe ingresar una opcion correcta" << endl;
             break;*/

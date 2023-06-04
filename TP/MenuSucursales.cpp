@@ -1,5 +1,5 @@
 /**
-Al cambiar el estado de la sucursal los cajeros de la sucursales hay que cambiar el estado
+Creo que funciona todo
 */
 #include <iostream>
 #include <string>
@@ -14,6 +14,7 @@ void menuSucursales ()
 {
     int opcion, numSucEditar, numSucMostar, numSucuEstado;
     bool validSucu;
+    bool validSucuEstado;
     bool flag;
     do
     {
@@ -62,10 +63,15 @@ void menuSucursales ()
                 }
 
                 validSucu=validarSucursal(numSucEditar);
+                validSucuEstado=validarSucursalEstado(numSucEditar);
             }
-            if (validSucu==true)
+            if ((validSucu==true) && (validSucuEstado==true))
             {
                 editarSucursal(numSucEditar);
+            }
+            else
+            {
+                cout << "Sucursal no puede ser Editada, esta dada de Baja:" << endl;
             }
 
             break;
@@ -90,10 +96,16 @@ void menuSucursales ()
                 }
 
                 validSucu=validarSucursal(numSucuEstado);
+                validSucuEstado=validarSucursalEstado(numSucEditar);
             }
-            if (validSucu==true)
+            if ((validSucu==true) && (validSucuEstado==true))
             {
                 borrarSucursal(numSucuEstado);
+                borrarCajerosXSucursal(numSucuEstado);
+            }
+            else
+            {
+                cout << "Sucursal esta dada de Baja:" << endl;
             }
             break;
 
@@ -117,10 +129,15 @@ void menuSucursales ()
                 }
 
                 validSucu=validarSucursal(numSucuEstado);
+                validSucuEstado=validarSucursalEstado(numSucuEstado);
             }
-            if (validSucu==true)
+            if ((validSucu==true) && (validSucuEstado==false))
             {
                 darAltaSucursal(numSucuEstado);
+            }
+            else
+            {
+                cout << "La Sucursal esta Activa:" << endl;
             }
             break;
 

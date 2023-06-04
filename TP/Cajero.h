@@ -14,7 +14,7 @@ class Cajero
         int numSerie;
         int numSucursal;
         bool estadoCajero;
-        Sucursal sucu;
+        //Sucursal sucu;
 
     public:
         ///gets
@@ -32,6 +32,7 @@ class Cajero
         void setEstadoCajero(bool _estadoCajero);
 
         void Cargar();
+        void CargarEditar();
         void Mostrar();
 
         bool editarEnDisco(int);
