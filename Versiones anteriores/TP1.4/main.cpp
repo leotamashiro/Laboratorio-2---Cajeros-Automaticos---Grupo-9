@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cstring>
-#include "MenuAdmin.h"
+#include "Direccion.h"
 #include "funciones.h"
 
 
@@ -11,6 +11,7 @@ using namespace std;
 int main()
 {
 
-    menuAdmin();
+    menuSucursales();
+    menuCajeros();
     return 0;
 }

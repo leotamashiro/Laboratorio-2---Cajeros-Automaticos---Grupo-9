@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string>
 #include <cstring>
-#include "MenuAdmin.h"
+#include "Direccion.h"
 
 using namespace std;
 
-void menuAdmin()
+void menuAdmin ()
 {
 
     int opcion;
@@ -17,7 +17,6 @@ void menuAdmin()
         cout << "1. Sucursales" << endl;
         cout << "2. Cajeros" << endl;
         cout << "3. Clientes" << endl;
-        cout << "4. Balanceo" << endl;
         cout << endl;
         cout << "0. Salir" << endl;
         cout << "--------------------------" << endl;
@@ -27,16 +26,13 @@ void menuAdmin()
         switch(opcion)
         {
         case 1:
-            menuSucursales();
+            ///Sucursales();
             break;
         case 2:
-            menuCajeros();
+            ///Cajeros();
             break;
         case 3:
             ///Clientes();
-            break;
-        case 4:
-            //menuBalanceo();
             break;
         default:
             cout << "Debe ingresar una opcion correcta" << endl;

@@ -36,8 +36,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="AuxuliarCajero.cpp" />
-		<Unit filename="AuxuliarCajero.h" />
 		<Unit filename="Cajero.cpp" />
 		<Unit filename="Cajero.h" />
 		<Unit filename="Direccion.cpp" />
@@ -45,13 +43,11 @@
 		<Unit filename="Fecha.cpp" />
 		<Unit filename="Fecha.h" />
 		<Unit filename="MenuAdmin.cpp" />
-		<Unit filename="MenuAdmin.h" />
 		<Unit filename="MenuCajeros.cpp" />
 		<Unit filename="MenuClientes.cpp" />
 		<Unit filename="MenuSucursales.cpp" />
 		<Unit filename="Sucursal.cpp" />
 		<Unit filename="Sucursal.h" />
-		<Unit filename="balanceo.cpp" />
 		<Unit filename="funciones.cpp" />
 		<Unit filename="funciones.h" />
 		<Unit filename="main.cpp" />

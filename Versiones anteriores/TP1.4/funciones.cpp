@@ -5,7 +5,6 @@
 #include "funciones.h"
 #include "Sucursal.h"
 #include "Cajero.h"
-#include "AuxuliarCajero.h"
 
 using namespace std;
 
@@ -333,36 +332,6 @@ void mostarCajeroSucursal(int numSucuMostrar)
         {
             cout << "La Sucursal " << endl;
             break;
-        }
-    }
-}
-
-
-///***********Balanceo***********///
-
-void editarCargaCajero(int idCajero, int cargaCajero)
-{
-    AuxuliarCajero auxCajero;
-    int pos=0, posEdit;
-    while(auxCajero.leerDeDisco(pos++)){
-        if(idCajero == auxCajero.getIdCajero())
-        {
-            auxCajero.setCapacidad(cargaCajero);
-            posEdit=pos-1;
-            auxCajero.editarEnDisco(pos);
-        }
-    }
-}
-
-void mostarCargaCajero(int id)
-{
-    AuxuliarCajero auxCajero;
-    int pos=0;
-    while (auxCajero.leerDeDisco(pos++))
-    {
-        if (id == auxCajero.getIdCajero())
-        {
-            auxCajero.MostrarBilletes();
         }
     }
 }

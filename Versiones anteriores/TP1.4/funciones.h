@@ -28,9 +28,6 @@ void darAltaCajero(int);
 void mostrarCajeroID(int);
 void mostarCajeroSucursal(int);
 
-///Funciones para el Balanceo
-void editarCargaCajero(int, int);
-void mostarCargaCajero(int);
 
 
 #endif // FUNCIONES_H_INCLUDED

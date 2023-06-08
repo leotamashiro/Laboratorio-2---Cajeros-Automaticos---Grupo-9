@@ -14,7 +14,7 @@ Despues creo que funciona todo
 
 using namespace std;
 
-void menuCajeros()
+void menuCajeros ()
 {
     int opcion, idCajeroEditar, numCajeroEstado, idCajeroMostar, numSucuMostrar;
     bool existeCajero=false;
@@ -41,16 +41,15 @@ void menuCajeros()
 
         switch(opcion)
         {
-        case 1:
-            {
-                Cajero objcajero;
-                objcajero.Cargar();
-                objcajero.grabarEnDisco();
-            }
+
+        /*case 1:
+            Cajero objcajero;
+            objcajero.Cargar();
+            objcajero.grabarEnDisco();
             break;
+        */
 
         case 2:
-        {
             mostarCajerosActivos();
             flag=false;
             existeCajero= false;
@@ -79,11 +78,9 @@ void menuCajeros()
             {
                 cout << "El cajero esta Inactivo, por favor dar de Alta para Editarlo:" << endl;
             }
-        }
-        break;
+            break;
 
         case 3:
-        {
             mostarCajerosActivos();
             flag=false;
             existeCajero= false;
@@ -112,11 +109,10 @@ void menuCajeros()
             {
                 cout << "El Cajero ya fue borrado:" << endl;
             }
-        }
-        break;
+
+            break;
 
         case 4:
-        {
             mostarCajerosInactivos();
             flag=false;
             existeCajero= false;
@@ -146,9 +142,7 @@ void menuCajeros()
             {
                 cout << "El Cajero ya esta Activado:" << endl;
             }
-        }
-
-        break;
+            break;
         ///Listar por ID
         case 5:
             cout << "Ingrese el ID del Cajero a Mostar:" << endl;
@@ -170,10 +164,10 @@ void menuCajeros()
         case 8:
             mostarCajeros();
             break;
-
+    /*
         default:
             cout << "Debe ingresar una opcion correcta" << endl;
-            break;
+            break;*/
         }
 
     }

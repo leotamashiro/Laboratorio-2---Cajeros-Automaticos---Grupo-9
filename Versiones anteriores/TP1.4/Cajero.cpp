@@ -20,11 +20,6 @@ int Cajero::getNumSucursal()
     return numSucursal;
 }
 
-int Cajero::getCapcidadMaxima()
-{
-    return capacidadMaxima;
-}
-
 bool Cajero::getEstadoCajero()
 {
     return estadoCajero;
@@ -47,11 +42,6 @@ void Cajero::setFechaInstalacion(Fecha _fechaInstalacion)
 void Cajero::setNumSucursal(int _numSucursal)
 {
     numSucursal=_numSucursal;
-}
-
-void Cajero::setCapacidadMaxima (int _capidadMax)
-{
-    capacidadMaxima=_capidadMax;
 }
 
 void Cajero::setEstadoCajero(bool _estadoCajero)

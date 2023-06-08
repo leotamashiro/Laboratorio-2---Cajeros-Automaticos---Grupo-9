@@ -11,12 +11,11 @@ void menuClientes ()
     do
     {
         cout << "---------------------------------" << endl;
-        cout << "----------MENU CLIENTES----------" << endl;
-        cout << "---------------------------------" << endl;
+        cout << "---------MENU CLIENTES---------" << endl;
+        cout << "---------------------------" << endl;
         cout << "1. Cargar" << endl;
         cout << "2. Editar" << endl;
         cout << "3. Borrar" << endl;
-        cout << "3. Activar Cliente" << endl;
         cout << "4. Listar Cliente por DNI" << endl;
         cout << "5. Listar Cliente por Apellido" << endl;
         cout << "6. Listar Todos lss Clientes" << endl;
