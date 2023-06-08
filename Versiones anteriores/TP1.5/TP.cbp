@@ -51,8 +51,6 @@
 		<Unit filename="MenuSucursales.cpp" />
 		<Unit filename="Sucursal.cpp" />
 		<Unit filename="Sucursal.h" />
-		<Unit filename="Transacciones.cpp" />
-		<Unit filename="Transacciones.h" />
 		<Unit filename="balanceo.cpp" />
 		<Unit filename="funciones.cpp" />
 		<Unit filename="funciones.h" />

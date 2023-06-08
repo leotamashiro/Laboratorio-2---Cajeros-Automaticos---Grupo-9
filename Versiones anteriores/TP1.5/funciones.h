@@ -32,8 +32,5 @@ void mostarCajeroSucursal(int);
 void editarCargaCajero(int, int);
 void mostarCargaCajero(int);
 
-///Transacciones
-double generarNumTransaccion();
-
 
 #endif // FUNCIONES_H_INCLUDED

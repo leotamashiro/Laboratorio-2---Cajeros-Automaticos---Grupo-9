@@ -6,8 +6,6 @@
 #include "Sucursal.h"
 #include "Cajero.h"
 #include "AuxuliarCajero.h"
-#include "Transacciones.h"
-#include <time.h>
 
 using namespace std;
 
@@ -367,56 +365,4 @@ void mostarCargaCajero(int id)
             auxCajero.MostrarBilletes();
         }
     }
-}
-
-
-///Transacciones
-/*double generarNumTransaccion()
-{
-    Transacciones reg;
-    double num;
-    FILE *p;
-    p = fopen("transacciones.dat", "rb");
-    if(p==NULL) return -1;
-    fseek(p, -sizeof(Transacciones), SEEK_END);
-    if(fread(&reg, sizeof(Transacciones), 1, p) == 0){
-        num = 0;
-    }
-    else{
-        num = reg.getNumTransaccion();
-    }
-    fclose(p);
-    return num;
-}*/
-
-void extracciones(int idCajero) /// en el case pasar el id cajero como paremetro y creo que es mejor pasale el monto,
-{
-    int monto;
-    Transacciones regTransaccion;
-    Fecha fechasis;
-    double numTran;
-    ///seteo la fecha del sistema a fechasis;
-    time_t t;
-    t = time(NULL);
-    struct tm *f;
-    f = localtime(&t);
-    int _dia = f->tm_mday;
-    int _mes = f->tm_mon + 1;
-    int _anio = f->tm_year + 1900;
-    fechasis.setDia(_dia);
-    fechasis.setMes(_mes);
-    fechasis.setAnio(_anio);
-   /** do
-    {
-        cout << "Ingrese el monto a Extraer: ";
-        cin >> monto;
-    }while ((monto&100==0) && (monto>=100));*/   ///Creo que no VA!!!!!!!!
-
-    ///numTran=generarNumTransaccion();
-    regTransaccion.setFechaTransaccion(fechasis);
-    regTransaccion.setMonto(monto);
-    regTransaccion.setIdCajero(idCajero);
-    ///regTransaccion.getNumTransaccion(numTran);
-    ///regTransaccion.grabarEnDisco();/// Falta HAcerla en CPP
-
 }
