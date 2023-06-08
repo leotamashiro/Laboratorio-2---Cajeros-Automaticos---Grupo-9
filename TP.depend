@@ -1,0 +1,304 @@
+# depslib dependency file v1.0
+1683488017 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\fecha.cpp
+	<iostream>
+	<string>
+	"Fecha.h"
+
+1685566851 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\fecha.h
+	<string>
+	<cstring>
+
+1685906530 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\main.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+	"funciones.h"
+
+1685559049 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\direccion.cpp
+	<iostream>
+	<string>
+	<cstring>
+	<climits>
+	"Direccion.h"
+
+1685558850 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\direccion.h
+	<iostream>
+	<string>
+	<cstring>
+
+1685228191 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menuadmin.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1685906959 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\funciones.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+	"funciones.h"
+	"Sucursal.h"
+	"Cajero.h"
+
+1685896392 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menucajeros.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Cajero.h"
+	"funciones.h"
+
+1685225038 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menuclientes.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1685906519 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menusucursales.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+	"Sucursal.h"
+	"funciones.h"
+
+1685748073 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\sucursal.cpp
+	"Sucursal.h"
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+	"funciones.h"
+
+1685558867 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\sucursal.h
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1685906501 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\funciones.h
+
+1685559049 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\direccion.cpp
+	<iostream>
+	<string>
+	<cstring>
+	<climits>
+	"Direccion.h"
+
+1685558850 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\direccion.h
+	<iostream>
+	<string>
+	<cstring>
+
+1683488017 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\fecha.cpp
+	<iostream>
+	<string>
+	"Fecha.h"
+
+1683488017 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\fecha.h
+
+1685560942 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\funciones.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+	"funciones.h"
+	"Sucursal.h"
+
+1685560942 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\funciones.h
+
+1685558867 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\sucursal.h
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1685228191 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\main.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+	"funciones.h"
+
+1685228191 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\menuadmin.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1685225038 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\menucajeros.cpp
+	<iostream>
+	<string>
+	<cstring>
+
+1685225038 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\menuclientes.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1685560590 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\menusucursales.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+	"Sucursal.h"
+	"funciones.h"
+
+1685558949 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\sucursal.cpp
+	"Sucursal.h"
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1685836655 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\cajero.cpp
+	"Cajero.h"
+
+1685833346 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\cajero.h
+	<iostream>
+	"Fecha.h"
+	"Sucursal.h"
+	"funciones.h"
+
+1685907463 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\cajero.cpp
+	"Cajero.h"
+
+1685907463 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\cajero.h
+	<iostream>
+	"Fecha.h"
+	"Sucursal.h"
+	"funciones.h"
+
+1686191642 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\fecha.h
+	<string>
+	<cstring>
+
+1685907463 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\sucursal.h
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1686193791 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\direccion.h
+	<iostream>
+	<string>
+	<cstring>
+
+1685907463 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\funciones.h
+
+1686193808 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\direccion.cpp
+	<iostream>
+	<string>
+	<cstring>
+	<climits>
+	"Direccion.h"
+	"funcionesClientes.h"
+
+1686191974 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\fecha.cpp
+	<iostream>
+	<string>
+	<ctime>
+	"Fecha.h"
+
+1685907463 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\funciones.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+	"funciones.h"
+	"Sucursal.h"
+	"Cajero.h"
+
+1686192978 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\main.cpp
+	<iostream>
+	<string>
+	<cstring>
+	<ctime>
+	"Direccion.h"
+	"funciones.h"
+	"Fecha.h"
+	"Tarjeta.h"
+	"funcionesClientes.h"
+
+1685907463 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\menuadmin.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1685907463 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\menucajeros.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Cajero.h"
+	"funciones.h"
+
+1685907463 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\menuclientes.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1685907463 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\menusucursales.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+	"Sucursal.h"
+	"funciones.h"
+
+1685907463 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\sucursal.cpp
+	"Sucursal.h"
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+	"funciones.h"
+
+1686193519 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\tarjeta.cpp
+	"Tarjeta.h"
+	"funcionesClientes.h"
+
+1686191415 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\tarjeta.h
+	"Fecha.h"
+
+1686193516 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\cuenta.cpp
+	<cstdio>
+	"Cuenta.h"
+	"funcionesClientes.h"
+
+1686192296 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\cuenta.h
+	"Tarjeta.h"
+
+1686193536 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\cliente.cpp
+	<iostream>
+	<string>
+	<cstring>
+	<climits>
+	"Cliente.h"
+	"funcionesClientes.h"
+
+1686193762 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\cliente.h
+	"Cuenta.h"
+	"Fecha.h"
+	"Direccion.h"
+
+1686193296 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\funcionesclientes.cpp
+	<cstdlib>
+	<time.h>
+	"funcionesClientes.h"
+
+1686192876 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\funcionesclientes.h
+	"ArchivoCliente.h"
+	"Cliente.h"
+
+1686191783 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\archivocliente.cpp
+	<string>
+	<cstring>
+	"ArchivoCliente.h"
+
+1686191009 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\laboratorio-2---cajeros-automaticos---grupo-9-main\tp\archivocliente.h
+	"Cliente.h"
+
