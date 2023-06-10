@@ -1,0 +1,209 @@
+# depslib dependency file v1.0
+1683488017 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\fecha.cpp
+	<iostream>
+	<string>
+	"Fecha.h"
+
+1685566851 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\fecha.h
+	<string>
+	<cstring>
+
+1686266697 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\main.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"MenuAdmin.h"
+	"funciones.h"
+
+1685559049 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\direccion.cpp
+	<iostream>
+	<string>
+	<cstring>
+	<climits>
+	"Direccion.h"
+
+1685558850 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\direccion.h
+	<iostream>
+	<string>
+	<cstring>
+
+1686177081 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menuadmin.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"MenuAdmin.h"
+
+1686415076 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\funciones.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+	"funciones.h"
+	"Sucursal.h"
+	"Cajero.h"
+	"AuxuliarCajero.h"
+	"Transacciones.h"
+	<time.h>
+
+1686183351 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menucajeros.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Cajero.h"
+	"funciones.h"
+
+1685919684 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menuclientes.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1686183232 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menusucursales.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+	"Sucursal.h"
+	"funciones.h"
+
+1685748073 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\sucursal.cpp
+	"Sucursal.h"
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+	"funciones.h"
+
+1685558867 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\sucursal.h
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1686415076 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\funciones.h
+
+1685559049 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\direccion.cpp
+	<iostream>
+	<string>
+	<cstring>
+	<climits>
+	"Direccion.h"
+
+1685558850 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\direccion.h
+	<iostream>
+	<string>
+	<cstring>
+
+1683488017 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\fecha.cpp
+	<iostream>
+	<string>
+	"Fecha.h"
+
+1683488017 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\fecha.h
+
+1685560942 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\funciones.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+	"funciones.h"
+	"Sucursal.h"
+
+1685560942 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\funciones.h
+
+1685558867 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\sucursal.h
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1685228191 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\main.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+	"funciones.h"
+
+1685228191 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\menuadmin.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1685225038 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\menucajeros.cpp
+	<iostream>
+	<string>
+	<cstring>
+
+1685225038 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\menuclientes.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1685560590 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\menusucursales.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+	"Sucursal.h"
+	"funciones.h"
+
+1685558949 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\version 2\tp\sucursal.cpp
+	"Sucursal.h"
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1686179516 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\cajero.cpp
+	"Cajero.h"
+
+1686179506 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\cajero.h
+	<iostream>
+	"Fecha.h"
+	"Sucursal.h"
+	"funciones.h"
+
+1686266697 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menuadmin.h
+
+1686183394 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\balanceo.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"MenuAdmin.h"
+	"Cajero.h"
+	"AuxuliarCajero.h"
+	"funciones.h"
+
+1686415076 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\auxuliarcajero.h
+	"funciones.h"
+	"Cajero.h"
+
+1686181710 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\auxuliarcajero.cpp
+	"AuxuliarCajero.h"
+
+1686264636 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\transacciones.cpp
+	"Transacciones.h"
+
+1686264636 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\transacciones.h
+	<iostream>
+	"Fecha.h"
+	"funciones.h"
+
+1686415076 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menuusuario.cpp
+	<iostream>
+	<string>
+	<cstring>
+	<cstdlib>
+	<conio.h>
+	"MenuAdmin.h"
+
+1686414588 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\usuariologin.cpp
+	"UsuarioLogin.h"
+
+1686414588 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\usuariologin.h
+	<iostream>
+	<string>
+	<cstring>
+
