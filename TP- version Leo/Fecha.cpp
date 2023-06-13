@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <ctime>
 #include "Fecha.h"
 using namespace std;
 
@@ -139,4 +140,25 @@ std::string Fecha::toString(std::string formatoFecha){
    }
 
    return fechaFormateada;
+}
+
+void Fecha::actualFecha() {
+    time_t t = time(nullptr);
+    tm* now = localtime(&t);
+    anio = (now->tm_year +1900);
+    dia = now->tm_mday;
+    mes = (now->tm_mon+1);
+
+//    cout << "Current Date: " << now->tm_mday << '/' << (now->tm_mon + 1) << '/'
+//            << (now->tm_year + 1900) << endl;
+}
+
+void Fecha::fechaVencimiento() {
+    int anioVencimiento;
+    Fecha fecha;
+    fecha.actualFecha();
+    anioVencimiento = (fecha.getAnio() + 8);
+    anio = anioVencimiento;
+    mes = fecha.getMes();
+    dia = fecha.getDia();
 }

@@ -95,6 +95,15 @@ void Sucursal::Mostrar()
     cout << "Estado Sucursal: " << estadoSucursal << endl;
 }
 
+void Sucursal::MostarAlCliente()
+{
+    cout << "Numero sucursal: " << numSucursal << endl;
+    cout << "Nombre de la Sucursal: ";
+    std::cout << nombreSucursal;
+    direcSucursal.Mostrar();
+    cout << endl;
+}
+
 bool Sucursal::editarEnDisco(int pos){
     bool guardo;
     FILE *p;

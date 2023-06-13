@@ -27,8 +27,11 @@ class Fecha
         int getDia();
         int getMes();
         int getAnio();
+        void actualFecha();
+        void fechaVencimiento();
 
         std::string toString(std::string formatoFecha = "DD/MM/YYYY");
+
 
 
 };

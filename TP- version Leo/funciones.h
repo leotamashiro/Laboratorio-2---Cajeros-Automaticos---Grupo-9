@@ -33,8 +33,25 @@ void editarCargaCajero(int, int);
 void mostarCargaCajero(int);
 
 ///Transacciones
-double generarNumTransaccion();
+int generarNumTransaccion();
 
 ///
+void extracciones(int, int, int);
 
+/// Extracciones
+bool verificarSaldoDisplonible(int, int);
+bool verificarDineroEnCajero(int, int);
+
+
+///Login, diferencia admin de cliente,
+int leerLogin (int, char, char);
+
+///lo que Ven los Clientes
+
+int pedirleAlClienteNumSucursal();
+void listarSucuNumeroAlCliente(int);
+int pedirleAlClienteCajero(int);
+void mostarCajeroSucursalAlCliente(int);
+
+float traerMontoCuenta(int);
 #endif // FUNCIONES_H_INCLUDED

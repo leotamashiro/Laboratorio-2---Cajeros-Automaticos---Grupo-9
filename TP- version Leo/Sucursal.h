@@ -31,6 +31,7 @@ class Sucursal
 
         void Cargar();
         void Mostrar();
+        void MostarAlCliente();
 
         bool editarEnDisco(int);
         void grabarEnDisco();

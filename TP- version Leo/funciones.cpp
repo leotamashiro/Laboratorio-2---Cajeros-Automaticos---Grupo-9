@@ -7,7 +7,10 @@
 #include "Cajero.h"
 #include "AuxuliarCajero.h"
 #include "Transacciones.h"
+#include "UsuarioLogin.h"
 #include <time.h>
+#include "Cuenta.h"
+
 
 using namespace std;
 
@@ -73,8 +76,10 @@ bool validarSucursal(int SucEditar)///devuelve true si encuentra Sucursal
 {
     Sucursal sucu;
     int pos = 0;
-    while(sucu.leerDeDisco(pos++)){
-        if(SucEditar == sucu.getNumeroSucursal()){
+    while(sucu.leerDeDisco(pos++))
+    {
+        if(SucEditar == sucu.getNumeroSucursal())
+        {
             return true;
         }
     }
@@ -86,8 +91,10 @@ void editarSucursal(int sucEditar)
 {
     Sucursal sucu;
     int pos=0, posEdit;
-    while(sucu.leerDeDisco(pos++)){
-        if(sucEditar == sucu.getNumeroSucursal()){
+    while(sucu.leerDeDisco(pos++))
+    {
+        if(sucEditar == sucu.getNumeroSucursal())
+        {
             cout << "\n" << "\n";
             cout << "INFORMACION A EDITAR" << endl;
             sucu.Mostrar();
@@ -109,7 +116,7 @@ void listarSucuNumero(int numSucMostar)
         {
             cout << "La sucursal tiene los siguientes datos: " << endl;
             suc.Mostrar();
-            break;
+            return;
         }
     }
     cout << "La sucursal que desea mostrar no esta registrada" << endl;
@@ -255,8 +262,10 @@ void editarCajeroID(int cajEditar)
 {
     Cajero objcajero;
     int pos=0, posEdit;
-    while(objcajero.leerDeDisco(pos++)){
-        if(cajEditar == objcajero.getIdCajero()){
+    while(objcajero.leerDeDisco(pos++))
+    {
+        if(cajEditar == objcajero.getIdCajero())
+        {
             cout << "\n" << "\n";
             cout << "INFORMACION A EDITAR" << endl;
             objcajero.Mostrar();
@@ -315,7 +324,7 @@ void mostrarCajeroID(int idCajeroMostar)
         {
             cout << "El Cajero tiene los siguientes datos: " << endl;
             objcajero.Mostrar();
-            break;
+            return;
         }
     }
     cout << "El Cajero que desea mostrar no esta registrado" << endl;
@@ -346,7 +355,8 @@ void editarCargaCajero(int idCajero, int cargaCajero)
 {
     AuxuliarCajero auxCajero;
     int pos=0, posEdit;
-    while(auxCajero.leerDeDisco(pos++)){
+    while(auxCajero.leerDeDisco(pos++))
+    {
         if(idCajero == auxCajero.getIdCajero())
         {
             auxCajero.setCapacidad(cargaCajero);
@@ -370,30 +380,27 @@ void mostarCargaCajero(int id)
 }
 
 ///***********Transacciones***********///
-/*double generarNumTransaccion()
+///me devuelve el ultimo numero de transaccion +1, sino tiene nada me devuelve 1, la 1er transaccion
+int generarNumTransaccion()
 {
     Transacciones reg;
-    double num;
-    FILE *p;
-    p = fopen("transacciones.dat", "rb");
-    if(p==NULL) return -1;
-    fseek(p, -sizeof(Transacciones), SEEK_END);
-    if(fread(&reg, sizeof(Transacciones), 1, p) == 0){
-        num = 0;
+    int num;
+    num=reg.contarRegistros();
+    if (num==-1)
+    {
+        return 1;
     }
-    else{
-        num = reg.getNumTransaccion();
+    else
+    {
+        return num+1;
     }
-    fclose(p);
-    return num;
-}*/
-
-void extracciones(int idCajero) /// en el case pasar el id cajero como paremetro y creo que es mejor pasale el monto,
+}
+///Aca Guarda la transacciones que se hacen
+void extracciones(int idCajero,int monto, int dni) /// en el case pasar el id cajero como paremetro y creo que es mejor pasale el monto,
 {
-    int monto;
     Transacciones regTransaccion;
     Fecha fechasis;
-    double numTran;
+    int numTran;
     ///seteo la fecha del sistema a fechasis;
     time_t t;
     t = time(NULL);
@@ -405,18 +412,189 @@ void extracciones(int idCajero) /// en el case pasar el id cajero como paremetro
     fechasis.setDia(_dia);
     fechasis.setMes(_mes);
     fechasis.setAnio(_anio);
-   /** do
-    {
-        cout << "Ingrese el monto a Extraer: ";
-        cin >> monto;
-    }while ((monto&100==0) && (monto>=100));*/   ///Creo que no VA!!!!!!!!
 
-    ///numTran=generarNumTransaccion();
+    numTran=generarNumTransaccion();
     regTransaccion.setFechaTransaccion(fechasis);
     regTransaccion.setMonto(monto);
     regTransaccion.setIdCajero(idCajero);
-    ///regTransaccion.getNumTransaccion(numTran);
-    ///regTransaccion.grabarEnDisco();/// Falta HAcerla en CPP
+    regTransaccion.setNumTransaccion(numTran);
+    regTransaccion.setDniCliente(dni);
+    regTransaccion.grabarEnDisco();
+}
+/*
+
+int leerLogin (int dni, char _user, char _pass)
+{
+    UsuarioLogin usuario;
+    string user, pass;
+    user=_user;
+    pass=_pass;
+    int pos = 0;
+    while(usuario.leerDeDisco(pos++))
+    {
+        if(dni == usuario.getDNI())
+        {
+            if (user == usuario.getUser())
+            {
+                if (pass == usuario.getPassword())
+                {
+                    return usuario.getPermiso();
+                }
+                else
+                {
+                    cout << "Pass no valida";
+                }
+            }
+            else
+                {
+                    cout << "User no valido";
+                }
+        }
+        else
+        {
+            cout << "DNI no valido";
+        }
+    }
+}*/
+
+bool verificarSaldoDisplonible(int dni, int monto)
+{
+    float montoFloat=float(monto);
+
+    Cuenta cuentaCliente;
+    int pos=0;
+    while (cuentaCliente.leerDeDisco(pos++))
+    {
+        if ((dni==cuentaCliente.getDniCliente()) && cuentaCliente.getActivo()==true)
+        {
+            if (cuentaCliente.getSaldo()>=montoFloat)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
 
 }
 
+bool verificarDineroEnCajero(int idCajero, int monto)
+{
+    AuxuliarCajero cajero;
+    int pos=0;
+    while (cajero.leerDeDisco(pos++))
+    {
+        if (idCajero==cajero.getIdCajero())
+        {
+            if (cajero.getCapacidad()>=monto)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+}
+
+/// Lo que ve los Clientes
+
+int pedirleAlClienteNumSucursal()
+{
+    int numSucusal;
+    bool flagSucursal=false;
+    bool validSucu = false;
+    bool validSucuEstado;
+
+    flagSucursal=false;
+    validSucu = false;
+    while (validSucu == false)
+    {
+        if (flagSucursal==false)
+        {
+            cout << "Por favor ingrese el numero del sucursal al que desea ingresar:" << endl;
+            cin >> numSucusal;
+            flagSucursal=true;
+        }
+        else
+        {
+            cout << "El numero de sucursal ingresado no existe o esta temporalmente dada de baja:" << endl;
+            cout << "Vuelva a ingresar otra sucursal:" << endl;
+            cin >> numSucusal;
+        }
+        validSucu=validarSucursal(numSucusal);
+        validSucuEstado=validarSucursalEstado(numSucusal);
+    }
+    if ((validSucu==true) && (validSucuEstado==true))
+    {
+        return numSucusal;
+    }
+}
+
+int pedirleAlClienteCajero(int numSucursal)
+{
+    int idCajero;
+    bool flagCajero=false;
+    bool existeCajero= false;
+    bool estadoCajero;
+    cout << "Ustedes se encuentra en:" << "\n";
+    listarSucuNumeroAlCliente(numSucursal);
+    cout << "\n" << "Cuenta con los siguiente Cajeros Automaticos:"<< "\n" << endl;
+    mostarCajeroSucursalAlCliente(numSucursal);
+    flagCajero=false;
+    existeCajero= false;
+    while (existeCajero == false)
+    {
+        if (flagCajero==false)
+        {
+            cout << "Por favor ingrese el numero del Cajero del que desea hacer la extraccion:" << endl;
+            cin >> idCajero;
+            flagCajero=true;
+        }
+        else
+        {
+            cout << "El ID del Cajero ingresado no existe:" << endl;
+            cout << "Vuelva a ingresar el del cajero:" << endl;
+            cin >> idCajero;
+        }
+        existeCajero = validarCajeroID(idCajero);
+        estadoCajero = validarCajeroEstado(idCajero);
+    }
+    if ((existeCajero==true) && (estadoCajero==true))
+    {
+        return idCajero;
+    }
+}
+
+void listarSucuNumeroAlCliente(int numSucMostar)
+{
+    Sucursal suc;
+    int pos=0;
+    while(suc.leerDeDisco(pos++))
+    {
+        if(numSucMostar == suc.getNumeroSucursal())
+        {
+            suc.MostarAlCliente();
+            return;
+        }
+    }
+    cout << "La sucursal que desea mostrar no esta registrada" << endl;
+}
+
+void mostarCajeroSucursalAlCliente(int numSucuMostrar)
+{
+    Cajero objcajero;
+    int pos=0;
+    cout << "Numero sucursal: " << numSucuMostrar << endl;
+    while(objcajero.leerDeDisco(pos++))
+    {
+        if(numSucuMostrar == objcajero.getNumSucursal())
+        {
+            objcajero.MostarAlCliente();
+            cout << endl;
+        }
+    }
+}

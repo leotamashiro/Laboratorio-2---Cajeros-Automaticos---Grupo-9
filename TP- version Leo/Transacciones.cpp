@@ -1,7 +1,7 @@
 #include "Transacciones.h"
 
 ///gets
-double Transacciones::getNumTransaccion()
+int Transacciones::getNumTransaccion()
 {
     return numTransaccion;
 }
@@ -25,8 +25,13 @@ int Transacciones::getMonto()
 {
     return monto;
 }
+
+bool Transacciones::getConfirmada()
+{
+    return confirmada;
+}
 ///sets
-void Transacciones::setNumTransaccion(double _numTransaccion)
+void Transacciones::setNumTransaccion(int _numTransaccion)
 {
     numTransaccion=_numTransaccion;
 }
@@ -34,6 +39,11 @@ void Transacciones::setNumTransaccion(double _numTransaccion)
 void Transacciones::setIdCajero(int _idCajero)
 {
     idCajero=_idCajero;
+}
+
+void Transacciones::setDniCliente(int _dniCliente)
+{
+    dniCliente=_dniCliente;
 }
 
 void Transacciones::setFechaTransaccion(Fecha _fechaTransaccion)
@@ -46,19 +56,9 @@ void Transacciones::setMonto(int _monto)
     monto=_monto;
 }
 
-
-bool Transacciones::editarEnDisco(int pos)
+void Transacciones::setConfirmada(bool _confirmada)
 {
-    bool guardo;
-    FILE *p;
-    p = fopen("transacciones.dat", "rb+");
-    if( p == NULL ){
-        return false;
-    }
-    fseek(p, sizeof(Transacciones)*pos, SEEK_SET);
-    guardo = fwrite(this, sizeof *this, 1, p);
-    fclose(p);
-    return guardo;
+    confirmada=_confirmada;
 }
 
 void Transacciones::grabarEnDisco()
@@ -84,3 +84,15 @@ bool Transacciones::leerDeDisco(int pos)
     fclose(p);
     return lectura;
 }
+
+int Transacciones::contarRegistros()
+{
+        FILE *p;
+        p=fopen("transacciones.dat", "rb");
+        if(p==NULL) return -1;
+        fseek(p, 0,2);
+        int tam=ftell(p);
+        fclose(p);
+        return tam/sizeof(Transacciones);
+}
+

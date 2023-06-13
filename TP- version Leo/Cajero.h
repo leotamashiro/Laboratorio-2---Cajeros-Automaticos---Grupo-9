@@ -41,6 +41,7 @@ class Cajero
         void Cargar();
         void CargarEditar();
         void Mostrar();
+        void MostarAlCliente();
 
         bool editarEnDisco(int);
         void grabarEnDisco();

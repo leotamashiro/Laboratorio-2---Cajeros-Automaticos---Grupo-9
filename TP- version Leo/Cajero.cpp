@@ -163,6 +163,12 @@ void Cajero::Mostrar()
     cout << "Estado Cajero: " << estadoCajero << endl;
 }
 
+void Cajero::MostarAlCliente()
+{
+    cout << "ID del Cajero: " << idCajero << "  ";
+    cout << "Serie: " << numSerie << endl;
+}
+
 bool Cajero::editarEnDisco(int pos)
 {
     bool guardo;

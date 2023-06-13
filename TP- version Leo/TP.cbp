@@ -36,10 +36,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="ArchivoCliente.cpp" />
+		<Unit filename="ArchivoCliente.h" />
 		<Unit filename="AuxuliarCajero.cpp" />
 		<Unit filename="AuxuliarCajero.h" />
 		<Unit filename="Cajero.cpp" />
 		<Unit filename="Cajero.h" />
+		<Unit filename="Cliente.cpp" />
+		<Unit filename="Cliente.h" />
+		<Unit filename="Cuenta.cpp" />
+		<Unit filename="Cuenta.h" />
 		<Unit filename="Direccion.cpp" />
 		<Unit filename="Direccion.h" />
 		<Unit filename="Fecha.cpp" />
@@ -59,7 +65,10 @@
 		<Unit filename="balanceo.cpp" />
 		<Unit filename="funciones.cpp" />
 		<Unit filename="funciones.h" />
+		<Unit filename="funcionesClientes.cpp" />
+		<Unit filename="funcionesClientes.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="menuEstraxiones.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
