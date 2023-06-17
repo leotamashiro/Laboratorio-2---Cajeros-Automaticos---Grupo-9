@@ -68,3 +68,34 @@ int ArchivoCliente::buscarClientePorId(int ID)
     }
     return -1;
 }
+
+int ArchivoCliente::buscarClientePorApellido(const char *_apellido)
+{
+    int i, cantidadRegistros = this->getCantidadRegistros();
+    Cliente aux;
+
+    for(i=0; i<cantidadRegistros; i++)
+    {
+        aux = this->leerCliente(i);
+        if (strcmp(aux.getApellido(), _apellido) == 0 && aux.getActivo())
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+bool ArchivoCliente::sobreescribirCliente(Cliente reg, int posicionAReemplazar)
+{
+  FILE *p = fopen(_nombre, "rb+");
+
+  if (p == NULL)
+  {
+    return false;
+  }
+
+  fseek(p, posicionAReemplazar * sizeof(Cliente), SEEK_SET);
+  bool pudoEscribir = fwrite(&reg, sizeof(Cliente), 1, p);
+  fclose(p);
+  return pudoEscribir;
+}

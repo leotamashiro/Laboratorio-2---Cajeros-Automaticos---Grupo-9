@@ -4,35 +4,34 @@
 
 class Cuenta
 {
-    private:
-        int _numeroCuenta;
-        float _saldo;
-        char _tipoCuenta[30];
-        //Tarjeta _tarjeta;
-        bool _activo;
-        int _dniCliente;
-    public:
-        Cuenta();
-        int getNumeroCuenta() {return _numeroCuenta;}
-        float getSaldo() {return _saldo;}
-        const char* getTipoCuenta() {return _tipoCuenta;}
-        //Tarjeta getTarjeta() {return _tarjeta;}
-        int getDniCliente() {return _dniCliente;}
-        bool getActivo() {return _activo;}
+private:
+    int numeroCuenta;
+    float saldo;
+//        char _tipoCuenta[30];
 
-//        void setNumeroCuenta();
-        void setSaldoAumentar(float cantidad);
-        int setSaldoDecrementar(float cantidad);
-        void setTipoCuenta(char* tipoCuenta);
-        void setActivo(bool flag);
+    bool activo;
+    int dniCliente;
+public:
+    Cuenta();
+    int getNumeroCuenta();
+    float getSaldo();
+//        const char* getTipoCuenta();
+    int getDniCliente();
+    bool getActivo();
 
-        void CargarCuenta(int dni);
-        void MostrarCuenta();
+    void setNumeroCuenta();
+    void setSaldoAumentar(float cantidad);
+    int setSaldoDecrementar(float cantidad);
+//        void setTipoCuenta(char* tipoCuenta);
+    void setActivo(bool flag);
 
-        bool editarEnDisco(int);
-        void grabarEnDisco();
-        bool leerDeDisco(int);
-        int contarRegistros();
+    void CargarCuenta(int dni);
+    void MostrarCuenta();
+
+    bool editarEnDisco(int);
+    void grabarEnDisco();
+    bool leerDeDisco(int);
+    int contarRegistros();
 
 
 };

@@ -13,6 +13,8 @@ class ArchivoCliente
       int buscarClientePorId(int ID);
       Cliente leerCliente(int nroRegistro);
       bool guardarCliente(Cliente reg);
+      int buscarClientePorApellido(const char *_apellido);
+      bool sobreescribirCliente(Cliente reg, int posicionAReemplazar);
 //      int getCantidadRegistros();
 //      bool guardar(Multa reg);
 //      bool guardar(Multa reg, int posicionAReemplazar);

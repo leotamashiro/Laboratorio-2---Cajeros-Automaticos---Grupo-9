@@ -1,9 +1,10 @@
 #include <iostream>
 #include <string>
 #include <cstring>
-#include "Direccion.h"
-using namespace std;
 
+using namespace std;
+#include "Direccion.h"
+#include "funcionesClientes.h"
 void menuClientes ()
 {
 
@@ -29,22 +30,22 @@ void menuClientes ()
         switch(opcion)
         {
         case 1:
-
+            persistirCliente();
             break;
         case 2:
 
             break;
         case 3:
-
+            eliminadoLogico();
             break;
         case 4:
-
+            buscarClientePorDni();
             break;
         case 5:
-
+            buscarClienteporApellido();
             break;
         case 6:
-
+            buscarClientes();
             break;
         default:
             cout << "Debe ingresar una opcion correcta" << endl;

@@ -27,9 +27,14 @@ class UsuarioLogin
         void setPassword(char *_password);
         void setEstado(bool _estado);
 
+        void mostrarLogin();
+        bool cargarLogin(int _dni);
+
         bool editarEnDisco(int);
         void grabarEnDisco();
         bool leerDeDisco(int);
+        int buscarClientePorUser(const char* user);
+        int getCantidadRegistros();
 
 };
 

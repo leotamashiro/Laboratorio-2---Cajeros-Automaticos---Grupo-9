@@ -96,19 +96,18 @@ void Direccion::Cargar()
     cin.ignore(0, '\n');
     cin.getline(provincia,100);
 
-    /*cout << "Ingrese la pais: ";
+    cout << "Ingrese el pais: ";
     cin.ignore(0, '\n');
-    cin.getline(pais,100);*/
-
+    cin.getline(pais,100);
 }
 
 void Direccion::Mostrar()
 {
-    cout << "calle " << calle;
-    cout << " " << numero;
-    cout << ". ";
-    cout << codPostal << " CP." << "\n";
-    cout << localidad <<", ";
-    cout <<provincia;
-    //cout << pais;
+    cout<<"DATOS DIRECCION: "<<endl;
+    cout << "CALLE "<<calle<<endl;
+    cout << "NUMERO " <<numero<<"."<<endl;
+    cout <<"CODIGO POSTAL: "<< codPostal << " CP." << endl;
+    cout <<"LOCALIDAD: "<< localidad <<endl;
+    cout <<"PROVINCIA: "<<provincia<<endl;
+    cout <<"PAIS: "<<pais<<endl;
 }
