@@ -30,7 +30,7 @@ void AuxuliarCajero::MostrarBilletes()
     cantDinero = capacidad*BILLETE;
     cout << "ID del Cajero: " << idCajero << endl;
     cout << "Cuenta con: " << capacidad << " cantidad de billetes" << endl;
-    cout << "Es decir con: " << cantDinero << " de pesos" << endl;
+    cout << "Es decir con: " << cantDinero << " pesos" << endl;
 }
 
 bool AuxuliarCajero::editarEnDisco(int pos)

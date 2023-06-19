@@ -9,7 +9,6 @@ void balanceoMenu()
 {
     int opcion;
     int idCajero, numSucural;
-    bool primerIngreso;
     bool sePuedeCargarCajero;
     bool montoPosible;
     int montoACargar;
@@ -44,41 +43,45 @@ void balanceoMenu()
                 mostarCargaCajero(idCajero);
                 ustedesPuedeCargar(idCajero);
                 sePuedeCargarCajero=false;
-                primerIngreso=true;
-                montoPosible=false;
-                do
+                existeArchivoAuxCajero=archivoAuxCajeroExiste();
+                if (existeArchivoAuxCajero==false)
                 {
-                    if ((primerIngreso==true)&&(montoPosible==false))
+                    do
                     {
+                        montoPosible=false;
                         cout << "Por favor ingrese la cantidad de pesos que desea cargar en el cajero: ";
                         cin >> montoACargar;
-                        primerIngreso=false;
-                        if ((montoACargar%BILLETE==0) && (montoACargar>=BILLETE))
+                        if ((montoACargar >= BILLETE) && (montoACargar % BILLETE == 0))
                         {
                             montoPosible=true;
                         }
-                    }
-                    else
-                    {
-                        cout << "Ingrese un numero multiplo de: " << BILLETE ;
-                        cin >> montoACargar;
-                        if ((montoACargar%BILLETE==0) && (montoACargar>=BILLETE))
+                        else
                         {
-                            montoPosible=true;
+                            montoPosible=false;
+                            cout << "Ingrese un numero multiplo de: " << BILLETE << endl;
                         }
-                    }
-                    existeArchivoAuxCajero=archivoAuxCajeroExiste();
-                    if (existeArchivoAuxCajero==false)
-                    {
-                        seGeneraArchivoAuxCajero(idCajero, (montoACargar/BILLETE));
-                    }
-                    else
-                    {
-                        sePuedeCargarCajero = esPosibleCargarCajero(idCajero, montoACargar);
-                    }
-                }while ((montoPosible==true) && (sePuedeCargarCajero==true));
-                if (sePuedeCargarCajero==true)
+
+                    }while (montoPosible==false);
+                    seGeneraArchivoAuxCajero(idCajero, (montoACargar/BILLETE));
+                }
+                else
                 {
+                    do
+                    {
+                        montoPosible=false;
+                        cout << "Por favor ingrese la cantidad de pesos que desea cargar en el cajero: ";
+                        cin >> montoACargar;
+                        if ((montoACargar >= BILLETE) && (montoACargar % BILLETE == 0))
+                        {
+                            montoPosible=true;
+                        }
+                        else
+                        {
+                            montoPosible=false;
+                            cout << "Ingrese un numero multiplo de: " << BILLETE << endl;
+                        }
+                        sePuedeCargarCajero = esPosibleCargarCajero(idCajero, montoACargar);
+                    }while ((montoPosible==false)&&(sePuedeCargarCajero==false));
                     editarCargaCajero(idCajero, (montoACargar/BILLETE)); //edito el .dat de auxCajero
                 }
             }

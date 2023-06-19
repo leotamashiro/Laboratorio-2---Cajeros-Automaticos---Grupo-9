@@ -162,7 +162,7 @@
 1686958967 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\cajero.cpp
 	"Cajero.h"
 
-1686524542 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\cajero.h
+1687192409 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\cajero.h
 	<iostream>
 	"Fecha.h"
 	"Sucursal.h"
@@ -183,7 +183,7 @@
 	"funciones.h"
 	"Cajero.h"
 
-1686954846 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\auxuliarcajero.cpp
+1687202821 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\auxuliarcajero.cpp
 	"AuxuliarCajero.h"
 
 1686616806 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\transacciones.cpp
@@ -258,7 +258,7 @@
 	"Cliente.h"
 	<time.h>
 
-1687191832 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menubalanceo.cpp
+1687202530 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menubalanceo.cpp
 	<iostream>
 	<string>
 	"MenuAdmin.h"

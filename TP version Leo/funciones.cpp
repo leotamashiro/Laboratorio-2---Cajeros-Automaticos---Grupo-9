@@ -422,9 +422,9 @@ void ustedesPuedeCargar(int idCajero)
             {
                 if(idCajero == auxCajero.getIdCajero())
                 {
-                    cargaMaxPosible=objCajero.getCapcidadMaxima() - auxCajero.getCapacidad();
-                    cout << "Usted Puede cargar hasta: " << cargaMaxPosible << "billetes." << endl;
-                    cout << "El equibalente a: " << cargaMaxPosible * BILLETE << "pesos." << endl;
+                    cargaMaxPosible=objCajero.CAP_MAX - auxCajero.getCapacidad();
+                    cout << "Usted Puede cargar hasta: " << cargaMaxPosible << " billetes." << endl;
+                    cout << "El equivalente a: " << cargaMaxPosible * BILLETE << " pesos." << endl;
                     return;
                 }
             }

@@ -12,7 +12,6 @@ using namespace std;
 class Cajero
 {
     private:
-        const int CAP_MAX = 40000;
         int idCajero;
         Fecha fechaInstalacion;
         int numSerie;
@@ -22,6 +21,7 @@ class Cajero
         //Sucursal sucu;
 
     public:
+        const int CAP_MAX = 40000;
         ///gets
         int getIdCajero();
         int getNumeroSerie();
