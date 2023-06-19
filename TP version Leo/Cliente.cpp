@@ -77,11 +77,11 @@ void Cliente::CargarCliente()
     Cuenta cuenta;
     UsuarioLogin userLogin;
     int _dni, _nroTelefonico;
-    bool existeDni, guardoLogin;
+    bool existeDni;
     Fecha fecha;
     fecha.actualFecha();
     cout << "INGRESE DNI: " <<endl;
-    cin>>_dni;
+    _dni = validarNumerosIngresados();
     existeDni = validarDni(_dni);
     if(existeDni)
     {
@@ -97,8 +97,7 @@ void Cliente::CargarCliente()
     cargarCadena(email, 29);
 
     cout << "INGRESE NUMERO TELEFONICO: " <<endl;
-    cin>>_nroTelefonico;
-    nroTelefono = _nroTelefonico;
+    nroTelefono = validarNumerosIngresados();
     fechaCreacion = fecha;
     cuenta.CargarCuenta(dni);
     userLogin.cargarLogin(dni);

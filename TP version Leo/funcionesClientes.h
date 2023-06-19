@@ -14,6 +14,7 @@ bool eliminadoLogico();
 void buscarClientes();
 int posCliente(int dni);
 bool buscarClienteporApellido();
+int validarNumerosIngresados();
 
 
 

@@ -41,18 +41,22 @@ int generarNumeros(int desde, int hasta)
     int totalCuenta = cuenta.contarRegistros();
     int contador;
 
-    do{
+    do
+    {
         srand(time(NULL));
         num=desde+rand()%(hasta-desde);
         contador = 0;
-        for(int i = 0; i < totalCuenta; i++) {
+        for(int i = 0; i < totalCuenta; i++)
+        {
             cuenta.leerDeDisco(i);
-            if(cuenta.getNumeroCuenta() == num) {
+            if(cuenta.getNumeroCuenta() == num)
+            {
                 contador++;
             }
         }
 
-    } while(contador!=0);
+    }
+    while(contador!=0);
 
     return num;
 }
@@ -234,4 +238,30 @@ bool buscarClienteporApellido()
 //        cout<<"NO SE ENCONTRO NINGUN CLIENTE CON EL APELLIDO: "<<apellido<<endl;
 //        return false;
 //    }
+}
+
+int validarCin() {
+    int num;
+    cin>>num;
+    if(cin.fail()) {
+        cout<<"Por favor ingrese un numero entero"<<endl;
+        cin.clear();
+        cin.ignore(10000, '\n');
+        return -1;
+    }
+    return num;
+}
+
+int validarNumerosIngresados()
+{
+    int num;
+    bool flag = false;
+    cout<<"Ingrese un numero entero"<<endl;
+    while(!flag) {
+        num = validarCin();
+        if(num != -1) {
+            flag = true;
+        }
+    }
+    return num;
 }

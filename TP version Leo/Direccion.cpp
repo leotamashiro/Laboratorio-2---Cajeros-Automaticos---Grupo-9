@@ -3,6 +3,7 @@
 #include <cstring>
 #include <climits>
 #include "Direccion.h"
+#include "funcionesClientes.h"
 
 using namespace std;
 
@@ -15,7 +16,7 @@ using namespace std;
 
 char *Direccion::getCalle()
 {
-   return calle;
+    return calle;
 }
 
 int Direccion::getNumero()
@@ -30,17 +31,17 @@ int Direccion::getCodPostal()
 
 char *Direccion::getLocalidad()
 {
-   return localidad;
+    return localidad;
 }
 
 char *Direccion::getProvincia()
 {
-   return provincia;
+    return provincia;
 }
 
 char *Direccion::getPais()
 {
-   return pais;
+    return pais;
 }
 
 ///set
@@ -50,13 +51,14 @@ void Direccion::setCalle(char *_calle)
     strcpy(calle, _calle);
 }
 
-void Direccion::setNumero(int _numero){
-   numero = _numero;
+void Direccion::setNumero(int _numero)
+{
+    numero = _numero;
 }
 
 void Direccion::setCodPostal(int _codPostal)
 {
-   codPostal = _codPostal;
+    codPostal = _codPostal;
 }
 
 void Direccion::setLocalidad(char *_localidad)
@@ -76,21 +78,19 @@ void Direccion::setPais(char *_pais)
 
 void Direccion::Cargar()
 {
-
     cout << "Ingrese la calle: ";
     cin.ignore(0, '\n');
     cin.getline(calle,100);
 
-    cout << "Ingrese numero: ";
-    cin >> numero;
+    cout << "Ingrese numero de calle: "<<endl;
+    numero = validarNumerosIngresados();
 
-    cout << "Ingrese Cod Postal: ";
-    cin >> codPostal;
+    cout << "Ingrese Cod Postal: "<<endl;
+    codPostal = validarNumerosIngresados();
 
     cin.ignore();
     cout << "Ingrese la localidad: ";
     cin.getline(localidad,100);
-
 
     cout << "Ingrese la provincia: ";
     cin.ignore(0, '\n');
