@@ -1,5 +1,4 @@
 ///Ver si se agrega la camtidad de saldo que tiene en la cuenta
-
 #include <iostream>
 #include "MenuAdmin.h"
 #include "AuxuliarCajero.h"
@@ -21,7 +20,6 @@ void menuExtraxion(int dni, int idCajero)
     bool dineroCliente;
     bool dineroCajero;
     int monto;
-    float saldoCuenta;
     primerIngreso=true;
     do
     {
@@ -37,7 +35,7 @@ void menuExtraxion(int dni, int idCajero)
             cin >> monto;
         }
 
-    }while ((monto%100==0) && (monto>=100));
+    }while ((monto%BILLETE==0) && (monto>=BILLETE));
 
     dineroCliente = verificarSaldoDisplonible(dni, monto); // false Saldo insuficiente // true tiene dinero disponible para extarer
     dineroCajero = verificarDineroEnCajero(idCajero, monto);// false Cajero no tiene suficiente efectivo

@@ -63,7 +63,6 @@
 		<Unit filename="Transacciones.h" />
 		<Unit filename="UsuarioLogin.cpp" />
 		<Unit filename="UsuarioLogin.h" />
-		<Unit filename="balanceo.cpp" />
 		<Unit filename="funciones.cpp" />
 		<Unit filename="funciones.h" />
 		<Unit filename="funcionesClientes.cpp" />

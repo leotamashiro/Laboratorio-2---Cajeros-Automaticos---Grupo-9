@@ -32,15 +32,17 @@ void menuCajeros()
         cout << "----------------------------------" << endl;
         cout << endl;
         cin >> opcion;
+        system("cls");
 
         switch(opcion)
         {
         case 1:
-            {
-                Cajero objcajero;
-                objcajero.Cargar();
-                objcajero.grabarEnDisco();
-            }
+        {
+            Cajero objcajero;
+            objcajero.Cargar();
+            objcajero.grabarEnDisco();
+            system("cls");
+        }
             break;
 
         case 2:
@@ -74,6 +76,8 @@ void menuCajeros()
                 cout << "El cajero esta Inactivo, por favor dar de Alta para Editarlo:" << endl;
             }
         }
+        system("pause");
+        system("cls");
         break;
 
         case 3:
@@ -107,6 +111,8 @@ void menuCajeros()
                 cout << "El Cajero ya fue borrado:" << endl;
             }
         }
+        system("pause");
+        system("cls");
         break;
 
         case 4:
@@ -141,13 +147,17 @@ void menuCajeros()
                 cout << "El Cajero ya esta Activado:" << endl;
             }
         }
-
+        system("pause");
+        system("cls");
         break;
+
         ///Listar por ID
         case 5:
             cout << "Ingrese el ID del Cajero a Mostar:" << endl;
             cin >> idCajeroMostar;
             mostrarCajeroID(idCajeroMostar);
+            system("pause");
+            system("cls");
             break;
 
         ///Listar Cajero por Sucursal
@@ -155,14 +165,20 @@ void menuCajeros()
             cout << "Ingrese el Numero de Sucursal de la que desee mostrar todos los Cajeros:" << endl;
             cin >> numSucuMostrar;
             mostarCajeroSucursal(numSucuMostrar);
+            system("pause");
+            system("cls");
             break;
 
         case 7:
             mostarCajerosInactivos();
+            system("pause");
+            system("cls");
             break;
 
         case 8:
             mostarCajeros();
+            system("pause");
+            system("cls");
             break;
 
         default:

@@ -327,17 +327,41 @@ void mostarCajeroSucursal(int numSucuMostrar)
 }
 
 ///***********Balanceo***********///
+bool archivoAuxCajeroExiste()
+{
+    AuxuliarCajero auxCajero;
+    int pos=0;
+    return auxCajero.leerDeDisco(pos);
+}
+
+void seGeneraArchivoAuxCajero(int idCajero, int cargaCajero)
+{
+    AuxuliarCajero auxCajero;
+    Cajero objCajero;
+    if (cargaCajero<= objCajero.getCapcidadMaxima())
+    {
+        auxCajero.setIdCajero(idCajero);
+        auxCajero.setCapacidad(cargaCajero);
+        auxCajero.grabarEnDisco();
+    }
+    else
+    {
+        cout << "Supera el limite de carga" << endl;
+    }
+}
+
 void editarCargaCajero(int idCajero, int cargaCajero)
 {
     AuxuliarCajero auxCajero;
-    int pos=0, posEdit;
+    int pos=0, posEdit, cantBilletesActual;
     while(auxCajero.leerDeDisco(pos++))
     {
         if(idCajero == auxCajero.getIdCajero())
         {
-            auxCajero.setCapacidad(cargaCajero);
+            cantBilletesActual=auxCajero.getCapacidad();
+            auxCajero.setCapacidad(cargaCajero + cantBilletesActual);
             posEdit=pos-1;
-            auxCajero.editarEnDisco(pos);
+            auxCajero.editarEnDisco(posEdit);
         }
     }
 }
@@ -354,11 +378,12 @@ void mostarCargaCajero(int id)
     }
 }
 
-bool esPosibleCargarCajero(int idCajero, int montoACargar)
+bool esPosibleCargarCajero(int idCajero, double montoACargar)
 {
     AuxuliarCajero auxCajero;
     Cajero objCajero;
-    int dineroEnCajero;
+    int cantBilletesCajero, cantBilletesACagar;
+    cantBilletesACagar = (montoACargar/BILLETE);
     int pos=0, posCajeroGenera=0;
     while (objCajero.leerDeDisco(posCajeroGenera++))
     {
@@ -368,8 +393,8 @@ bool esPosibleCargarCajero(int idCajero, int montoACargar)
             {
                 if(idCajero == auxCajero.getIdCajero())
                 {
-                    dineroEnCajero=auxCajero.getCapacidad();
-                    if (objCajero.getCapcidadMaxima()>=dineroEnCajero)
+                    cantBilletesCajero=auxCajero.getCapacidad();
+                    if ((objCajero.getCapcidadMaxima()) >= (cantBilletesCajero + cantBilletesACagar))
                     {
                         return true;
                     }
@@ -398,7 +423,8 @@ void ustedesPuedeCargar(int idCajero)
                 if(idCajero == auxCajero.getIdCajero())
                 {
                     cargaMaxPosible=objCajero.getCapcidadMaxima() - auxCajero.getCapacidad();
-                    cout << "Usted Puede cargar hasta: " << cargaMaxPosible << "cantidad de plata." << endl;
+                    cout << "Usted Puede cargar hasta: " << cargaMaxPosible << "billetes." << endl;
+                    cout << "El equibalente a: " << cargaMaxPosible * BILLETE << "pesos." << endl;
                     return;
                 }
             }
@@ -514,7 +540,7 @@ bool verificarDineroEnCajero(int idCajero, int monto)
     {
         if (idCajero==cajero.getIdCajero())
         {
-            if (cajero.getCapacidad()>=monto)
+            if ((cajero.getCapacidad()*BILLETE)>=monto)
             {
                 return true;
             }
@@ -545,16 +571,17 @@ void restarSaldoCuentaCliente(int dni, int montoRetirado)
 void restarDineroCajero(int idCajero, int montoExtraido)
 {
     AuxuliarCajero cajero;
-    int montoActual;
+    int capacidadActual, cantBilletesExtraida=0;
     int pos=0, posEdit;
     while (cajero.leerDeDisco(pos++))
     {
         if (idCajero==cajero.getIdCajero())
         {
             posEdit=pos-1;
-            montoActual=cajero.getCapacidad();
-            montoActual-=montoExtraido;
-            cajero.setCapacidad(montoActual);
+            capacidadActual=cajero.getCapacidad();
+            cantBilletesExtraida= (montoExtraido/BILLETE);
+            capacidadActual = capacidadActual - cantBilletesExtraida;
+            cajero.setCapacidad(capacidadActual);
             cajero.editarEnDisco(posEdit);
         }
     }
@@ -609,7 +636,7 @@ int pedirleAlClienteCajero(int numSucursal)
     {
         if (flagCajero==false)
         {
-            cout << "Por favor ingrese el numero del Cajero del que desea hacer la extraccion:" << endl;
+            cout << "Por favor ingrese el numero del Cajero:" << endl;
             cin >> idCajero;
             flagCajero=true;
         }

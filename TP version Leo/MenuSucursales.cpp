@@ -34,6 +34,7 @@ void menuSucursales()
         cout << "---------------------------------" << endl;
         cout << endl;
         cin >> opcion;
+        system("cls");
 
         switch(opcion)
         {
@@ -41,6 +42,7 @@ void menuSucursales()
                 Sucursal sucu;
                 sucu.Cargar();
                 sucu.grabarEnDisco();
+                system("cls");
                 break;
 
             case 2:
@@ -75,6 +77,8 @@ void menuSucursales()
                         cout << "Sucursal no puede ser Editada, esta dada de Baja:" << endl;
                     }
                 }
+                system("pause");
+                system("cls");
                 break;
 
             case 3:
@@ -110,8 +114,9 @@ void menuSucursales()
                         cout << "Sucursal esta dada de Baja:" << endl;
                     }
                 }
+                system("pause");
+                system("cls");
                 break;
-
 
             case 4:
                 {
@@ -145,28 +150,38 @@ void menuSucursales()
                         cout << "La Sucursal esta Activa:" << endl;
                     }
                 }
+                system("pause");
+                system("cls");
                 break;
 
             case 5:
                 cout << "El numero de sucursal que de desea mostar:" << endl;
                 cin >> numSucMostar;
                 listarSucuNumero(numSucMostar);
+                system("pause");
+                system("cls");
                 break;
 
             case 6:
                 mostarSucursalesActivas();
+                system("pause");
+                system("cls");
                 break;
 
             case 7:
                 mostarSucursalesInactivas();
+                system("pause");
+                system("cls");
                 break;
 
             case 8:
                 mostarSucursales();
+                system("pause");
+                system("cls");
                 break;
 
             default:
-                cout << "Debe ingresar una opcion correcta" << endl;
+                //cout << "Debe ingresar una opcion correcta" << endl;
                 break;
     }
 

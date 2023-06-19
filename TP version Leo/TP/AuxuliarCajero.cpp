@@ -26,8 +26,11 @@ void AuxuliarCajero::setCapacidad(int _capacidad)
 
 void AuxuliarCajero::MostrarBilletes()
 {
+    int cantDinero; // es la cantidad de plata que tiene el cajero (capacidad x denominacion de billete, en este caso de 100)
+    cantDinero = capacidad*BILLETE;
     cout << "ID del Cajero: " << idCajero << endl;
     cout << "Cuenta con: " << capacidad << " cantidad de billetes" << endl;
+    cout << "Es decir con: " << cantDinero << " de pesos" << endl;
 }
 
 bool AuxuliarCajero::editarEnDisco(int pos)

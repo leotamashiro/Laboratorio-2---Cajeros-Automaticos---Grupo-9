@@ -1,6 +1,8 @@
 #ifndef FUNCIONES_H_INCLUDED
 #define FUNCIONES_H_INCLUDED
 
+const int BILLETE = 1000; //Es el monto minimo para extraer de los cajeros.
+
 void menuSucursales();
 void menuCajeros();
 
@@ -29,9 +31,11 @@ void mostrarCajeroID(int);
 void mostarCajeroSucursal(int);
 
 ///Funciones para el Balanceo
+bool archivoAuxCajeroExiste();
+void seGeneraArchivoAuxCajero(int, int);
 void editarCargaCajero(int, int);
 void mostarCargaCajero(int);
-bool esPosibleCargarCajero(int, int);
+bool esPosibleCargarCajero(int, double);
 void ustedesPuedeCargar(int);
 
 ///Transacciones

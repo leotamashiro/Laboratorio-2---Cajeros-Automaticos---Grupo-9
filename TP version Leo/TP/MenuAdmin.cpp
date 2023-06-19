@@ -29,10 +29,12 @@ void menuAdmin()
         cout << "--------------------------" << endl;
         cout << endl;
         cin >> opcion;
+        system("cls");
 
         switch(opcion)
         {
         case 1:
+
             menuSucursales();
             break;
         case 2:

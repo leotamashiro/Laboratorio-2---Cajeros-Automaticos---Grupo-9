@@ -145,8 +145,8 @@ void Cajero::CargarEditar()
 
     cout << "Ingrese la fecha de Instalacion: ";
     fechaInstalacion.Cargar();
-
-    cout << "Ingrese el Estado delCajero: ";
+    cout << endl;
+    cout << "Ingrese el Estado del Cajero: ";
     cin >> estadoCajero;
 
 

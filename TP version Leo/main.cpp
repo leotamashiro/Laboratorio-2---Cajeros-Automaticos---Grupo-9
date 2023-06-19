@@ -4,13 +4,11 @@
 #include "MenuAdmin.h"
 #include "funciones.h"
 
-
-
 using namespace std;
 
 int main()
 {
 
-    menuUsuario();
+    menuAdmin();
     return 0;
 }
