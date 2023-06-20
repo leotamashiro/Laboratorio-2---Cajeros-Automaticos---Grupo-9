@@ -111,7 +111,7 @@ void Cliente::MostrarCliente()
 {
     Cuenta cuenta;
     UsuarioLogin userLogin;
-    cout<<"-----------------"<<endl;
+    cout << "---------------------------------" << endl;
     cout<<"DATOS CLIENTE:"<<endl;
     cout<<"NOMBRE: "<<nombre<<endl;
     cout<<"APELLIDO: "<<apellido<<endl;

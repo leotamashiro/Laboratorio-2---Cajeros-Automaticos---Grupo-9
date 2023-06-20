@@ -9,6 +9,8 @@ using namespace std;
 int main()
 {
 
-    menuAdmin();
+//    menuAdmin();
+    menuUsuario();
+//    menuClientes();
     return 0;
 }
