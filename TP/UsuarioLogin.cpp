@@ -69,7 +69,7 @@ bool UsuarioLogin::cargarLogin(int _dni)
     }
 
 
-    cout<<"INGRESE PASSWORD: "<<endl;
+    cout<<"INGRESE PASSWORD (MAXIMO 6 DIGITOS): "<<endl;
     cargarCadena(password, 6);
 
     dni = _dni;
@@ -146,6 +146,22 @@ int UsuarioLogin::buscarClientePorUser(const char* user)
     return -1;
 }
 
+int UsuarioLogin::buscarClientePorDni(int _dni)
+{
+    int i;
+    int cantidadRegistros = this->getCantidadRegistros();
+
+
+    for(i=0; i<cantidadRegistros; i++)
+    {
+        this->leerDeDisco(i);
+        if(this->getDNI() == _dni) {
+            return i;
+        }
+    }
+    return -1;
+}
+
 int UsuarioLogin::getCantidadRegistros()
 {
     FILE *p = fopen("usuarioLogin.dat", "rb");
@@ -160,4 +176,19 @@ int UsuarioLogin::getCantidadRegistros()
     fclose(p);
 
     return bytes / sizeof(*this);
+}
+
+bool UsuarioLogin::validarLogin(int _dni, const char* _password, int pos) {
+
+    this->leerDeDisco(pos);
+    if(_dni != dni) {
+        cout<<"EL DNI INGRESADO NO COINCIDE CON EL DNI DEL USER"<<endl;
+        return false;
+    }
+
+    if(strcmp(password, _password)) {
+        cout<<"LA PASSWORD NO ES CORRECTA: "<<endl;
+        return false;
+    }
+    return true;
 }

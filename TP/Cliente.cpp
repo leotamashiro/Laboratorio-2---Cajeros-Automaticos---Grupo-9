@@ -72,6 +72,12 @@ void Cliente::setNumeroTelefono(int _nroTelefono)
     nroTelefono = _nroTelefono;
 }
 
+void Cliente::setDireccion() {
+    cin.clear();
+    cin.ignore(10000, '\n');
+    direccion.Cargar();
+}
+
 void Cliente::CargarCliente()
 {
     Cuenta cuenta;
@@ -111,7 +117,7 @@ void Cliente::MostrarCliente()
 {
     Cuenta cuenta;
     UsuarioLogin userLogin;
-    cout<<"-----------------"<<endl;
+    cout << "---------------------------------" << endl;
     cout<<"DATOS CLIENTE:"<<endl;
     cout<<"NOMBRE: "<<nombre<<endl;
     cout<<"APELLIDO: "<<apellido<<endl;

@@ -19,23 +19,24 @@ void menuExtraxion(int dni, int idCajero)
     bool primerIngreso;
     bool dineroCliente;
     bool dineroCajero;
+    bool montoPosible;
     int monto;
     primerIngreso=true;
     do
     {
-        if (primerIngreso==true)
+        montoPosible=false;
+        cout << "Por favor ingrese el monto que desea retirar del cajero: ";
+        cin >> monto;
+        if ((monto >= BILLETE) && (monto % BILLETE == 0))
         {
-            cout << "Por fsvor ingrese la cantidad de dinero que desea retirar: ";
-            cin >> monto;
-            primerIngreso=false;
+            montoPosible=true;
         }
         else
         {
-            cout << "Ingrese un numero multiplo de 100: ";
-            cin >> monto;
+            montoPosible=false;
+            cout << "Ingrese un numero multiplo de: " << BILLETE << endl;
         }
-
-    }while ((monto%BILLETE==0) && (monto>=BILLETE));
+    }while (montoPosible==false);
 
     dineroCliente = verificarSaldoDisplonible(dni, monto); // false Saldo insuficiente // true tiene dinero disponible para extarer
     dineroCajero = verificarDineroEnCajero(idCajero, monto);// false Cajero no tiene suficiente efectivo

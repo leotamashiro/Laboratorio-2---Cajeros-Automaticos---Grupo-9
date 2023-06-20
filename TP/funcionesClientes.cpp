@@ -198,52 +198,12 @@ bool eliminadoLogico()
     return arcCli.sobreescribirCliente(cliente, pos);
 }
 
-bool buscarClienteporApellido()
+int validarCin()
 {
-//    ArchivoCliente arcCli("clientes.dat");
-//    Cliente cliente;
-//    int totalClientes = arcCli.getCantidadRegistros();
-//    char apellido[30];
-//    int pos;
-//    bool flag;
-//
-//    cout << "INGRESE EL APELLIDO DEL CLIENTE A BUSCAR: " <<endl;
-//    cargarCadena(apellido, 29);
-////    pos = arccli.buscarclienteporapellido(apellido);
-////    if (pos == -1)
-////    {
-////        cout<<"no se encontro ningun cliente con el apellido: "<<apellido<<endl;
-////        return false;
-////    }
-//    for(int i = 0; i < totalClientes; i++)
-//    {
-//        pos = arcCli.buscarClientePorApellido(apellido);
-//        if (pos == -1)
-//        {
-//            flag = false;
-//        }
-//        else
-//        {
-//            flag = true;
-//        }
-//        if(flag)
-//        {
-//            cliente = arcCli.leerCliente(pos);
-//            mostrarClientes(pos, cliente);
-//
-//        }
-//    }
-//    if(!flag)
-//    {
-//        cout<<"NO SE ENCONTRO NINGUN CLIENTE CON EL APELLIDO: "<<apellido<<endl;
-//        return false;
-//    }
-}
-
-int validarCin() {
     int num;
     cin>>num;
-    if(cin.fail()) {
+    if(cin.fail())
+    {
         cout<<"Por favor ingrese un numero entero"<<endl;
         cin.clear();
         cin.ignore(10000, '\n');
@@ -257,11 +217,278 @@ int validarNumerosIngresados()
     int num;
     bool flag = false;
     cout<<"Ingrese un numero entero"<<endl;
-    while(!flag) {
+    while(!flag)
+    {
         num = validarCin();
-        if(num != -1) {
+        if(num != -1)
+        {
             flag = true;
         }
     }
     return num;
 }
+
+void ingresarFondosCuenta(int dni) {
+    Cuenta cuenta;
+    int pos;
+    float fondos;
+    bool editoEnDisco;
+    pos = cuenta.buscarCuentaPorDni(dni);
+    cuenta.leerDeDisco(pos);
+    cout<<"INGRESE LA CANTIDAD DE FONDOS A INGRESAR A SU CUENTA: "<<cuenta.getNumeroCuenta()<<endl;
+    cin>>fondos;
+    cuenta.setSaldoAumentar(fondos);
+    editoEnDisco = cuenta.editarEnDisco(pos);
+    if(editoEnDisco) {
+        cout<<"SE AGREGO LA CANTIDAD DE FONDOS: "<<cuenta.getSaldo()<<" A SU CUENTA: "<<cuenta.getNumeroCuenta()<<endl;
+    } else {
+        cout<<"HA OCURRIDO UN ERROR, POR FAVOR INTENTE DE NUEVO"<<endl;
+    }
+}
+
+int posDniUsarioLogin() {
+    UsuarioLogin login;
+    int totalLogin = login.getCantidadRegistros();
+    int pos, dni;
+
+    cout<<"INGRESE DNI"<<endl;
+    dni = validarNumerosIngresados();
+
+    pos = login.buscarClientePorDni(dni);
+    if(pos < 0)
+    {
+        cout<<"NO SE ENCONTRO NINGUN CLIENTE CON DNI: "<<dni<<endl;
+        return -1;
+    } else {
+        return pos;
+    }
+}
+
+int loginUsuario(int dni)
+{
+    UsuarioLogin login;
+    int pos;
+    char password[7];
+    char user[30];
+    bool puedeIngresar;
+
+    cout<<"INGRESE USER: "<<endl;
+    cargarCadena(user, 29);
+    cout<<"INGRESE PASSWORD: "<<endl;
+    cargarCadena(password, 6);
+
+    pos = login.buscarClientePorUser(user);
+
+    if(pos == -1)
+    {
+        cout<<"NO SE ENCONTRO NINGUN CLIENTE CON EL USER: "<<user<<endl;
+        return 0;
+    }
+
+    puedeIngresar = login.validarLogin(dni, password, pos);
+    if(puedeIngresar)
+    {
+        cout<<"LOGIN OK"<<endl;
+        login.leerDeDisco(pos);
+        if(login.getPermiso() == 2) {
+            ingresarFondosCuenta(dni);
+        }
+        return login.getPermiso();
+    }
+    else
+    {
+        cout<<"NO PUEDE INGRESAR"<<endl;
+        return 0;
+    }
+}
+
+void editarDireccionCliente()
+{
+    Cliente cliente;
+    ArchivoCliente arcCli("clientes.dat");
+    int pos;
+    bool clienteEditado;
+
+    pos = posDniEncontrado();
+
+    cliente = arcCli.leerCliente(pos);
+    cliente.setDireccion();
+    clienteEditado = arcCli.sobreescribirCliente(cliente, pos);
+    if(clienteEditado)
+    {
+        cout<<"CLIENTE MODIFICADO CORRECTAMENTE"<<endl;
+    }
+    else
+    {
+        cout<<"NO SE LOGRO MODIFICAR EL CLIENTE"<<endl;
+    }
+}
+
+void editarUserCliente()
+{
+    UsuarioLogin login;
+    int pos;
+    bool clienteEditado;
+    char user[30];
+    char nuevoUser[30];
+
+    pos = posDniUsarioLogin();
+    if(pos == -1) return;
+
+    login.leerDeDisco(pos);
+    cout<<"INGRESE ANTIGUO USER"<<endl;
+    cargarCadena(user, 29);
+    if(strcmp(login.getUser(), user))
+    {
+        cout<<"EL USER INGRESADO NO COINCIDE CON ANTIGUO USER"<<endl;
+    }
+    else
+    {
+        cout<<"INGRESE EL NUEVO NOMBRE DE USER"<<endl;
+        cargarCadena(nuevoUser, 29);
+        login.setUser(nuevoUser);
+        clienteEditado = login.editarEnDisco(pos);
+
+        if(clienteEditado)
+        {
+            cout<<"CLIENTE MODIFICADO CORRECTAMENTE"<<endl;
+        }
+        else
+        {
+            cout<<"NO SE LOGRO MODIFICAR EL CLIENTE"<<endl;
+        }
+    }
+}
+
+void editarPasswordCliente() {
+    UsuarioLogin login;
+    int pos;
+    bool clienteEditado;
+    char pass[7];
+    char nuevoPass[7];
+
+    pos = posDniUsarioLogin();
+    if(pos == -1) return;
+
+    login.leerDeDisco(pos);
+    cout<<"INGRESE ANTIGUA PASSWORD"<<endl;
+    cargarCadena(pass, 6);
+    if(strcmp(login.getPassword(), pass))
+    {
+        cout<<"LA PASSWORD INGRESADA NO COINCIDE CON LA ANTIGUA PASSWORD"<<endl;
+    }
+    else
+    {
+        cout<<"INGRESE LA NUEVA PASSWORD (MAXIMO 6 DIGITOS)"<<endl;
+        cargarCadena(nuevoPass, 6);
+        login.setPassword(nuevoPass);
+        clienteEditado = login.editarEnDisco(pos);
+
+        if(clienteEditado)
+        {
+            cout<<"CLIENTE MODIFICADO CORRECTAMENTE"<<endl;
+        }
+        else
+        {
+            cout<<"NO SE LOGRO MODIFICAR EL CLIENTE"<<endl;
+        }
+    }
+
+}
+
+void editarDatosCliente() {
+    Cliente cliente;
+    ArchivoCliente arcCli("clientes.dat");
+    int pos, nroTelefono;
+    bool clienteEditado;
+    char nombre[30], apellido[30], email[30];
+
+    pos = posDniEncontrado();
+
+    cliente = arcCli.leerCliente(pos);
+    cout<<"INGRESE NOMBRE: "<<endl;
+    cargarCadena(nombre, 29);
+    cout<<"INGRESE APELLIDO: "<<endl;
+    cargarCadena(apellido, 29);
+    cout<<"INGRESE EMAIL: "<<endl;
+    cargarCadena(email, 29);
+    cout<<"INGRESE NUEVO NUMERO TELEFONICO"<<endl;
+    nroTelefono = validarNumerosIngresados();
+    cliente.setNombre(nombre);
+    cliente.setApellido(apellido);
+    cliente.setEmail(email);
+    cliente.setNumeroTelefono(nroTelefono);
+
+    clienteEditado = arcCli.sobreescribirCliente(cliente, pos);
+    if(clienteEditado)
+    {
+        cout<<"CLIENTE MODIFICADO CORRECTAMENTE"<<endl;
+    }
+    else
+    {
+        cout<<"NO SE LOGRO MODIFICAR EL CLIENTE"<<endl;
+    }
+}
+
+void editarPermisosCliente() {
+    UsuarioLogin login;
+    int pos, permiso;
+    bool clienteEditado;
+
+    pos = posDniUsarioLogin();
+    if(pos == -1) return;
+    login.leerDeDisco(pos);
+    cout<<"ELIJA EL PERMISO PARA EL CLIENTE. 1. ADMINSTRADOR - 2. CLIENTE"<<endl;
+    cin>>permiso;
+    if(permiso == 1 || permiso == 2) {
+        login.setPermiso(permiso);
+        login.editarEnDisco(pos);
+        cout<<"PERMISOS DE CLIENTE ACTUALIZADOS CORRECTAMENTE"<<endl;
+    } else {
+        cout<<"INGRESE UN PERMISO VALIDO"<<endl;
+    }
+}
+
+void menuEditarClientes()
+{
+    int opcion;
+    do
+    {
+        cout << "---------------------------------" << endl;
+        cout << "1. Editar Direccion" << endl;
+        cout << "2. Editar User" << endl;
+        cout << "3. Editar Password" << endl;
+        cout << "4. Editar Datos Personales" << endl;
+        cout << "5. Editar Permisos Clientes" << endl;
+        cout << endl;
+        cout << "0. Salir" << endl;
+        cout << "---------------------------------" << endl;
+        cout << endl;
+        cin >> opcion;
+
+        switch(opcion)
+        {
+        case 1:
+            editarDireccionCliente();
+            break;
+        case 2:
+            editarUserCliente();
+            break;
+        case 3:
+            editarPasswordCliente();
+            break;
+        case 4:
+            editarDatosCliente();
+            break;
+        case 5:
+            editarPermisosCliente();
+            break;
+        default:
+            cout << "Debe ingresar una opcion correcta" << endl;
+            break;
+        }
+
+    }
+    while(opcion != 0);
+}
+

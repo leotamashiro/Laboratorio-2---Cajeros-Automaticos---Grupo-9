@@ -29,12 +29,14 @@ class UsuarioLogin
 
         void mostrarLogin();
         bool cargarLogin(int _dni);
+        bool validarLogin(int _dni, const char* _password, int pos);
 
         bool editarEnDisco(int);
         void grabarEnDisco();
         bool leerDeDisco(int);
         int buscarClientePorUser(const char* user);
         int getCantidadRegistros();
+        int buscarClientePorDni(int _dni);
 
 };
 

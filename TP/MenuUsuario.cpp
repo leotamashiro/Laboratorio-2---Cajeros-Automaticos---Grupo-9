@@ -5,6 +5,7 @@
 #include <conio.h>
 #include "MenuAdmin.h"
 #include "funciones.h"
+#include "funcionesClientes.h"
 
 using namespace std;
 
@@ -18,11 +19,12 @@ void menuUsuario()
     int idCajero;
     char user[30]="";
     char password[7]="";
-    cout << "--------------------------------------" << endl;
-    cout << "--------------BIENVENIDO--------------" << endl;
-    cout << "--------------------------------------" << endl << endl;
+    int permisoCliente;
     do
     {
+        cout << "--------------------------------------" << endl;
+        cout << "--------------BIENVENIDO--------------" << endl;
+        cout << "--------------------------------------" << endl << endl;
         cout << "1. Logearse:" << endl;
         cout << "2. Registrarse:" << endl;
         cout << endl;
@@ -33,54 +35,40 @@ void menuUsuario()
 
         switch(opcion)
         {
+        case 1:
+        {
+            cout<<"INGRESE DNI: "<<endl;
+            dni = validarNumerosIngresados();
+            permisoCliente = loginUsuario(dni);
+            switch(permisoCliente)
+            {
             case 1:
-                {
-                    while (verificarUsuario==false)
-                    {
-                        cout << "Por favor ingrese su numero DNI: ";
-                        cin >> dni;
-                        cout << "Ingrese su nombre de usuario: ";
-                        cin.ignore();
-                        cin.getline(user, 30);
-                        cout << "Ingrese su contrasena (maximo 6 caracteres): ";
-                        cin.getline(password, 7);
-                        //leerLogin(dni, *user, *password);
-                        /**
-                        validar que los datos esten correctos  ->   idCajero
-                        */
-                        if (verificarLogin==1 || verificarLogin==2)
-                        {
-                            verificarUsuario=true;
-                        }
-                    }
-                    switch(verificarLogin)
-                    {
-                    case 1:
-                        menuAdmin();
-                        break;
+                menuAdmin();
+                break;
 
-                    case 2:
-                        cout << "A continuacion Listaremos todas las sucursales disponibles:"<< endl << endl;
-                        system ("pause");
-                        mostarSucursalesActivas();
-                        Sucusal = pedirleAlClienteNumSucursal();
-                        system("cls");
-                        idCajero = pedirleAlClienteCajero(Sucusal);
-                        system("cls");
-                        ///Ya empizo a estraer el dinero
-                        menuExtraxion(dni, idCajero);
-                    default:
-                        break;
-                    }
-                }
-                break;
             case 2:
-                ///Registrar Cliente:
-                break;
+                cout << "A continuacion Listaremos todas las sucursales disponibles:"<< endl << endl;
+                system ("pause");
+                mostarSucursalesActivas();
+                Sucusal = pedirleAlClienteNumSucursal();
+                system("cls");
+                idCajero = pedirleAlClienteCajero(Sucusal);
+                system("cls");
+                ///Ya empizo a estraer el dinero
+                menuExtraxion(dni, idCajero);
             default:
-                cout << "Por favor ingrese una opcion correcta: ";
                 break;
+            }
         }
-    }while(opcion!=0);
+        break;
+        case 2:
+            persistirCliente();
+            break;
+        default:
+            cout << "Por favor ingrese una opcion correcta: ";
+            break;
+        }
+    }
+    while(opcion!=0);
 
 }
