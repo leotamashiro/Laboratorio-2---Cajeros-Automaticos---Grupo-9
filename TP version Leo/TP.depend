@@ -264,3 +264,192 @@
 	"MenuAdmin.h"
 	"funciones.h"
 
+1687021744 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\archivocliente.cpp
+	<string>
+	<cstring>
+	"ArchivoCliente.h"
+
+1687021757 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\archivocliente.h
+	"Cliente.h"
+
+1686949427 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\cliente.h
+	"Cuenta.h"
+	"Fecha.h"
+	"Direccion.h"
+
+1686767542 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\cuenta.h
+
+1686760473 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\fecha.h
+	<string>
+	<cstring>
+
+1687194868 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\direccion.h
+	<iostream>
+	<string>
+	<cstring>
+
+1687199138 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\auxuliarcajero.cpp
+	"AuxuliarCajero.h"
+
+1686760473 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\auxuliarcajero.h
+	"funciones.h"
+	"Cajero.h"
+
+1687199138 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\funciones.h
+
+1686760473 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\cajero.h
+	<iostream>
+	"Fecha.h"
+	"Sucursal.h"
+	"funciones.h"
+
+1686760473 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\sucursal.h
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+
+1687199138 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\cajero.cpp
+	"Cajero.h"
+
+1687267906 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\cliente.cpp
+	<iostream>
+	<string>
+	<cstring>
+	<climits>
+	"Cliente.h"
+	"Fecha.h"
+	"UsuarioLogin.h"
+	"funcionesClientes.h"
+
+1687266739 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\usuariologin.h
+	<iostream>
+	<string>
+	<cstring>
+
+1687267351 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\funcionesclientes.h
+	"ArchivoCliente.h"
+	"Cliente.h"
+
+1687026703 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\cuenta.cpp
+	<cstdio>
+	"Cuenta.h"
+	"funcionesClientes.h"
+
+1687198369 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\direccion.cpp
+	<iostream>
+	<string>
+	<cstring>
+	<climits>
+	"Direccion.h"
+	"funcionesClientes.h"
+
+1686760473 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\fecha.cpp
+	<iostream>
+	<string>
+	<ctime>
+	"Fecha.h"
+
+1687199138 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\funciones.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+	"funciones.h"
+	"Sucursal.h"
+	"Cajero.h"
+	"AuxuliarCajero.h"
+	"Transacciones.h"
+	"UsuarioLogin.h"
+	<time.h>
+	"Cuenta.h"
+
+1686760473 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\transacciones.h
+	<iostream>
+	"Fecha.h"
+	"funciones.h"
+
+1687267077 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\main.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"MenuAdmin.h"
+	"funciones.h"
+
+1687199138 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\menuadmin.h
+
+1687267632 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\menuadmin.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"MenuAdmin.h"
+
+1687199138 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\menubalanceo.cpp
+	<iostream>
+	<string>
+	"MenuAdmin.h"
+	"funciones.h"
+
+1687199138 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\menucajeros.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Cajero.h"
+	"funciones.h"
+
+1687199138 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\menuestraxiones.cpp
+	<iostream>
+	"MenuAdmin.h"
+	"AuxuliarCajero.h"
+	"Transacciones.h"
+	"UsuarioLogin.h"
+	"Cliente.h"
+	<time.h>
+
+1687199138 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\menusucursales.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+	"Sucursal.h"
+	"funciones.h"
+
+1687268181 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\menuusuario.cpp
+	<iostream>
+	<string>
+	<cstring>
+	<cstdlib>
+	<conio.h>
+	"MenuAdmin.h"
+	"funciones.h"
+	"funcionesClientes.h"
+
+1686760473 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\sucursal.cpp
+	"Sucursal.h"
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+	"funciones.h"
+
+1686760473 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\transacciones.cpp
+	"Transacciones.h"
+
+1687267689 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\funcionesclientes.cpp
+	<cstdlib>
+	<time.h>
+	"funcionesClientes.h"
+	"UsuarioLogin.h"
+
+1687267383 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\menuclientes.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"Direccion.h"
+	"funcionesClientes.h"
+
+1687268134 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp version leo\usuariologin.cpp
+	"UsuarioLogin.h"
+	"funcionesClientes.h"
+	"UsuarioLogin.h"
+

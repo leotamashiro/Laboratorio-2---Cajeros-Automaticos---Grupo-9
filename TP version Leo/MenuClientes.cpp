@@ -17,10 +17,8 @@ void menuClientes ()
         cout << "1. Cargar" << endl;
         cout << "2. Editar" << endl;
         cout << "3. Borrar" << endl;
-        cout << "3. Activar Cliente" << endl;
         cout << "4. Listar Cliente por DNI" << endl;
-        cout << "5. Listar Cliente por Apellido" << endl;
-        cout << "6. Listar Todos lss Clientes" << endl;
+        cout << "5. Listar Todos lss Clientes" << endl;
         cout << endl;
         cout << "0. Salir" << endl;
         cout << "---------------------------------" << endl;
@@ -42,9 +40,6 @@ void menuClientes ()
             buscarClientePorDni();
             break;
         case 5:
-            buscarClienteporApellido();
-            break;
-        case 6:
             buscarClientes();
             break;
         default:

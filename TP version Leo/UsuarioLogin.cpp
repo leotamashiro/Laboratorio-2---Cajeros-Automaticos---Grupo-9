@@ -161,3 +161,18 @@ int UsuarioLogin::getCantidadRegistros()
 
     return bytes / sizeof(*this);
 }
+
+bool UsuarioLogin::validarLogin(int _dni, const char* _password, int pos) {
+
+    this->leerDeDisco(pos);
+    if(_dni != dni) {
+        cout<<"EL DNI INGRESADO NO COINCIDE CON EL DNI DEL USER"<<endl;
+        return false;
+    }
+
+    if(strcmp(password, _password)) {
+        cout<<"LA PASSWORD NO ES CORRECTA: "<<endl;
+        return false;
+    }
+    return true;
+}

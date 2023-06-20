@@ -9,6 +9,7 @@ bool validarDni(int dni);
 void cargarCadena(char *pal, int tam);
 int generarNumeros(int desde, int hasta);
 bool validarUser(const char* user);
+int loginUsuario(int dni);
 bool buscarClientePorDni();
 bool eliminadoLogico();
 void buscarClientes();

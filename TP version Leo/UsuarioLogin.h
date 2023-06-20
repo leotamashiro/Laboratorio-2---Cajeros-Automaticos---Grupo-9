@@ -29,6 +29,7 @@ class UsuarioLogin
 
         void mostrarLogin();
         bool cargarLogin(int _dni);
+        bool validarLogin(int _dni, const char* _password, int pos);
 
         bool editarEnDisco(int);
         void grabarEnDisco();

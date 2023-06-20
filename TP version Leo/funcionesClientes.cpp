@@ -198,48 +198,6 @@ bool eliminadoLogico()
     return arcCli.sobreescribirCliente(cliente, pos);
 }
 
-bool buscarClienteporApellido()
-{
-//    ArchivoCliente arcCli("clientes.dat");
-//    Cliente cliente;
-//    int totalClientes = arcCli.getCantidadRegistros();
-//    char apellido[30];
-//    int pos;
-//    bool flag;
-//
-//    cout << "INGRESE EL APELLIDO DEL CLIENTE A BUSCAR: " <<endl;
-//    cargarCadena(apellido, 29);
-////    pos = arccli.buscarclienteporapellido(apellido);
-////    if (pos == -1)
-////    {
-////        cout<<"no se encontro ningun cliente con el apellido: "<<apellido<<endl;
-////        return false;
-////    }
-//    for(int i = 0; i < totalClientes; i++)
-//    {
-//        pos = arcCli.buscarClientePorApellido(apellido);
-//        if (pos == -1)
-//        {
-//            flag = false;
-//        }
-//        else
-//        {
-//            flag = true;
-//        }
-//        if(flag)
-//        {
-//            cliente = arcCli.leerCliente(pos);
-//            mostrarClientes(pos, cliente);
-//
-//        }
-//    }
-//    if(!flag)
-//    {
-//        cout<<"NO SE ENCONTRO NINGUN CLIENTE CON EL APELLIDO: "<<apellido<<endl;
-//        return false;
-//    }
-}
-
 int validarCin() {
     int num;
     cin>>num;
@@ -264,4 +222,34 @@ int validarNumerosIngresados()
         }
     }
     return num;
+}
+
+int loginUsuario(int dni) {
+    UsuarioLogin login;
+    int pos;
+    char password[7];
+    char user[30];
+    bool puedeIngresar;
+
+    cout<<"INGRESE USER: "<<endl;
+    cargarCadena(user, 29);
+    cout<<"INGRESE PASSWORD: "<<endl;
+    cargarCadena(password, 6);
+
+    pos = login.buscarClientePorUser(user);
+
+    if(pos == -1) {
+        cout<<"NO SE ENCONTRO NINGUN CLIENTE CON EL USER: "<<user<<endl;
+        return 0;
+    }
+
+    puedeIngresar = login.validarLogin(dni, password, pos);
+    if(puedeIngresar) {
+        cout<<"LOGIN OK"<<endl;
+        login.leerDeDisco(pos);
+        return login.getPermiso();
+    } else {
+        cout<<"NO PUEDE INGRESAR"<<endl;
+        return 0;
+    }
 }

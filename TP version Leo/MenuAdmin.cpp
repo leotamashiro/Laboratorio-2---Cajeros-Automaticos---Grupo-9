@@ -41,7 +41,7 @@ void menuAdmin()
             menuCajeros();
             break;
         case 3:
-            ///Clientes();
+            menuClientes();
             break;
         case 4:
             balanceoMenu();
