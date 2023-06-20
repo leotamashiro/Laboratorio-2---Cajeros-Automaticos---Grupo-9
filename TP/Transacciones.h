@@ -3,6 +3,7 @@
 #include <iostream>
 #include "Fecha.h"
 #include "funciones.h"
+using namespace std;
 
 class Transacciones
 {
@@ -29,6 +30,7 @@ class Transacciones
         void setFechaTransaccion(Fecha _fechaTransaccion);
         void setMonto(int _monto);
         void setConfirmada (bool _confirmada);
+        void Mostrar();
 
         void grabarEnDisco();
         bool leerDeDisco(int);

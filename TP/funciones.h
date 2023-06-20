@@ -40,7 +40,8 @@ void ustedesPuedeCargar(int);
 
 ///Transacciones
 int generarNumTransaccion();
-void operacionTransaccion(int, int, int); ///Aca Guarda la transacciones que se hacen
+void operacionTransaccion(int, int, int, bool); ///Aca Guarda la transacciones que se hacen
+void mostrarTransacciones();
 
 /// Extracciones
 bool verificarSaldoDisplonible(int, int);

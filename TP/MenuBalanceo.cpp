@@ -90,6 +90,7 @@ void balanceoMenu()
             break;
 
         case 3:
+            mostrarTransacciones();
             ///Transacciones
             break;
         default:

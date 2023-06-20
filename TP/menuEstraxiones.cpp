@@ -52,7 +52,7 @@ void menuExtraxion(int dni, int idCajero)
             y supuestamente se lo di al cliente
             */
 
-            operacionTransaccion(idCajero, monto, dni); /// Aca me genera la transaccion y la guarda en transaccion.dat
+            operacionTransaccion(idCajero, monto, dni, true); /// Aca me genera la transaccion y la guarda en transaccion.dat
             cout << "Por favor retire el dinero" << endl;
             system("cls");
         }
@@ -60,6 +60,7 @@ void menuExtraxion(int dni, int idCajero)
         {
             cout << "El cajero en el que usted esta no cuenta con esa cantidad de efectivo." << endl;
             cout << "Por favor dirijase a otro Cajero, o intene sacar menos dinero" << endl;
+            operacionTransaccion(idCajero, monto, dni, false);
         }
     }
     else

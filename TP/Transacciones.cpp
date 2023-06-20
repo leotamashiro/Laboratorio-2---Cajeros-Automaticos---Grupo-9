@@ -61,6 +61,17 @@ void Transacciones::setConfirmada(bool _confirmada)
     confirmada=_confirmada;
 }
 
+void Transacciones::Mostrar()
+{
+    cout << "Numero de Transaccion: " << numTransaccion << endl;
+    cout << "ID Cajero: " << idCajero << endl;
+    cout << "Importe: " << monto << endl;
+    cout << "DNI del Cliente: " << dniCliente << endl;
+    cout << "Fecha: ";
+    fechaTransaccion.Mostrar();
+    cout << endl;
+}
+
 void Transacciones::grabarEnDisco()
 {
     FILE *p;
