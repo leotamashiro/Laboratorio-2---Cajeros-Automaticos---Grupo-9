@@ -44,43 +44,11 @@ void Cuenta::setActivo(bool flag)
 
 void Cuenta::CargarCuenta(int dni)
 {
-//    string cuentaCorriente = "CUENTA CORRIENTE";
-//    string cuentaAhorro = "CUENTA AHORRO";
-//    bool flag = false;
-
     numeroCuenta = generarNumeros(10000, 99999);
-//        for(int i = 0; i < totalCuenta; i++) {
-//            this->leerDeDisco(i)
-//            if(this->getNumeroCuenta() == nroCuenta) {
-//                flag = false;
-//            }
-//        }
-//
     saldo = 0;
-//    while(!flag)
-//    {
-//        cout<<"INGRESE QUE TIPO DE CUENTA DESEA: "<<endl<<"1. Cuenta Corriente"<<endl<<"2. Cuenta Ahorro"<<endl;
-//        cin>>opt;
-//        if(opt == 1)
-//        {
-//            strcpy(_tipoCuenta, cuentaCorriente.c_str());
-//            flag = true;
-//        }
-//        else if (opt == 2)
-//        {
-//            strcpy(_tipoCuenta, cuentaAhorro.c_str());
-//            flag = true;
-//        }
-//        else
-//        {
-//            cout<<"OPCION NO VALIDA. INGRESE UNA DE LAS OPCIONES POSIBLES"<<endl;
-//            flag = false;
-//        }
-//    }
     dniCliente = dni;
     activo = true;
     this->grabarEnDisco();
-    //_tarjeta.cargarTarjeta(_numeroCuenta);
 }
 
 void Cuenta::MostrarCuenta()
@@ -88,8 +56,6 @@ void Cuenta::MostrarCuenta()
     cout<<"DATOS CUENTA:"<<endl;
     cout<<"NUMERO DE CUENTA: "<<numeroCuenta<<endl;
     cout<<"SALDO: "<<saldo<<endl;
-//    cout<<"TIPO DE CUENTA: "<<_tipoCuenta<<endl;
-    //_tarjeta.mostrarTarjeta();
 }
 
 bool Cuenta::editarEnDisco(int pos)
@@ -142,4 +108,20 @@ int Cuenta::contarRegistros()
     fclose(p);
     return tam/sizeof(Cuenta);
 }
+
+int Cuenta::buscarCuentaPorDni(int dni){
+    int i, cantidadRegistros = this->contarRegistros();
+
+    for(i=0; i<cantidadRegistros; i++)
+    {
+        this->leerDeDisco(i);
+        if (this->getDniCliente() == dni)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+
 

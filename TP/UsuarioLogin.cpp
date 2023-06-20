@@ -69,7 +69,7 @@ bool UsuarioLogin::cargarLogin(int _dni)
     }
 
 
-    cout<<"INGRESE PASSWORD: "<<endl;
+    cout<<"INGRESE PASSWORD (MAXIMO 6 DIGITOS): "<<endl;
     cargarCadena(password, 6);
 
     dni = _dni;
@@ -140,6 +140,22 @@ int UsuarioLogin::buscarClientePorUser(const char* user)
         encontroUser = strcmp(this->getUser(), user);
         if(encontroUser == 0)
         {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int UsuarioLogin::buscarClientePorDni(int _dni)
+{
+    int i;
+    int cantidadRegistros = this->getCantidadRegistros();
+
+
+    for(i=0; i<cantidadRegistros; i++)
+    {
+        this->leerDeDisco(i);
+        if(this->getDNI() == _dni) {
             return i;
         }
     }

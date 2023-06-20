@@ -31,7 +31,8 @@ void menuClientes ()
             persistirCliente();
             break;
         case 2:
-
+            system("cls");
+            menuEditarClientes();
             break;
         case 3:
             eliminadoLogico();

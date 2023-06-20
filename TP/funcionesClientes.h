@@ -16,6 +16,13 @@ void buscarClientes();
 int posCliente(int dni);
 bool buscarClienteporApellido();
 int validarNumerosIngresados();
+int posDniUsarioLogin();
+void menuEditarClientes();
+void editarDireccionCliente();
+void editarUserCliente();
+void editarPasswordCliente();
+void editarDatosCliente();
+void ingresarFondosCuenta(int dni);
 
 
 

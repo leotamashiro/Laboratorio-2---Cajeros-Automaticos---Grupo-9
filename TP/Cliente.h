@@ -33,6 +33,7 @@ class Cliente
         void setDni(int _dni);
         void setNumeroTelefono(int _nroTelefono);
         void setActivo(bool flag);
+        void setDireccion();
 
         void CargarCliente();
         void MostrarCliente();

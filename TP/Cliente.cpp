@@ -72,6 +72,12 @@ void Cliente::setNumeroTelefono(int _nroTelefono)
     nroTelefono = _nroTelefono;
 }
 
+void Cliente::setDireccion() {
+    cin.clear();
+    cin.ignore(10000, '\n');
+    direccion.Cargar();
+}
+
 void Cliente::CargarCliente()
 {
     Cuenta cuenta;

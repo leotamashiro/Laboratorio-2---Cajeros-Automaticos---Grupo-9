@@ -32,6 +32,7 @@ public:
     void grabarEnDisco();
     bool leerDeDisco(int);
     int contarRegistros();
+    int buscarCuentaPorDni(int dni);
 
 
 };

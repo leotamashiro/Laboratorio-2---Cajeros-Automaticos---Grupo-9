@@ -36,6 +36,7 @@ class UsuarioLogin
         bool leerDeDisco(int);
         int buscarClientePorUser(const char* user);
         int getCantidadRegistros();
+        int buscarClientePorDni(int _dni);
 
 };
 

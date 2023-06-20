@@ -277,12 +277,12 @@
 1687271680 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\archivocliente.h
 	"Cliente.h"
 
-1687271680 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\cliente.h
+1687275111 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\cliente.h
 	"Cuenta.h"
 	"Fecha.h"
 	"Direccion.h"
 
-1687271680 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\cuenta.h
+1687280186 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\cuenta.h
 
 1687271680 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\fecha.h
 	<string>
@@ -317,7 +317,7 @@
 1687271680 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\cajero.cpp
 	"Cajero.h"
 
-1687271680 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\cliente.cpp
+1687275432 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\cliente.cpp
 	<iostream>
 	<string>
 	<cstring>
@@ -327,16 +327,16 @@
 	"UsuarioLogin.h"
 	"funcionesClientes.h"
 
-1687272768 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\usuariologin.h
+1687276718 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\usuariologin.h
 	<iostream>
 	<string>
 	<cstring>
 
-1687272742 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\funcionesclientes.h
+1687280710 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\funcionesclientes.h
 	"ArchivoCliente.h"
 	"Cliente.h"
 
-1687271680 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\cuenta.cpp
+1687280689 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\cuenta.cpp
 	<cstdio>
 	"Cuenta.h"
 	"funcionesClientes.h"
@@ -374,13 +374,13 @@
 	"Fecha.h"
 	"funciones.h"
 
-1687272724 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\funcionesclientes.cpp
+1687281101 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\funcionesclientes.cpp
 	<cstdlib>
 	<time.h>
 	"funcionesClientes.h"
 	"UsuarioLogin.h"
 
-1687273147 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\main.cpp
+1687280973 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\main.cpp
 	<iostream>
 	<string>
 	<cstring>
@@ -408,7 +408,7 @@
 	"Cajero.h"
 	"funciones.h"
 
-1687272850 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\menuclientes.cpp
+1687274416 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\menuclientes.cpp
 	<iostream>
 	<string>
 	<cstring>
@@ -453,7 +453,7 @@
 1687271680 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\transacciones.cpp
 	"Transacciones.h"
 
-1687273323 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\usuariologin.cpp
+1687280817 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\usuariologin.cpp
 	"UsuarioLogin.h"
 	"funcionesClientes.h"
 	"UsuarioLogin.h"
