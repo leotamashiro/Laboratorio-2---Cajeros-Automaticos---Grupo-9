@@ -68,6 +68,7 @@
 		<Unit filename="funcionesClientes.cpp" />
 		<Unit filename="funcionesClientes.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="menuClienteExterno.cpp" />
 		<Unit filename="menuEstraxiones.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

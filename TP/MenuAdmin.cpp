@@ -46,6 +46,9 @@ void menuAdmin()
         case 4:
             balanceoMenu();
             break;
+        case 0:
+            system("cls");
+            break;
         default:
             cout << "Debe ingresar una opcion correcta" << endl;
             break;

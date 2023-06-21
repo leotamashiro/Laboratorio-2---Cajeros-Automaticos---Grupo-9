@@ -11,6 +11,7 @@ void menuClientes ()
     int opcion;
     do
     {
+        system("cls");
         cout << "---------------------------------" << endl;
         cout << "----------MENU CLIENTES----------" << endl;
         cout << "---------------------------------" << endl;
@@ -28,20 +29,32 @@ void menuClientes ()
         switch(opcion)
         {
         case 1:
+            system("cls");
             persistirCliente();
+            system("pause");
             break;
         case 2:
             system("cls");
             menuEditarClientes();
+            system("pause");
             break;
         case 3:
+            system("cls");
             eliminadoLogico();
+            system("pause");
             break;
         case 4:
+            system("cls");
             buscarClientePorDni();
+            system("pause");
             break;
         case 5:
+            system("cls");
             buscarClientes();
+            system("pause");
+            break;
+        case 0:
+            system("cls");
             break;
         default:
             cout << "Debe ingresar una opcion correcta" << endl;
