@@ -376,7 +376,7 @@
 	"Fecha.h"
 	"funciones.h"
 
-1687305106 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\funcionesclientes.cpp
+1687443226 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\funcionesclientes.cpp
 	<cstdlib>
 	<time.h>
 	"funcionesClientes.h"
@@ -391,13 +391,13 @@
 
 1687296733 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\menuadmin.h
 
-1687273076 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\menuadmin.cpp
+1687305436 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\menuadmin.cpp
 	<iostream>
 	<string>
 	<cstring>
 	"MenuAdmin.h"
 
-1687295542 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\menubalanceo.cpp
+1687443494 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\menubalanceo.cpp
 	<iostream>
 	<string>
 	"MenuAdmin.h"
@@ -410,7 +410,7 @@
 	"Cajero.h"
 	"funciones.h"
 
-1687305336 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\menuclientes.cpp
+1687443025 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\menuclientes.cpp
 	<iostream>
 	<string>
 	<cstring>

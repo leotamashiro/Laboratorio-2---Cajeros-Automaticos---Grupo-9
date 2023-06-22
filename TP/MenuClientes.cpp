@@ -19,7 +19,7 @@ void menuClientes ()
         cout << "2. Editar" << endl;
         cout << "3. Borrar" << endl;
         cout << "4. Listar Cliente por DNI" << endl;
-        cout << "5. Listar Todos lss Clientes" << endl;
+        cout << "5. Listar Todos los Clientes" << endl;
         cout << endl;
         cout << "0. Salir" << endl;
         cout << "---------------------------------" << endl;

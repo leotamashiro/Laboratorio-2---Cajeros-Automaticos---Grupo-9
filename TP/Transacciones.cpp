@@ -63,6 +63,7 @@ void Transacciones::setConfirmada(bool _confirmada)
 
 void Transacciones::Mostrar()
 {
+    cout << "---------------------------------" << endl;
     cout << "Numero de Transaccion: " << numTransaccion << endl;
     cout << "ID Cajero: " << idCajero << endl;
     cout << "Importe: " << monto << endl;

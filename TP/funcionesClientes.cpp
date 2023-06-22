@@ -368,7 +368,7 @@ void editarUserCliente(int dni)
 {
     UsuarioLogin login;
     int pos;
-    bool clienteEditado;
+    bool clienteEditado = false, existeUser;
     char user[30];
     char nuevoUser[30];
 
@@ -394,8 +394,13 @@ void editarUserCliente(int dni)
     {
         cout<<"INGRESE EL NUEVO NOMBRE DE USER"<<endl;
         cargarCadena(nuevoUser, 29);
-        login.setUser(nuevoUser);
-        clienteEditado = login.editarEnDisco(pos);
+        existeUser = validarUser(nuevoUser);
+        if(existeUser) {
+            cout<<"EL USER INGRESADO YA EXISTE. POR FAVOR INGRESE UNO NUEVO"<<endl;
+        } else {
+            login.setUser(nuevoUser);
+            clienteEditado = login.editarEnDisco(pos);
+        }
 
         if(clienteEditado)
         {
