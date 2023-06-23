@@ -494,42 +494,6 @@ void mostrarTransacciones()
     }
 }
 
-///************Loggin********************/////
-/*
-int leerLogin (int dni, char _user, char _pass)
-{
-    UsuarioLogin usuario;
-    string user, pass;
-    user=_user;
-    pass=_pass;
-    int pos = 0;
-    while(usuario.leerDeDisco(pos++))
-    {
-        if(dni == usuario.getDNI())
-        {
-            if (user == usuario.getUser())
-            {
-                if (pass == usuario.getPassword())
-                {
-                    return usuario.getPermiso();
-                }
-                else
-                {
-                    cout << "Pass no valida";
-                }
-            }
-            else
-                {
-                    cout << "User no valido";
-                }
-        }
-        else
-        {
-            cout << "DNI no valido";
-        }
-    }
-}*/
-
 /*************Verifico Si el monto esta disponible en la cuenta y en el Cajero************/
 bool verificarSaldoDisplonible(int dni, int monto)
 {

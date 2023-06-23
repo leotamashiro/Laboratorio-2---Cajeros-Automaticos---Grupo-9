@@ -20,7 +20,7 @@ void balanceoMenu()
         cout << "---------------------------------" << endl;
         cout << "1. Mostar Carga de los Cajeros" << endl;
         cout << "2. Balancear Equipos" << endl;
-        cout << "3. Vizualisar Transacciones" << endl;
+        cout << "3. Visualizar Transacciones" << endl;
         cout << endl;
         cout << "0. Salir" << endl;
         cout << "---------------------------------" << endl;
@@ -30,6 +30,7 @@ void balanceoMenu()
         switch(opcion)
         {
         case 1:
+            system("cls");
             numSucural = pedirleAlClienteNumSucursal();
             idCajero = pedirleAlClienteCajero(numSucural);
             mostarCargaCajero(idCajero);//Muestro la cantidad de plata que tiene el cajero
@@ -38,6 +39,7 @@ void balanceoMenu()
             break;
         case 2:
             {
+                system("cls");
                 numSucural = pedirleAlClienteNumSucursal();
                 idCajero = pedirleAlClienteCajero(numSucural);
                 mostarCargaCajero(idCajero);
@@ -90,8 +92,14 @@ void balanceoMenu()
             break;
 
         case 3:
+            system("cls");
             mostrarTransacciones();
             ///Transacciones
+            system("pause");
+            system("cls");
+            break;
+            case 0:
+                system("cls");
             break;
         default:
             cout << "Debe ingresar una opcion correcta" << endl;
