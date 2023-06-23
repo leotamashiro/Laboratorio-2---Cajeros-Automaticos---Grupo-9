@@ -254,10 +254,12 @@ void ingresarFondosCuenta(int dni)
     if(editoEnDisco)
     {
         cout<<"SU NUMERO DE CUENTA "<<cuenta.getNumeroCuenta()<<" TIENE UN TOTAL DE SALDO DE: "<<cuenta.getSaldo()<<endl;
+        operacionTransaccion(cuenta.getNumeroCuenta(), static_cast<int>(fondos), dni, 2, true);
     }
     else
     {
         cout<<"HA OCURRIDO UN ERROR, POR FAVOR INTENTE DE NUEVO"<<endl;
+        operacionTransaccion(cuenta.getNumeroCuenta(), static_cast<int>(fondos), dni, 2, false);
     }
 }
 
@@ -520,6 +522,21 @@ void editarPermisosCliente()
     {
         cout<<"INGRESE UN PERMISO VALIDO"<<endl;
     }
+}
+
+void mostrarTransaccionesCliente(int dni) {
+    Transacciones transacciones;
+    bool flag = false;
+    int totalTransacciones = transacciones.contarRegistros();
+    for(int i = 0; i < totalTransacciones; i++) {
+        transacciones.leerDeDisco(i);
+        if(transacciones.getDniCliente() == dni) {
+           transacciones.Mostrar();
+           transaccionConfirmada(transacciones.getConfirmada());
+           flag = true;
+        }
+    }
+    if(!flag) cout<<"No posee ninguna Transaccion realizada"<<endl;
 }
 
 void menuEditarClientes(int dni)

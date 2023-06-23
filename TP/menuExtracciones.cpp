@@ -14,7 +14,7 @@ y auxCajero.dat
 y cuenta.dat
 
 */
-void menuExtraxion(int dni, int idCajero)
+void menuExtraccion(int dni, int idCajero)
 {
     bool primerIngreso;
     bool dineroCliente;
@@ -52,19 +52,22 @@ void menuExtraxion(int dni, int idCajero)
             y supuestamente se lo di al cliente
             */
 
-            operacionTransaccion(idCajero, monto, dni, true); /// Aca me genera la transaccion y la guarda en transaccion.dat
+            operacionTransaccion(idCajero, monto, dni, 1, true); /// Aca me genera la transaccion y la guarda en transaccion.dat
             cout << "Por favor retire el dinero" << endl;
+            system("pause");
             system("cls");
         }
         else
         {
             cout << "El cajero en el que usted esta no cuenta con esa cantidad de efectivo." << endl;
             cout << "Por favor dirijase a otro Cajero, o intene sacar menos dinero" << endl;
-            operacionTransaccion(idCajero, monto, dni, false);
+            operacionTransaccion(idCajero, monto, dni, 1, false);
+            system("pause");
         }
     }
     else
     {
         cout << "Usted no cuenta con saldo suficiente" << endl;
+        system("pause");
     }
 }

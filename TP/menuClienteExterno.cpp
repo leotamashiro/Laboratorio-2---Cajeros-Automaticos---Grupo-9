@@ -12,8 +12,7 @@ using namespace std;
 void menuClienteExterno(int dni)
 {
     int opcion;
-    int verificarLogin;
-    int Sucusal;
+    int Sucursal;
     int idCajero;
     do
     {
@@ -25,6 +24,7 @@ void menuClienteExterno(int dni)
         cout << "2. Editar Datos Cliente:" << endl;
         cout << "3. Extraer Dinero:" << endl;
         cout << "4. Ingresar Dinero:" << endl;
+        cout << "5. Ver Transacciones:" << endl;
         cout << endl;
         cout << "0. Salir" << endl;
         cout << "--------------------------------------" << endl;
@@ -48,17 +48,23 @@ void menuClienteExterno(int dni)
             cout << "A continuacion Listaremos todas las sucursales disponibles:"<< endl << endl;
             system ("pause");
             mostarSucursalesActivas();
-            Sucusal = pedirleAlClienteNumSucursal();
+            Sucursal = pedirleAlClienteNumSucursal();
             system("cls");
-            idCajero = pedirleAlClienteCajero(Sucusal);
+            idCajero = pedirleAlClienteCajero(Sucursal);
             system("cls");
             ///Ya empizo a extraer el dinero
-            menuExtraxion(dni, idCajero);
+            menuExtraccion(dni, idCajero);
         break;
         case 4:
             ///FUNCION PARA INGRESAR DINERO EN LA CUENTA DEL CLIENTE
             system("cls");
             ingresarFondosCuenta(dni);
+            system("pause");
+            break;
+        case 5:
+            ///FUNCION PARA VER LOS DATOS DE LAS TRANSACCIONES REALIZADAS
+            system("cls");
+            mostrarTransaccionesCliente(dni);
             system("pause");
             break;
         case 0:

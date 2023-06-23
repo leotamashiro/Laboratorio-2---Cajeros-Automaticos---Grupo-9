@@ -115,7 +115,7 @@ int Cuenta::buscarCuentaPorDni(int dni){
     for(i=0; i<cantidadRegistros; i++)
     {
         this->leerDeDisco(i);
-        if (this->getDniCliente() == dni)
+        if (this->getDniCliente() == dni && this->getActivo())
         {
             return i;
         }

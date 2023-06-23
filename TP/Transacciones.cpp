@@ -6,9 +6,9 @@ int Transacciones::getNumTransaccion()
     return numTransaccion;
 }
 
-int Transacciones::getIdCajero()
+int Transacciones::getIdProcedencia()
 {
-    return idCajero;
+    return id;
 }
 
 Fecha Transacciones::getFechaTranssacion()
@@ -36,9 +36,9 @@ void Transacciones::setNumTransaccion(int _numTransaccion)
     numTransaccion=_numTransaccion;
 }
 
-void Transacciones::setIdCajero(int _idCajero)
+void Transacciones::setIdProcedencia(int _id)
 {
-    idCajero=_idCajero;
+    id =_id;
 }
 
 void Transacciones::setDniCliente(int _dniCliente)
@@ -61,13 +61,22 @@ void Transacciones::setConfirmada(bool _confirmada)
     confirmada=_confirmada;
 }
 
+void Transacciones::setTipoTransaccion(int _tipoTransaccion) {
+    tipoTransaccion = _tipoTransaccion;
+}
+
 void Transacciones::Mostrar()
 {
     cout << "---------------------------------" << endl;
     cout << "Numero de Transaccion: " << numTransaccion << endl;
-    cout << "ID Cajero: " << idCajero << endl;
+    if(tipoTransaccion == 1) {
+        cout << "ID Cajero: " << id << endl;
+    } else {
+        cout << "Numero Cuenta: "<< id <<endl;
+    }
     cout << "Importe: " << monto << endl;
     cout << "DNI del Cliente: " << dniCliente << endl;
+    cout << "Tipo de Transaccion " <<tipoTransaccion<<endl;
     cout << "Fecha: ";
     fechaTransaccion.Mostrar();
     cout << endl;

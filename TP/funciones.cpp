@@ -449,7 +449,7 @@ int generarNumTransaccion()
     }
 }
 ///Aca Guarda la transacciones que se hacen
-void operacionTransaccion(int idCajero,int monto, int dni, bool posible) /// en el case pasar el id cajero como paremetro y creo que es mejor pasale el monto,
+void operacionTransaccion(int id,int monto, int dni, int tipoTransaccion, bool posible) /// en el case pasar el id cajero como paremetro y creo que es mejor pasale el monto,
 {
     Transacciones regTransaccion;
     Fecha fechasis;
@@ -469,11 +469,24 @@ void operacionTransaccion(int idCajero,int monto, int dni, bool posible) /// en 
     numTran=generarNumTransaccion();
     regTransaccion.setFechaTransaccion(fechasis);
     regTransaccion.setMonto(monto);
-    regTransaccion.setIdCajero(idCajero);
+    regTransaccion.setIdProcedencia(id);
     regTransaccion.setNumTransaccion(numTran);
     regTransaccion.setDniCliente(dni);
     regTransaccion.setConfirmada(posible);
+    regTransaccion.setTipoTransaccion(tipoTransaccion);
     regTransaccion.grabarEnDisco();
+}
+
+void transaccionConfirmada(bool estaConfirmada)
+{
+    if (estaConfirmada)
+    {
+        cout << "Transaccion Confirmada" << endl;
+    }
+    else
+    {
+        cout << "Error en Transaccion" << endl;
+    }
 }
 
 void mostrarTransacciones()
@@ -483,14 +496,7 @@ void mostrarTransacciones()
     while (regTransaccion.leerDeDisco(pos++))
     {
         regTransaccion.Mostrar();
-        if (regTransaccion.getConfirmada()==1)
-        {
-            cout << "Transaccion Confirmada" << endl;
-        }
-        else
-        {
-            cout << "Error en Transaccion" << endl;
-        }
+        transaccionConfirmada(regTransaccion.getConfirmada());
     }
 }
 

@@ -6,7 +6,7 @@ void menuSucursales();
 void menuCajeros();
 void menuClientes();
 void balanceoMenu();
-void menuExtraxion(int, int );
+void menuExtraccion(int, int );
 void menuClienteExterno(int dni);
 
 

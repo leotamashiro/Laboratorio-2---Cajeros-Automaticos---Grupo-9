@@ -2,6 +2,8 @@
 #define FUNCIONESCLIENTES_H
 #include "ArchivoCliente.h"
 #include "Cliente.h"
+#include "Transacciones.h"
+#include "funciones.h"
 
 int persistirCliente();
 void mostrarClientes();
@@ -24,6 +26,7 @@ void editarUserCliente(int dni = -1);
 void editarPasswordCliente(int dni = -1);
 void editarDatosCliente(int dni = -1);
 void ingresarFondosCuenta(int dni);
+void mostrarTransaccionesCliente(int dni);
 
 
 
