@@ -38,8 +38,6 @@
 		</Compiler>
 		<Unit filename="ArchivoCliente.cpp" />
 		<Unit filename="ArchivoCliente.h" />
-		<Unit filename="AuxuliarCajero.cpp" />
-		<Unit filename="AuxuliarCajero.h" />
 		<Unit filename="Cajero.cpp" />
 		<Unit filename="Cajero.h" />
 		<Unit filename="Cliente.cpp" />
@@ -68,6 +66,7 @@
 		<Unit filename="funcionesClientes.cpp" />
 		<Unit filename="funcionesClientes.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="menuClienteExterno.cpp" />
 		<Unit filename="menuEstraxiones.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

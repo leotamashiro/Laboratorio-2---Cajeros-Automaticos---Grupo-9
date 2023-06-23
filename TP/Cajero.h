@@ -18,6 +18,7 @@ class Cajero
         int numSucursal;
         bool estadoCajero;
         int capacidadMaxima=CAP_MAX;
+        int capacidad;
         //Sucursal sucu;
 
     public:
@@ -28,6 +29,7 @@ class Cajero
         Fecha getFechaInstalacion();
         int getNumSucursal();
         int getCapcidadMaxima();
+        int getCapacidad();
         bool getEstadoCajero();
 
         ///sets
@@ -36,12 +38,14 @@ class Cajero
         void setFechaInstalacion(Fecha _fechaInstalacion);
         void setNumSucursal(int _numSucursal);
         void setCapacidadMaxima (int _capidadMax);
+        void setCapacidad(int _capacidad);
         void setEstadoCajero(bool _estadoCajero);
 
         void Cargar();
         void CargarEditar();
         void Mostrar();
         void MostarAlCliente();
+        void MostrarBilletes();
 
         bool editarEnDisco(int);
         void grabarEnDisco();

@@ -1,7 +1,6 @@
 ///Ver si se agrega la camtidad de saldo que tiene en la cuenta
 #include <iostream>
 #include "MenuAdmin.h"
-#include "AuxuliarCajero.h"
 #include "Transacciones.h"
 #include "UsuarioLogin.h"
 #include "Cliente.h"
@@ -16,12 +15,11 @@ y cuenta.dat
 */
 void menuExtraxion(int dni, int idCajero)
 {
-    bool primerIngreso;
     bool dineroCliente;
     bool dineroCajero;
     bool montoPosible;
+    bool estadoTransaccion;
     int monto;
-    primerIngreso=true;
     do
     {
         montoPosible=false;
@@ -51,16 +49,17 @@ void menuExtraxion(int dni, int idCajero)
             Hasta aca, ya le reste el dinero a la cuenta y al cajero
             y supuestamente se lo di al cliente
             */
-
-            operacionTransaccion(idCajero, monto, dni, true); /// Aca me genera la transaccion y la guarda en transaccion.dat
+            estadoTransaccion =true;
+            operacionTransaccion(idCajero, monto, dni, 1, estadoTransaccion); /// Aca me genera la transaccion y la guarda en transaccion.dat
             cout << "Por favor retire el dinero" << endl;
             system("cls");
         }
         else
         {
+            estadoTransaccion=false;
             cout << "El cajero en el que usted esta no cuenta con esa cantidad de efectivo." << endl;
             cout << "Por favor dirijase a otro Cajero, o intene sacar menos dinero" << endl;
-            operacionTransaccion(idCajero, monto, dni, false);
+            operacionTransaccion(idCajero, monto, dni, 1, estadoTransaccion);
         }
     }
     else

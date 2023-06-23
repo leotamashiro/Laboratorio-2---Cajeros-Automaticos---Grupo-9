@@ -25,6 +25,10 @@ int Cajero::getCapcidadMaxima()
     return capacidadMaxima;
 }
 
+int Cajero::getCapacidad(){
+    return capacidad;
+}
+
 bool Cajero::getEstadoCajero()
 {
     return estadoCajero;
@@ -52,6 +56,11 @@ void Cajero::setNumSucursal(int _numSucursal)
 void Cajero::setCapacidadMaxima (int _capidadMax)
 {
     capacidadMaxima=_capidadMax;
+}
+
+void Cajero::setCapacidad(int _capacidad)
+{
+    capacidad=_capacidad;
 }
 
 void Cajero::setEstadoCajero(bool _estadoCajero)
@@ -167,6 +176,16 @@ void Cajero::MostarAlCliente()
 {
     cout << "ID del Cajero: " << idCajero << "  ";
     cout << "Serie: " << numSerie << endl;
+}
+
+
+void Cajero::MostrarBilletes()
+{
+    int cantDinero; // es la cantidad de plata que tiene el cajero (capacidad x denominacion de billete, en este caso de 100)
+    cantDinero = capacidad*BILLETE;
+    cout << "ID del Cajero: " << idCajero << endl;
+    cout << "Cuenta con: " << capacidad << " cantidad de billetes" << endl;
+    cout << "Es decir con: " << cantDinero << " pesos" << endl;
 }
 
 bool Cajero::editarEnDisco(int pos)

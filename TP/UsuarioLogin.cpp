@@ -155,7 +155,7 @@ int UsuarioLogin::buscarClientePorDni(int _dni)
     for(i=0; i<cantidadRegistros; i++)
     {
         this->leerDeDisco(i);
-        if(this->getDNI() == _dni) {
+        if(this->getDNI() == _dni && this->getEstado()) {
             return i;
         }
     }

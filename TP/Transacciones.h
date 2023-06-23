@@ -9,27 +9,30 @@ class Transacciones
 {
     private:
         int numTransaccion;
-        int idCajero;
+        int id;
         Fecha fechaTransaccion;
         int dniCliente;
         int monto;
+        int tipoTransaccion;
         bool confirmada;
 
     public:
 
         int getNumTransaccion ();
-        int getIdCajero();
+        int getIdProcedencia();
         Fecha getFechaTranssacion();
         int getDniCliente();
         int getMonto();
+        int getTipoTransaccion();
         bool getConfirmada();
 
         void setNumTransaccion(int _numTransaccion);
-        void setIdCajero(int _idCajero);
+        void setIdProcedencia(int _id);
         void setDniCliente(int _dniCliente);
         void setFechaTransaccion(Fecha _fechaTransaccion);
         void setMonto(int _monto);
         void setConfirmada (bool _confirmada);
+        void setTipoTransaccion(int _tipoTransaccion);
         void Mostrar();
 
         void grabarEnDisco();

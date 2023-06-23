@@ -327,107 +327,72 @@ void mostarCajeroSucursal(int numSucuMostrar)
 }
 
 ///***********Balanceo***********///
-bool archivoAuxCajeroExiste()
-{
-    AuxuliarCajero auxCajero;
-    int pos=0;
-    return auxCajero.leerDeDisco(pos);
-}
-
-void seGeneraArchivoAuxCajero(int idCajero, int cargaCajero)
-{
-    AuxuliarCajero auxCajero;
-    Cajero objCajero;
-    if (cargaCajero<= objCajero.getCapcidadMaxima())
-    {
-        auxCajero.setIdCajero(idCajero);
-        auxCajero.setCapacidad(cargaCajero);
-        auxCajero.grabarEnDisco();
-    }
-    else
-    {
-        cout << "Supera el limite de carga" << endl;
-    }
-}
 
 void editarCargaCajero(int idCajero, int cargaCajero)
 {
-    AuxuliarCajero auxCajero;
+    Cajero objCajero;
     int pos=0, posEdit, cantBilletesActual;
-    while(auxCajero.leerDeDisco(pos++))
+    while(objCajero.leerDeDisco(pos++))
     {
-        if(idCajero == auxCajero.getIdCajero())
+        if(idCajero == objCajero.getIdCajero())
         {
-            cantBilletesActual=auxCajero.getCapacidad();
-            auxCajero.setCapacidad(cargaCajero + cantBilletesActual);
+            cantBilletesActual=objCajero.getCapacidad();
+            objCajero.setCapacidad(cargaCajero + cantBilletesActual);
             posEdit=pos-1;
-            auxCajero.editarEnDisco(posEdit);
+            objCajero.editarEnDisco(posEdit);
         }
     }
 }
-void mostarCargaCajero(int id)
+void mostarCargaCajero(int idCajero)
 {
-    AuxuliarCajero auxCajero;
+    Cajero objCajero;
     int pos=0;
-    while (auxCajero.leerDeDisco(pos++))
+    while (objCajero.leerDeDisco(pos++))
     {
-        if (id == auxCajero.getIdCajero())
+        if (idCajero == objCajero.getIdCajero())
         {
-            auxCajero.MostrarBilletes();
+            objCajero.MostrarBilletes();
         }
     }
 }
 
 bool esPosibleCargarCajero(int idCajero, double montoACargar)
 {
-    AuxuliarCajero auxCajero;
     Cajero objCajero;
     int cantBilletesCajero, cantBilletesACagar;
     cantBilletesACagar = (montoACargar/BILLETE);
-    int pos=0, posCajeroGenera=0;
-    while (objCajero.leerDeDisco(posCajeroGenera++))
+    int pos=0;
+    while (objCajero.leerDeDisco(pos++))
     {
         if (idCajero == objCajero.getIdCajero())
         {
-            while(auxCajero.leerDeDisco(pos++))
+            cantBilletesCajero=objCajero.getCapacidad();
+            if ((objCajero.getCapcidadMaxima()) >= (cantBilletesCajero + cantBilletesACagar))
             {
-                if(idCajero == auxCajero.getIdCajero())
-                {
-                    cantBilletesCajero=auxCajero.getCapacidad();
-                    if ((objCajero.getCapcidadMaxima()) >= (cantBilletesCajero + cantBilletesACagar))
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
+                return true;
+            }
+            else
+            {
+                cout << "Usted supera el limete de Carga posible para este cajero" << endl;
+                return false;
             }
         }
     }
 }
 
-void ustedesPuedeCargar(int idCajero)
+void ustedPuedeCargar(int idCajero)
 {
-    AuxuliarCajero auxCajero;
     Cajero objCajero;
     int cargaMaxPosible;
-    int pos=0, posCajeroGenera=0;
-    while (objCajero.leerDeDisco(posCajeroGenera++))
+    int pos=0;
+    while (objCajero.leerDeDisco(pos++))
     {
         if (idCajero == objCajero.getIdCajero())
         {
-            while(auxCajero.leerDeDisco(pos++))
-            {
-                if(idCajero == auxCajero.getIdCajero())
-                {
-                    cargaMaxPosible=objCajero.CAP_MAX - auxCajero.getCapacidad();
-                    cout << "Usted Puede cargar hasta: " << cargaMaxPosible << " billetes." << endl;
-                    cout << "El equivalente a: " << cargaMaxPosible * BILLETE << " pesos." << endl;
-                    return;
-                }
-            }
+            cargaMaxPosible=objCajero.getCapcidadMaxima() - objCajero.getCapacidad();
+            cout << "Usted Puede cargar hasta: " << cargaMaxPosible << " billetes." << endl;
+            cout << "El equivalente a: " << cargaMaxPosible * BILLETE << " pesos." << endl;
+            return;
         }
     }
 }
@@ -449,7 +414,7 @@ int generarNumTransaccion()
     }
 }
 ///Aca Guarda la transacciones que se hacen
-void operacionTransaccion(int idCajero,int monto, int dni, bool posible) /// en el case pasar el id cajero como paremetro y creo que es mejor pasale el monto,
+void operacionTransaccion(int id,int monto, int dni, int tipoTransaccion, bool posible) /// en el case pasar el id cajero como paremetro y creo que es mejor pasale el monto,
 {
     Transacciones regTransaccion;
     Fecha fechasis;
@@ -469,11 +434,24 @@ void operacionTransaccion(int idCajero,int monto, int dni, bool posible) /// en 
     numTran=generarNumTransaccion();
     regTransaccion.setFechaTransaccion(fechasis);
     regTransaccion.setMonto(monto);
-    regTransaccion.setIdCajero(idCajero);
+    regTransaccion.setIdProcedencia(id);
     regTransaccion.setNumTransaccion(numTran);
     regTransaccion.setDniCliente(dni);
     regTransaccion.setConfirmada(posible);
+    regTransaccion.setTipoTransaccion(tipoTransaccion);
     regTransaccion.grabarEnDisco();
+}
+
+void transaccionConfirmada(bool estaConfirmada)
+{
+    if (estaConfirmada)
+    {
+        cout << "Transaccion Confirmada" << endl;
+    }
+    else
+    {
+        cout << "Error en Transaccion" << endl;
+    }
 }
 
 void mostrarTransacciones()
@@ -483,52 +461,9 @@ void mostrarTransacciones()
     while (regTransaccion.leerDeDisco(pos++))
     {
         regTransaccion.Mostrar();
-        if (regTransaccion.getConfirmada()==1)
-        {
-            cout << "Transaccion Confirmada" << endl;
-        }
-        else
-        {
-            cout << "Error en Transaccion" << endl;
-        }
+        transaccionConfirmada(regTransaccion.getConfirmada());
     }
 }
-
-///************Loggin********************/////
-/*
-int leerLogin (int dni, char _user, char _pass)
-{
-    UsuarioLogin usuario;
-    string user, pass;
-    user=_user;
-    pass=_pass;
-    int pos = 0;
-    while(usuario.leerDeDisco(pos++))
-    {
-        if(dni == usuario.getDNI())
-        {
-            if (user == usuario.getUser())
-            {
-                if (pass == usuario.getPassword())
-                {
-                    return usuario.getPermiso();
-                }
-                else
-                {
-                    cout << "Pass no valida";
-                }
-            }
-            else
-                {
-                    cout << "User no valido";
-                }
-        }
-        else
-        {
-            cout << "DNI no valido";
-        }
-    }
-}*/
 
 /*************Verifico Si el monto esta disponible en la cuenta y en el Cajero************/
 bool verificarSaldoDisplonible(int dni, int monto)
@@ -553,13 +488,13 @@ bool verificarSaldoDisplonible(int dni, int monto)
 }
 bool verificarDineroEnCajero(int idCajero, int monto)
 {
-    AuxuliarCajero cajero;
+    Cajero objCajero;
     int pos=0;
-    while (cajero.leerDeDisco(pos++))
+    while (objCajero.leerDeDisco(pos++))
     {
-        if (idCajero==cajero.getIdCajero())
+        if (idCajero==objCajero.getIdCajero())
         {
-            if ((cajero.getCapacidad()*BILLETE)>=monto)
+            if ((objCajero.getCapacidad()*BILLETE)>=monto)
             {
                 return true;
             }
@@ -589,19 +524,19 @@ void restarSaldoCuentaCliente(int dni, int montoRetirado)
 }
 void restarDineroCajero(int idCajero, int montoExtraido)
 {
-    AuxuliarCajero cajero;
+    Cajero objCajero;
     int capacidadActual, cantBilletesExtraida=0;
     int pos=0, posEdit;
-    while (cajero.leerDeDisco(pos++))
+    while (objCajero.leerDeDisco(pos++))
     {
-        if (idCajero==cajero.getIdCajero())
+        if (idCajero==objCajero.getIdCajero())
         {
             posEdit=pos-1;
-            capacidadActual=cajero.getCapacidad();
+            capacidadActual=objCajero.getCapacidad();
             cantBilletesExtraida= (montoExtraido/BILLETE);
             capacidadActual = capacidadActual - cantBilletesExtraida;
-            cajero.setCapacidad(capacidadActual);
-            cajero.editarEnDisco(posEdit);
+            objCajero.setCapacidad(capacidadActual);
+            objCajero.editarEnDisco(posEdit);
         }
     }
 }

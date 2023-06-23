@@ -36,12 +36,13 @@ void seGeneraArchivoAuxCajero(int, int);
 void editarCargaCajero(int, int);
 void mostarCargaCajero(int);
 bool esPosibleCargarCajero(int, double);
-void ustedesPuedeCargar(int);
+void ustedPuedeCargar(int);
 
 ///Transacciones
 int generarNumTransaccion();
-void operacionTransaccion(int, int, int, bool); ///Aca Guarda la transacciones que se hacen
+void operacionTransaccion(int, int, int, int, bool); ///Aca Guarda la transacciones que se hacen
 void mostrarTransacciones();
+void transaccionConfirmada(bool estaConfirmada);
 
 /// Extracciones
 bool verificarSaldoDisplonible(int, int);
