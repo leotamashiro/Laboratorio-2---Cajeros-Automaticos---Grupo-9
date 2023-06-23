@@ -5,7 +5,6 @@
 #include "funciones.h"
 #include "Sucursal.h"
 #include "Cajero.h"
-#include "AuxuliarCajero.h"
 #include "Transacciones.h"
 #include "UsuarioLogin.h"
 #include <time.h>
