@@ -2,29 +2,23 @@
 #include <string>
 #include <cstring>
 #include "MenuAdmin.h"
+#include "funcionesReportes.h"
 
-/**
-En la parte del Balanceo tengo que poner la plata que tiene cada auxCajero
-*/
-/**
-La opcion 3 seria Agregar el dinero que tiene cada cuenta y su numero de DNI.
-*/
 using namespace std;
 
-void menuAdmin()
+void reportes()
 {
-
     int opcion;
     do
     {
         cout << "--------------------------" << endl;
-        cout << "----MENU ADMINISTRADOR----" << endl;
+        cout << "----MENU Reportes----" << endl;
         cout << "--------------------------" << endl;
-        cout << "1. Sucursales" << endl;
-        cout << "2. Cajeros" << endl;
-        cout << "3. Clientes" << endl;
-        cout << "4. Balanceo" << endl;
-        cout << "5. Reportes" << endl;
+        cout << "1. Top 3 Sucursales" << endl;
+        cout << "2. Top 5 Cajeros" << endl;
+        cout << "3. " << endl;
+        cout << "4. " << endl;
+        cout << "5. " << endl;
         cout << endl;
         cout << "0. Salir" << endl;
         cout << "--------------------------" << endl;
@@ -35,21 +29,16 @@ void menuAdmin()
         switch(opcion)
         {
         case 1:
-
-            menuSucursales();
+            //topSucursales();
             break;
         case 2:
-            menuCajeros();
+            topCajeros();
             break;
         case 3:
-            menuClientes();
             break;
         case 4:
-            balanceoMenu();
             break;
-
         case 5:
-            reportes();
             break;
         case 0:
             system("cls");

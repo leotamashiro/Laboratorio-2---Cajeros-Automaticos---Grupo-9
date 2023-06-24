@@ -53,6 +53,7 @@
 		<Unit filename="MenuBalanceo.cpp" />
 		<Unit filename="MenuCajeros.cpp" />
 		<Unit filename="MenuClientes.cpp" />
+		<Unit filename="MenuReportes.cpp" />
 		<Unit filename="MenuSucursales.cpp" />
 		<Unit filename="MenuUsuario.cpp" />
 		<Unit filename="Sucursal.cpp" />
@@ -65,6 +66,8 @@
 		<Unit filename="funciones.h" />
 		<Unit filename="funcionesClientes.cpp" />
 		<Unit filename="funcionesClientes.h" />
+		<Unit filename="funcionesReportes.cpp" />
+		<Unit filename="funcionesReportes.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="menuClienteExterno.cpp" />
 		<Unit filename="menuEstraxiones.cpp" />

@@ -9,7 +9,7 @@ void balanceoMenu();
 void menuExtraxion(int, int);
 void menuClienteExterno(int);
 void menuUsuario();
-
+void reportes();
 
 ///
 
