@@ -3,6 +3,7 @@
 #include <ctime>
 #include "Fecha.h"
 using namespace std;
+#include "funcionesClientes.h"
 
 bool Fecha::esBiciesto()
 {
@@ -22,7 +23,7 @@ void Fecha::Cargar()
     flag=true;
     while (flag==true)
     {
-        cin >> anio;
+        anio = validarNumerosIngresados();
         if (anio > 0)
         {
             if (esBiciesto())
@@ -42,7 +43,7 @@ void Fecha::Cargar()
     flag=true;
     while (flag==true)
     {
-        cin >> mes;
+        mes = validarNumerosIngresados();
         if (mes > 0 && mes <13)
         {
             flag=false;
@@ -58,7 +59,7 @@ void Fecha::Cargar()
     cout << "Dia: ";
     while (flag==true)
     {
-        cin >> dia;
+        dia = validarNumerosIngresados();
         if (dia > 0 && dia <=dias[mes-1])
         {
             flag=false;

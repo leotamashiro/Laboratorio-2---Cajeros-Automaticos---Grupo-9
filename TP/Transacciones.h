@@ -12,7 +12,7 @@ class Transacciones
         int id;
         Fecha fechaTransaccion;
         int dniCliente;
-        int monto;
+        float monto;
         int tipoTransaccion;
         bool confirmada;
 
@@ -22,7 +22,7 @@ class Transacciones
         int getIdProcedencia();
         Fecha getFechaTranssacion();
         int getDniCliente();
-        int getMonto();
+        float getMonto();
         int getTipoTransaccion();
         bool getConfirmada();
 

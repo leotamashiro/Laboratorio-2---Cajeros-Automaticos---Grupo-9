@@ -413,7 +413,7 @@ int generarNumTransaccion()
     }
 }
 ///Aca Guarda la transacciones que se hacen
-void operacionTransaccion(int id,int monto, int dni, int tipoTransaccion, bool posible) /// en el case pasar el id cajero como paremetro y creo que es mejor pasale el monto,
+void operacionTransaccion(int id,float monto, int dni, int tipoTransaccion, bool posible) /// en el case pasar el id cajero como paremetro y creo que es mejor pasale el monto,
 {
     Transacciones regTransaccion;
     Fecha fechasis;
@@ -508,7 +508,7 @@ bool verificarDineroEnCajero(int idCajero, int monto)
 /********** Le resto el dinero a la Cuenta del Cliente y al Cajero de la operacion ************/
 void restarSaldoCuentaCliente(int dni, int montoRetirado)
 {
-    float montoRetidadoF =float(montoRetirado);
+    float montoRetidadoF =montoRetirado;
     Cuenta cuentaCliente;
     int pos=0, posEdit;
     while (cuentaCliente.leerDeDisco(pos++))
@@ -521,10 +521,12 @@ void restarSaldoCuentaCliente(int dni, int montoRetirado)
         }
     }
 }
-void restarDineroCajero(int idCajero, int montoExtraido)
+void restarDineroCajero(int idCajero, float montoExtraido)
 {
+    static_cast<int>(montoExtraido);
     Cajero objCajero;
-    int capacidadActual, cantBilletesExtraida=0;
+    int capacidadActual;
+    int cantBilletesExtraida=0;
     int pos=0, posEdit;
     while (objCajero.leerDeDisco(pos++))
     {
