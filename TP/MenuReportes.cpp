@@ -29,7 +29,7 @@ void reportes()
         switch(opcion)
         {
         case 1:
-            //topSucursales();
+            topSucursales();
             break;
         case 2:
             topCajeros();

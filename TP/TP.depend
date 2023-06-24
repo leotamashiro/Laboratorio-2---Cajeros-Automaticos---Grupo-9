@@ -160,7 +160,7 @@
 	<cstring>
 	"Direccion.h"
 
-1687559055 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\cajero.cpp
+1687625548 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\cajero.cpp
 	"Cajero.h"
 
 1687562667 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\cajero.h
@@ -491,7 +491,7 @@
 	"funciones.h"
 	"funcionesClientes.h"
 
-1687563884 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\funcionesreportes.cpp
+1687644330 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\funcionesreportes.cpp
 	<iostream>
 	<string>
 	<cstring>
@@ -503,7 +503,7 @@
 	<time.h>
 	"Cuenta.h"
 
-1687563913 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menureportes.cpp
+1687643564 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menureportes.cpp
 	<iostream>
 	<string>
 	<cstring>

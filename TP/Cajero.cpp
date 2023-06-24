@@ -127,7 +127,7 @@ void Cajero::Cargar()
     cout << "Ingrese la fecha de Instalacion: ";
     fechaInstalacion.Cargar();
 
-    cout << "Ingrese el Estado delCajero: ";
+    cout << "Ingrese el Estado del Cajero: ";
     cin >> estadoCajero;
 
 }
@@ -157,9 +157,6 @@ void Cajero::CargarEditar()
     cout << endl;
     cout << "Ingrese el Estado del Cajero: ";
     cin >> estadoCajero;
-
-
-
 }
 
 void Cajero::Mostrar()
@@ -224,4 +221,15 @@ bool Cajero::leerDeDisco(int pos)
     lectura = fread(this, sizeof *this, 1, p);
     fclose(p);
     return lectura;
+}
+
+int Cajero::contarRegistros()
+{
+        FILE *p;
+        p=fopen("cajeros.dat", "rb");
+        if(p==NULL) return -1;
+        fseek(p, 0,2);
+        int tam=ftell(p);
+        fclose(p);
+        return tam/sizeof(Cajero);
 }
