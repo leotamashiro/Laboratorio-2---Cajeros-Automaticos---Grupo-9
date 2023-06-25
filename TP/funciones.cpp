@@ -25,19 +25,23 @@ void mostarSucursales()
         cout << "---------------------------------" << endl;
     }
 }
-void mostarSucursalesActivas()
+bool mostarSucursalesActivas()
 {
     Sucursal sucu;
     int pos=0;
+    bool flag = false;
     while (sucu.leerDeDisco(pos++))
     {
+        sucu.Mostrar();
         if (sucu.getEstadoSucursal()==1)
         {
+        cout<<"paso por aca"<<endl;
             sucu.Mostrar();
+            flag = true;
             cout << "---------------------------------" << endl;
         }
     }
-    return;
+    return flag;
 }
 void mostarSucursalesInactivas()
 {

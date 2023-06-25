@@ -38,8 +38,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="../../../Laboratorio-2---Cajeros-Automaticos---Grupo-9-main/TP/IngresosMensuales.cpp" />
-		<Unit filename="../../../Laboratorio-2---Cajeros-Automaticos---Grupo-9-main/TP/IngresosMensuales.h" />
 		<Unit filename="ArchivoCliente.cpp" />
 		<Unit filename="ArchivoCliente.h" />
 		<Unit filename="Cajero.cpp" />

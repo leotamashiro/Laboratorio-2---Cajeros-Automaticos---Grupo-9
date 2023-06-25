@@ -30,9 +30,13 @@ void reportes()
         {
         case 1:
             topSucursales();
+            system("pause");
+            system("cls");
             break;
         case 2:
             topCajeros();
+            system("pause");
+            system("cls");
             break;
         case 3:
             transaccionesPeriodoTiempo();

@@ -1,7 +1,11 @@
 #include <cstdlib>
 #include <time.h>
+#include <iostream>
+#include <string>
+#include <cctype>
 #include "funcionesClientes.h"
 #include "UsuarioLogin.h"
+#include "funciones.h"
 
 int posCliente(int dni)
 {
@@ -212,15 +216,15 @@ bool eliminadoLogico()
 int validarCin()
 {
     int num;
-    cin>>num;
-    if(cin.fail())
-    {
-        cout<<"Por favor ingrese un numero entero"<<endl;
-        cin.clear();
-        cin.ignore(10000, '\n');
-        return -1;
+    string a;
+    cin>>a;
+    for (char c : a) {
+        if (!isdigit(c)) {
+            cout<<"Por favor ingrese un numero entero"<<endl;
+            return -1;
+        }
     }
-    return num;
+    return stoi(a);
 }
 
 int validarNumerosIngresados()

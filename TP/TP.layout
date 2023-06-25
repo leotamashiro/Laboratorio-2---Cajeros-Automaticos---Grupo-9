@@ -2,14 +2,14 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="UsuarioLogin.h" open="0" top="0" tabpos="20" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="funcionesReportes.cpp" open="1" top="1" tabpos="16" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="258" topLine="6" />
+			<Cursor1 position="9817" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="Cajero.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3722" topLine="206" />
+			<Cursor1 position="5867" topLine="223" />
 		</Cursor>
 	</File>
 	<File name="Direccion.cpp" open="0" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -17,9 +17,78 @@
 			<Cursor1 position="255" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Sucursal.h" open="0" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="funcionesClientes.cpp" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="149" topLine="0" />
+			<Cursor1 position="1357" topLine="62" />
+		</Cursor>
+	</File>
+	<File name="funciones.h" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="254" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="funciones.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="577" topLine="17" />
+		</Cursor>
+		<Folding>
+			<Collapse line="18" />
+			<Collapse line="46" />
+			<Collapse line="60" />
+			<Collapse line="76" />
+			<Collapse line="89" />
+			<Collapse line="107" />
+			<Collapse line="122" />
+			<Collapse line="140" />
+			<Collapse line="157" />
+			<Collapse line="177" />
+			<Collapse line="190" />
+			<Collapse line="203" />
+			<Collapse line="216" />
+			<Collapse line="226" />
+			<Collapse line="239" />
+			<Collapse line="252" />
+			<Collapse line="271" />
+			<Collapse line="288" />
+			<Collapse line="305" />
+			<Collapse line="320" />
+			<Collapse line="341" />
+			<Collapse line="356" />
+			<Collapse line="369" />
+			<Collapse line="394" />
+			<Collapse line="413" />
+			<Collapse line="428" />
+			<Collapse line="456" />
+			<Collapse line="468" />
+			<Collapse line="480" />
+			<Collapse line="501" />
+			<Collapse line="523" />
+			<Collapse line="538" />
+		</Folding>
+	</File>
+	<File name="UsuarioLogin.cpp" open="1" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="778" topLine="50" />
+		</Cursor>
+	</File>
+	<File name="MenuCajeros.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4917" topLine="88" />
+		</Cursor>
+	</File>
+	<File name="Cuenta.cpp" open="1" top="0" tabpos="24" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="632" topLine="42" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="364" topLine="4" />
+		</Cursor>
+	</File>
+	<File name="Transacciones.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="294" topLine="7" />
 		</Cursor>
 	</File>
 	<File name="Sucursal.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
@@ -27,59 +96,9 @@
 			<Cursor1 position="1338" topLine="90" />
 		</Cursor>
 	</File>
-	<File name="MenuClientes.cpp" open="0" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+	<File name="MenuAdmin.cpp" open="1" top="0" tabpos="19" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="612" topLine="12" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="189" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="ArchivoCliente.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="3" />
-		</Cursor>
-	</File>
-	<File name="UsuarioLogin.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="25" topLine="54" />
-		</Cursor>
-	</File>
-	<File name="Transacciones.h" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="419" topLine="7" />
-		</Cursor>
-	</File>
-	<File name="Fecha.h" open="0" top="0" tabpos="23" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="185" topLine="7" />
-		</Cursor>
-	</File>
-	<File name="MenuAdmin.cpp" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1416" topLine="18" />
-		</Cursor>
-	</File>
-	<File name="funcionesClientes.cpp" open="0" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4835" topLine="216" />
-		</Cursor>
-	</File>
-	<File name="Cajero.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="228" topLine="10" />
-		</Cursor>
-	</File>
-	<File name="funcionesClientes.h" open="0" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="589" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Fecha.cpp" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2281" topLine="0" />
+			<Cursor1 position="1234" topLine="36" />
 		</Cursor>
 	</File>
 	<File name="MenuSucursales.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -87,19 +106,54 @@
 			<Cursor1 position="5777" topLine="120" />
 		</Cursor>
 	</File>
-	<File name="Cuenta.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="funcionesReportes.h" open="1" top="0" tabpos="20" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="224" topLine="62" />
+			<Cursor1 position="119" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="menuEstraxiones.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Fecha.cpp" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="604" topLine="34" />
+			<Cursor1 position="2281" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Transacciones.cpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ArchivoCliente.h" open="1" top="0" tabpos="25" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1620" topLine="0" />
+			<Cursor1 position="490" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="MenuAdmin.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="266" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="MenuBalanceo.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="553" topLine="42" />
+		</Cursor>
+	</File>
+	<File name="ArchivoCliente.cpp" open="1" top="0" tabpos="23" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="409" topLine="15" />
+		</Cursor>
+	</File>
+	<File name="Cliente.cpp" open="1" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2118" topLine="90" />
+		</Cursor>
+	</File>
+	<File name="Fecha.h" open="0" top="0" tabpos="23" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="185" topLine="7" />
+		</Cursor>
+	</File>
+	<File name="UsuarioLogin.h" open="0" top="0" tabpos="20" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="258" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="menuEstraxiones.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="604" topLine="12" />
 		</Cursor>
 	</File>
 	<File name="Direccion.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -107,34 +161,39 @@
 			<Cursor1 position="331" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="funciones.h" open="0" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Cliente.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1077" topLine="0" />
+			<Cursor1 position="312" topLine="6" />
 		</Cursor>
 	</File>
-	<File name="MenuReportes.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Cuenta.h" open="1" top="0" tabpos="26" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="601" topLine="10" />
+			<Cursor1 position="572" topLine="9" />
 		</Cursor>
 	</File>
-	<File name="Cliente.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="funcionesClientes.h" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1898" topLine="70" />
+			<Cursor1 position="137" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="menuClienteExterno.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+	<File name="Transacciones.cpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1902" topLine="24" />
+			<Cursor1 position="1620" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="MenuCajeros.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+	<File name="MenuClientes.cpp" open="1" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4917" topLine="160" />
+			<Cursor1 position="612" topLine="32" />
 		</Cursor>
 	</File>
-	<File name="funcionesReportes.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Sucursal.h" open="0" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="119" topLine="0" />
+			<Cursor1 position="149" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Cajero.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="228" topLine="10" />
 		</Cursor>
 	</File>
 	<File name="MenuUsuario.cpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -142,73 +201,14 @@
 			<Cursor1 position="887" topLine="3" />
 		</Cursor>
 	</File>
-	<File name="funciones.cpp" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="menuClienteExterno.cpp" open="1" top="0" tabpos="22" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="13000" topLine="75" />
-		</Cursor>
-		<Folding>
-			<Collapse line="18" />
-			<Collapse line="28" />
-			<Collapse line="42" />
-			<Collapse line="56" />
-			<Collapse line="72" />
-			<Collapse line="85" />
-			<Collapse line="103" />
-			<Collapse line="118" />
-			<Collapse line="136" />
-			<Collapse line="153" />
-			<Collapse line="173" />
-			<Collapse line="186" />
-			<Collapse line="199" />
-			<Collapse line="212" />
-			<Collapse line="222" />
-			<Collapse line="235" />
-			<Collapse line="248" />
-			<Collapse line="267" />
-			<Collapse line="284" />
-			<Collapse line="301" />
-			<Collapse line="316" />
-			<Collapse line="337" />
-			<Collapse line="352" />
-			<Collapse line="365" />
-			<Collapse line="390" />
-			<Collapse line="409" />
-			<Collapse line="424" />
-			<Collapse line="452" />
-			<Collapse line="464" />
-			<Collapse line="476" />
-			<Collapse line="497" />
-			<Collapse line="519" />
-			<Collapse line="534" />
-			<Collapse line="554" />
-			<Collapse line="588" />
-			<Collapse line="625" />
-			<Collapse line="640" />
-		</Folding>
-	</File>
-	<File name="Cliente.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="312" topLine="6" />
+			<Cursor1 position="1788" topLine="48" />
 		</Cursor>
 	</File>
-	<File name="funcionesReportes.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+	<File name="MenuReportes.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="5464" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Cuenta.h" open="0" top="0" tabpos="19" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="696" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="MenuBalanceo.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="553" topLine="48" />
-		</Cursor>
-	</File>
-	<File name="MenuAdmin.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="260" topLine="0" />
+			<Cursor1 position="1014" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

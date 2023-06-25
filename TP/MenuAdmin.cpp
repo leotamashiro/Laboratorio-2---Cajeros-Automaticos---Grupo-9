@@ -47,7 +47,6 @@ void menuAdmin()
         case 4:
             balanceoMenu();
             break;
-
         case 5:
             reportes();
             break;

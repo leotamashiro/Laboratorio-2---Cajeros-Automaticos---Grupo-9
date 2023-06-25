@@ -8,7 +8,7 @@ void menuCajeros();
 
 /// Funciones para Sucursales
 void mostarSucursales();
-void mostarSucursalesActivas();
+bool mostarSucursalesActivas();
 void mostarSucursalesInactivas();
 bool validarSucursal(int);
 void editarSucursal(int);

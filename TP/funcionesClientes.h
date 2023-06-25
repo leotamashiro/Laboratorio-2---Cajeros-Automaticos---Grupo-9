@@ -3,7 +3,7 @@
 #include "ArchivoCliente.h"
 #include "Cliente.h"
 #include "Transacciones.h"
-#include "funciones.h"
+
 
 int persistirCliente();
 void mostrarClientes();

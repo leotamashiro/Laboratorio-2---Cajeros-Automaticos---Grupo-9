@@ -25,6 +25,12 @@ void topSucursales()
     tamCajero=objCajero.contarRegistros();
     tamSucursal = sucu.contarRegistros();
 
+    if(tamCajero == -1 || tamSucursal == -1)
+    {
+        cout<<"No es encontraron registros"<<endl;
+        return;
+    }
+
     int *cantTranSucu;// me guardo la cantidad de transacciones por Sucursal
     cantTranSucu=new int[tamSucursal];
 
@@ -78,26 +84,26 @@ void topSucursales()
     int auxTran, auxPosSucu;
     for(int i=0; i<tamSucursal ; i++)
     {
-    	for(int j=0;j<tamSucursal ;j++)
+        for(int j=0; j<tamSucursal ; j++)
         {
-    		if(cantTranSucu[j]<cantTranSucu[j+1])
-    		{
-    		    //Ordeno de mayor a menor la cantidad de Transacciones por Sucursal,
-    			auxTran=cantTranSucu[j];
-    			cantTranSucu[j]=cantTranSucu[j+1];
-    			cantTranSucu[j+1]=auxTran;
-    			//Ordeno de mayor a menor (por cantidad de Transacciones) la posicion de la Sucursal en Archivo Sucursal
-    			auxPosSucu=posicionArchivoSucursal[j];
-    			posicionArchivoSucursal[j]=posicionArchivoSucursal[j+1];
-    			posicionArchivoSucursal[j+1]=auxPosSucu;
-			}
-		}
-	}
+            if(cantTranSucu[j]<cantTranSucu[j+1])
+            {
+                //Ordeno de mayor a menor la cantidad de Transacciones por Sucursal,
+                auxTran=cantTranSucu[j];
+                cantTranSucu[j]=cantTranSucu[j+1];
+                cantTranSucu[j+1]=auxTran;
+                //Ordeno de mayor a menor (por cantidad de Transacciones) la posicion de la Sucursal en Archivo Sucursal
+                auxPosSucu=posicionArchivoSucursal[j];
+                posicionArchivoSucursal[j]=posicionArchivoSucursal[j+1];
+                posicionArchivoSucursal[j+1]=auxPosSucu;
+            }
+        }
+    }
 
     // Se muestra top 3 sucursal con mas visitas
-	cout << "Top 3 Sucursales con mas visitas" << endl;
-	cout << "-------------------------------------" << endl;
-	for (int t=0; t<3; t++)
+    cout << "Top 3 Sucursales con mas visitas" << endl;
+    cout << "-------------------------------------" << endl;
+    for (int t=0; t<3; t++)
     {
         cout << "Puesto " << ":" << t+1 << "    ";
         sucu.leerDeDisco(posicionArchivoSucursal[t]);
@@ -114,6 +120,12 @@ void topCajeros()
     Transacciones regTransacciones;
     int tamCajero;
     tamCajero=objCajero.contarRegistros();
+
+    if(tamCajero == -1)
+    {
+        cout<<"No es encontraron registros"<<endl;
+        return;
+    }
 
     int *cantTran;    // me guardo la cantidad de transacciones por Cajero
     cantTran=new int[tamCajero];
@@ -158,26 +170,26 @@ void topCajeros()
     int auxTran, auxPosCajero;
     for(int i=0; i<tamCajero ; i++)
     {
-    	for(int j=0;j<tamCajero ;j++)
+        for(int j=0; j<tamCajero ; j++)
         {
-    		if(cantTran[j]<cantTran[j+1])
-    		{
-    		    //Ordeno de mayor a menor la cantidad de Transacciones por Cajero,
-    			auxTran=cantTran[j];
-    			cantTran[j]=cantTran[j+1];
-    			cantTran[j+1]=auxTran;
-    			//Ordeno de mayor a menor (por cantidad de Transacciones) la posicion del Cajero en Archivo cajero
-    			auxPosCajero=posicionArchivoCajero[j];
-    			posicionArchivoCajero[j]=posicionArchivoCajero[j+1];
-    			posicionArchivoCajero[j+1]=auxPosCajero;
-			}
-		}
-	}
+            if(cantTran[j]<cantTran[j+1])
+            {
+                //Ordeno de mayor a menor la cantidad de Transacciones por Cajero,
+                auxTran=cantTran[j];
+                cantTran[j]=cantTran[j+1];
+                cantTran[j+1]=auxTran;
+                //Ordeno de mayor a menor (por cantidad de Transacciones) la posicion del Cajero en Archivo cajero
+                auxPosCajero=posicionArchivoCajero[j];
+                posicionArchivoCajero[j]=posicionArchivoCajero[j+1];
+                posicionArchivoCajero[j+1]=auxPosCajero;
+            }
+        }
+    }
 
-	// Se muestra los primeros 5 cajeros con mas transaccciones
-	cout << "Top 5 Cajeros con mas transacciones" << endl;
-	cout << "-------------------------------------" << endl;
-	for (int t=0; t<5; t++)
+    // Se muestra los primeros 5 cajeros con mas transaccciones
+    cout << "Top 5 Cajeros con mas transacciones" << endl;
+    cout << "-------------------------------------" << endl;
+    for (int t=0; t<5; t++)
     {
         cout << "Puesto " << ":" << t+1 << "    ";
         objCajero.leerDeDisco(posicionArchivoCajero[t]);
@@ -188,7 +200,8 @@ void topCajeros()
     delete posicionArchivoCajero;
 }
 
-void transaccionesPeriodoTiempo() {
+void transaccionesPeriodoTiempo()
+{
     Transacciones transacciones;
     Fecha fechaInicial, fechaFinal;
     int totalTransacciones = transacciones.contarRegistros();
@@ -207,10 +220,12 @@ void transaccionesPeriodoTiempo() {
     fechaPeriodoInicial = fechaInicial.toString();
     fechaPeriodoFinal = fechaFinal.toString();
 
-    for(int i = 0; i < totalTransacciones; i++) {
+    for(int i = 0; i < totalTransacciones; i++)
+    {
         transacciones.leerDeDisco(i);
         fechaTransaccion = transacciones.getFechaTranssacion().toString();
-        if(fechaTransaccion >= fechaPeriodoInicial && fechaTransaccion <= fechaPeriodoFinal) {
+        if(fechaTransaccion >= fechaPeriodoInicial && fechaTransaccion <= fechaPeriodoFinal)
+        {
             transacciones.Mostrar();
             contador++;
         }
@@ -219,7 +234,8 @@ void transaccionesPeriodoTiempo() {
     cout<<", se obtuvieron "<<contador<<" transacciones."<<endl;
 }
 
-void cantidadDineroExtraidoPorDia() {
+void cantidadDineroExtraidoPorDia()
+{
     Fecha fecha;
     Transacciones transacciones;
     int totalTransacciones = transacciones.contarRegistros();
@@ -229,20 +245,26 @@ void cantidadDineroExtraidoPorDia() {
     fecha.Cargar();
     fechaDia = fecha.toString();
 
-    for(int i = 0; i < totalTransacciones; i++) {
+    for(int i = 0; i < totalTransacciones; i++)
+    {
         transacciones.leerDeDisco(i);
-        if(transacciones.getFechaTranssacion().toString() == fechaDia && transacciones.getTipoTransaccion() == 1 && transacciones.getConfirmada()) {
+        if(transacciones.getFechaTranssacion().toString() == fechaDia && transacciones.getTipoTransaccion() == 1 && transacciones.getConfirmada())
+        {
             acumulador += transacciones.getMonto();
         }
     }
-    if(acumulador > 0) {
+    if(acumulador > 0)
+    {
         cout<<"Para el dia "<<fechaDia<<", se extrajeron de todos los cajeros un monto total de "<<acumulador<<endl;
-    } else {
+    }
+    else
+    {
         cout<<"Para el dia "<<fechaDia<<", no se extrajo dinero de ningun cajero"<<endl;
     }
 }
 
-void cantidadDineroIngresadoClientesPorMes() {
+void cantidadDineroIngresadoClientesPorMes()
+{
     int mes, anio, contador;
     float acumulado;
     Transacciones transacciones;
@@ -251,37 +273,48 @@ void cantidadDineroIngresadoClientesPorMes() {
     int totalClientes = arcCliente.getCantidadRegistros();
     int totalTransacciones = transacciones.contarRegistros();
 
-    cout<<"Ingrese el mes que desea consultar"<<endl;
+    cout<<"Ingrese el MES que desea consultar"<<endl;
     mes = validarNumerosIngresados();
-    if(mes <= 0 || mes > 12) {
+    if(mes <= 0 || mes > 12)
+    {
         cout<<"Ingrese un mes valido"<<endl;
         return;
     }
-    cout<<"Ingrese el anio que desea consultar"<<endl;
+    cout<<"Ingrese el ANIO que desea consultar"<<endl;
     anio = validarNumerosIngresados();
     Fecha fechaDeMes(1, mes, anio);
 
     system("pause");
     system("cls");
 
-    for(int i = 0; i < totalClientes; i++) {
+    cout<<"TOTAL CLIENTES: "<<totalClientes<<endl;
+
+    for(int i = 0; i < totalClientes; i++)
+    {
         acumulado = 0;
         contador = 0;
         cliente = arcCliente.leerCliente(i);
-        for(int j = 0; j < totalTransacciones; j++){
+        for(int j = 0; j < totalTransacciones; j++)
+        {
             transacciones.leerDeDisco(j);
-            if(cliente.getDni() == transacciones.getDniCliente() && transacciones.getTipoTransaccion() == 2 && transacciones.getConfirmada() && cliente.getActivo()) {
+            if(cliente.getDni() == transacciones.getDniCliente() && transacciones.getTipoTransaccion() == 2 && transacciones.getConfirmada() && cliente.getActivo())
+            {
                 acumulado += transacciones.getMonto();
                 contador++;
             }
         }
-        cout<<"Nombre Cliente: "<<cliente.getNombre()<<endl;
-        cout<<"Apellido Cliente: "<<cliente.getApellido()<<endl;
-        cout<<"Dni Cliente: "<<cliente.getDni()<<endl;
-        cout<<"Email Cliente: "<<cliente.getEmail()<<endl;
-        cout<<"Total de Ingresos Mensual: "<<acumulado<<endl;
-        cout<<"Cantidad de Transacciones Confirmadas Mensuales: "<<contador<<endl;
-        cout<<"-------------------------------------------------"<<endl;
+        if(cliente.getActivo())
+        {
+            cout<<"Nombre Cliente: "<<cliente.getNombre()<<endl;
+            cout<<"Apellido Cliente: "<<cliente.getApellido()<<endl;
+            cout<<"Dni Cliente: "<<cliente.getDni()<<endl;
+            cout<<"Email Cliente: "<<cliente.getEmail()<<endl;
+            cout<<"Cliente Activo: "<<cliente.getActivo()<<endl;
+            cout<<"Total de Ingresos Mensual: "<<acumulado<<endl;
+            cout<<"Cantidad de Transacciones Confirmadas Mensuales: "<<contador<<endl;
+            cout<<"-------------------------------------------------"<<endl;
+
+        }
     }
 
     cout<<"DATOS MENSUALES PARA EL MES "<<mes<<" Y EL ANIO "<<anio<<endl;
