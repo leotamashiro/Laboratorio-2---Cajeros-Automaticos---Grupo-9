@@ -79,13 +79,15 @@ void Cajero::Cargar()
         if (flag==false)
         {
             cout << "Ingrese numero de Sucursal: ";
-            cin >> numSucursal;
+            numSucursal = validarNumerosIngresados(); // ingreso valido numSucursal como numero int
+            //cin >> numSucursal;
             flag=true;
         }
         else
         {
             cout << "Sucursal no Cargada, por favor ingrese una sucursal valida: ";
-            cin >> numSucursal;
+            numSucursal = validarNumerosIngresados(); // ingreso valido numSucursal como numero int
+            //cin >> numSucursal;
         }
         validSucu = validarSucursal(numSucursal);
     }
@@ -96,13 +98,15 @@ void Cajero::Cargar()
         if (flag==false)
         {
             cout << "Ingrese el ID del Cajero: ";
-            cin >> idCajero;
+            idCajero = validarNumerosIngresados(); // ingreso valido idCajero como numero int
+            //cin >> idCajero;
             flag=true;
         }
         else
         {
             cout << "ID del Cajero ya ingresa, por favor ingrese otro: ";
-            cin >> idCajero;
+            idCajero = validarNumerosIngresados(); // ingreso valido idCajero como numero int
+            //cin >> idCajero;
         }
         validCajeroID = validarCajeroID(idCajero);
     }
@@ -113,13 +117,15 @@ void Cajero::Cargar()
         if (flag==false)
         {
             cout << "Ingrese el N de Serie del Cajero: ";
-            cin >> numSerie;
+            numSerie = validarNumerosIngresados(); // ingreso valido numSerie como numero int
+            //cin >> numSerie;
             flag=true;
         }
         else
         {
             cout << "N de Serie del Cajero ya ingresado, por favor ingrese otro: ";
-            cin >> numSerie;
+            numSerie = validarNumerosIngresados(); // ingreso valido numSerie como numero int
+            //cin >> numSerie;
         }
         validCajeroNSerie = validarCajeroNSerie(numSerie);
     }
@@ -141,13 +147,15 @@ void Cajero::CargarEditar()
         if (flag==false)
         {
             cout << "Ingrese numero de Sucursal: ";
-            cin >> numSucursal;
+            numSucursal = validarNumerosIngresados(); // ingreso valido numSucursal como numero int
+            //cin >> numSucursal;
             flag=true;
         }
         else
         {
             cout << "Sucursal no Cargada, por favor ingrese una sucursal valida: ";
-            cin >> numSucursal;
+            numSucursal = validarNumerosIngresados(); // ingreso valido numSucursal como numero int
+            //cin >> numSucursal;
         }
         validSucu = validarSucursal(numSucursal);
     }

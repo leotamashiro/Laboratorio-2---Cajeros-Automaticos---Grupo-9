@@ -5,6 +5,7 @@
 #include "UsuarioLogin.h"
 #include "Cliente.h"
 #include <time.h>
+#include "funcionesClientes.h"
 
 using namespace std;
 /**
@@ -24,7 +25,8 @@ void menuExtraxion(int dni, int idCajero)
     {
         montoPosible=false;
         cout << "Por favor ingrese el monto que desea retirar del cajero: ";
-        cin >> monto;
+        monto = validarNumerosIngresados(); // ingreso monto y valido Monto como numero enteo
+        //cin >> monto;
         if ((monto >= BILLETE) && (monto % BILLETE == 0))
         {
             montoPosible=true;

@@ -9,6 +9,7 @@
 #include "UsuarioLogin.h"
 #include <time.h>
 #include "Cuenta.h"
+#include "funcionesClientes.h"
 
 
 using namespace std;
@@ -555,14 +556,16 @@ int pedirleAlClienteNumSucursal()
         if (flagSucursal==false)
         {
             cout << "Por favor ingrese el numero del sucursal al que desea ingresar:" << endl;
-            cin >> numSucusal;
+            numSucusal = validarNumerosIngresados(); // ingreso valido numSucusal como numero int
+            //cin >> numSucusal;
             flagSucursal=true;
         }
         else
         {
             cout << "El numero de sucursal ingresado no existe o esta temporalmente dada de baja:" << endl;
             cout << "Vuelva a ingresar otra sucursal:" << endl;
-            cin >> numSucusal;
+            numSucusal = validarNumerosIngresados(); // ingreso valido numSucusal como numero int
+            //cin >> numSucusal;
         }
         validSucu=validarSucursal(numSucusal);
         validSucuEstado=validarSucursalEstado(numSucusal);
@@ -590,14 +593,16 @@ int pedirleAlClienteCajero(int numSucursal)
         if (flagCajero==false)
         {
             cout << "Por favor ingrese el numero del Cajero:" << endl;
-            cin >> idCajero;
+            idCajero = validarNumerosIngresados(); // ingreso valido idCajero como numero int
+            //cin >> idCajero;
             flagCajero=true;
         }
         else
         {
             cout << "El ID del Cajero ingresado no existe:" << endl;
             cout << "Vuelva a ingresar el del cajero:" << endl;
-            cin >> idCajero;
+            idCajero = validarNumerosIngresados(); // ingreso valido idCajero como numero int
+            //cin >> idCajero;
         }
         existeCajero = validarCajeroID(idCajero);
         estadoCajero = validarCajeroEstado(idCajero);

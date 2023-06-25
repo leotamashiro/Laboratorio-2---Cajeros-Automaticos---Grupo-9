@@ -4,6 +4,7 @@
 #include "Fecha.h"
 #include "Sucursal.h"
 #include "funciones.h"
+#include "funcionesClientes.h"
 
 ///Ver el tema de la capacidad de Carga de los Cajeros
 

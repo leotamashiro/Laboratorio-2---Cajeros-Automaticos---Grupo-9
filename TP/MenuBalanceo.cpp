@@ -2,6 +2,7 @@
 #include <string>
 #include "MenuAdmin.h"
 #include "funciones.h"
+#include "funcionesClientes.h"
 
 using namespace std;
 
@@ -48,7 +49,8 @@ void balanceoMenu()
                 {
                     montoPosible=false;
                     cout << "Por favor ingrese la cantidad de pesos que desea cargar en el cajero: ";
-                    cin >> montoACargar;
+                    montoACargar = validarNumerosIngresados(); // ingreso valido montoACargar como numero enteo
+                    //cin >> montoACargar;
                     if ((montoACargar >= BILLETE) && (montoACargar % BILLETE == 0))
                     {
                         montoPosible=true;

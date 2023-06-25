@@ -7,6 +7,7 @@ Creo que funciona todo
 #include "Direccion.h"
 #include "Sucursal.h"
 #include "funciones.h"
+#include "funcionesClientes.h"
 
 using namespace std;
 
@@ -55,14 +56,16 @@ void menuSucursales()
                         if (flag==false)
                         {
                             cout << "El numero de sucursal a editar:" << endl;
-                            cin >> numSucEditar;
+                            numSucEditar = validarNumerosIngresados(); // ingreso numSucEditar
+                            //cin >> numSucEditar;
                             flag=true;
                         }
                         else
                         {
                             cout << "El numero de sucursal ingresado no existe:" << endl;
                             cout << "Vuelva a ingresar el numero:" << endl;
-                            cin >> numSucEditar;
+                            numSucEditar = validarNumerosIngresados(); // ingreso numSucEditar
+                            //cin >> numSucEditar;
                         }
 
                         validSucu=validarSucursal(numSucEditar);
@@ -91,14 +94,16 @@ void menuSucursales()
                         if (flag==false)
                         {
                             cout << "Ingrese el numero de Sucursal que desea Borrar:" << endl;
-                            cin >> numSucuEstado;
+                            numSucuEstado = validarNumerosIngresados(); // ingreso numSucuEstado
+                            //cin >> numSucuEstado;
                             flag=true;
                         }
                         else
                         {
                             cout << "El numero de sucursal ingresado no existe:" << endl;
                             cout << "Vuelva a ingresar el numero:" << endl;
-                            cin >> numSucuEstado;
+                            numSucuEstado = validarNumerosIngresados(); // ingreso numSucuEstado
+                            //cin >> numSucuEstado;
                         }
 
                         validSucu=validarSucursal(numSucuEstado);
@@ -128,14 +133,16 @@ void menuSucursales()
                         if (flag==false)
                         {
                             cout << "Ingrese el numero de Sucursal que desea dar de Alta:" << endl;
-                            cin >> numSucuEstado;
+                            numSucuEstado = validarNumerosIngresados(); // ingreso numSucuEstado
+                            //cin >> numSucuEstado;
                             flag=true;
                         }
                         else
                         {
                             cout << "El numero de sucursal ingresado no existe:" << endl;
                             cout << "Vuelva a ingresar el numero:" << endl;
-                            cin >> numSucuEstado;
+                            numSucuEstado = validarNumerosIngresados(); // ingreso numSucuEstado
+                            //cin >> numSucuEstado;
                         }
 
                         validSucu=validarSucursal(numSucuEstado);
@@ -156,7 +163,8 @@ void menuSucursales()
 
             case 5:
                 cout << "El numero de sucursal que de desea mostar:" << endl;
-                cin >> numSucMostar;
+                numSucMostar = validarNumerosIngresados(); // ingreso valido numSucMostar como numero int
+                //cin >> numSucMostar;
                 listarSucuNumero(numSucMostar);
                 system("pause");
                 system("cls");

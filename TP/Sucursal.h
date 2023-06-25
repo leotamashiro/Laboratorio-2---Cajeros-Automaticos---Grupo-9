@@ -4,6 +4,7 @@
 #include <string>
 #include <cstring>
 #include "Direccion.h"
+#include "funcionesClientes.h"
 
 
 class Sucursal

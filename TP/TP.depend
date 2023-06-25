@@ -35,7 +35,7 @@
 	<cstring>
 	"MenuAdmin.h"
 
-1687562675 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\funciones.cpp
+1687663678 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\funciones.cpp
 	<iostream>
 	<string>
 	<cstring>
@@ -47,13 +47,15 @@
 	"UsuarioLogin.h"
 	<time.h>
 	"Cuenta.h"
+	"funcionesClientes.h"
 
-1687480690 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menucajeros.cpp
+1687663799 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menucajeros.cpp
 	<iostream>
 	<string>
 	<cstring>
 	"Cajero.h"
 	"funciones.h"
+	"funcionesClientes.h"
 
 1687480690 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menuclientes.cpp
 	<iostream>
@@ -62,15 +64,16 @@
 	"Direccion.h"
 	"funcionesClientes.h"
 
-1687480690 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menusucursales.cpp
+1687663828 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menusucursales.cpp
 	<iostream>
 	<string>
 	<cstring>
 	"Direccion.h"
 	"Sucursal.h"
 	"funciones.h"
+	"funcionesClientes.h"
 
-1687480690 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\sucursal.cpp
+1687663500 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\sucursal.cpp
 	"Sucursal.h"
 	<iostream>
 	<string>
@@ -78,11 +81,12 @@
 	"Direccion.h"
 	"funciones.h"
 
-1687480690 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\sucursal.h
+1687663500 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\sucursal.h
 	<iostream>
 	<string>
 	<cstring>
 	"Direccion.h"
+	"funcionesClientes.h"
 
 1687559562 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\funciones.h
 
@@ -160,14 +164,15 @@
 	<cstring>
 	"Direccion.h"
 
-1687625548 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\cajero.cpp
+1687663411 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\cajero.cpp
 	"Cajero.h"
 
-1687562667 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\cajero.h
+1687663288 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\cajero.h
 	<iostream>
 	"Fecha.h"
 	"Sucursal.h"
 	"funciones.h"
+	"funcionesClientes.h"
 
 1687563884 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menuadmin.h
 
@@ -257,19 +262,21 @@
 	"UsuarioLogin.h"
 	"funcionesClientes.h"
 
-1687557885 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menuestraxiones.cpp
+1687663191 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menuestraxiones.cpp
 	<iostream>
 	"MenuAdmin.h"
 	"Transacciones.h"
 	"UsuarioLogin.h"
 	"Cliente.h"
 	<time.h>
+	"funcionesClientes.h"
 
-1687559562 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menubalanceo.cpp
+1687663257 source:c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\menubalanceo.cpp
 	<iostream>
 	<string>
 	"MenuAdmin.h"
 	"funciones.h"
+	"funcionesClientes.h"
 
 1687271680 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\archivocliente.cpp
 	<string>

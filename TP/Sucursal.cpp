@@ -61,13 +61,15 @@ void Sucursal::Cargar()
         if (flag==false)
         {
             cout << "Ingrese numero de Sucursal: ";
-            cin >> numSucursal;
+            numSucursal = validarNumerosIngresados(); // ingreso valido numSucursal como numero int
+            //cin >> numSucursal;
             flag=true;
         }
         else
         {
             cout << "Sucursal repetida, por favor ingrese otro numero de Sucursal: ";
-            cin >> numSucursal;
+            numSucursal = validarNumerosIngresados(); // ingreso valido numSucursal como numero int
+            //cin >> numSucursal;
         }
         validSucu = validarSucursal(numSucursal);
     }
@@ -100,6 +102,7 @@ void Sucursal::MostarAlCliente()
     cout << "Numero sucursal: " << numSucursal << endl;
     cout << "Nombre de la Sucursal: ";
     std::cout << nombreSucursal;
+    cout << endl;
     direcSucursal.Mostrar();
     cout << endl;
 }
