@@ -1,10 +1,9 @@
-/**
-*/
 #include <iostream>
 #include <string>
 #include <cstring>
 #include "Cajero.h"
 #include "funciones.h"
+#include "funcionesClientes.h"
 
 using namespace std;
 
@@ -50,23 +49,26 @@ void menuCajeros()
             mostarCajerosActivos();
             flag=false;
             existeCajero= false;
-            while (existeCajero == false)
+            do
             {
                 if (flag==false)
                 {
                     cout << "El ID del Cajero a editar:" << endl;
-                    cin >> idCajeroEditar;
+                    idCajeroEditar = validarNumerosIngresados(); // ingreso idCajeroEditar
+                    //cin >> idCajeroEditar;
                     flag=true;
                 }
                 else
                 {
                     cout << "El ID del Cajero ingresado no existe:" << endl;
                     cout << "Vuelva a ingresar el ID:" << endl;
-                    cin >> idCajeroEditar;
+                    idCajeroEditar = validarNumerosIngresados(); // ingreso idCajeroEditar
+                    //cin >> idCajeroEditar;
                 }
                 existeCajero = validarCajeroID(idCajeroEditar);
                 estadoCajero = validarCajeroEstado(numCajeroEstado);
-            }
+            }while (existeCajero == false);
+
             if ((existeCajero==true) && (estadoCajero==true))
             {
                 editarCajeroID(idCajeroEditar);
@@ -85,23 +87,25 @@ void menuCajeros()
             mostarCajerosActivos();
             flag=false;
             existeCajero= false;
-            while (existeCajero == false)
+            do
             {
                 if (flag==false)
                 {
                     cout << "El ID del Cajero a borrar:" << endl;
-                    cin >> numCajeroEstado;
+                    numCajeroEstado = validarNumerosIngresados(); // ingreso numCajeroEstado
+                    //cin >> numCajeroEstado;
                     flag=true;
                 }
                 else
                 {
                     cout << "El ID del Cajero ingresado no existe:" << endl;
                     cout << "Vuelva a ingresar el ID:" << endl;
-                    cin >> numCajeroEstado;
+                    numCajeroEstado = validarNumerosIngresados(); // ingreso numCajeroEstado
+                    //cin >> numCajeroEstado;
                 }
                 existeCajero = validarCajeroID(numCajeroEstado);
                 estadoCajero = validarCajeroEstado(numCajeroEstado);
-            }
+            }while (existeCajero == false);
             if ((existeCajero==true) && (estadoCajero==true))
             {
                 borrarCajero(numCajeroEstado);
@@ -120,24 +124,26 @@ void menuCajeros()
             mostarCajerosInactivos();
             flag=false;
             existeCajero= false;
-            while (existeCajero == false)
+            do
             {
                 if (flag==false)
                 {
                     cout << "El ID del Cajero a borrar:" << endl;
-                    cin >> numCajeroEstado;
+                    numCajeroEstado = validarNumerosIngresados(); // ingreso numCajeroEstado
+                    //cin >> numCajeroEstado;
                     flag=true;
                 }
                 else
                 {
                     cout << "El ID del Cajero ingresado no existe:" << endl;
                     cout << "Vuelva a ingresar el ID:" << endl;
-                    cin >> numCajeroEstado;
+                    numCajeroEstado = validarNumerosIngresados(); // ingreso numCajeroEstado
+                    //cin >> numCajeroEstado;
                 }
                 existeCajero = validarCajeroID(numCajeroEstado);
                 estadoCajero = validarCajeroEstado(numCajeroEstado);
 
-            }
+            }while (existeCajero == false);
             if ((existeCajero==true) && (estadoCajero==false))
             {
                 darAltaCajero(numCajeroEstado);
@@ -154,7 +160,8 @@ void menuCajeros()
         ///Listar por ID
         case 5:
             cout << "Ingrese el ID del Cajero a Mostar:" << endl;
-            cin >> idCajeroMostar;
+            idCajeroMostar = validarNumerosIngresados(); // ingreso valido idCajeroMostar como numero int
+            //cin >> idCajeroMostar;
             mostrarCajeroID(idCajeroMostar);
             system("pause");
             system("cls");
@@ -163,7 +170,8 @@ void menuCajeros()
         ///Listar Cajero por Sucursal
         case 6:
             cout << "Ingrese el Numero de Sucursal de la que desee mostrar todos los Cajeros:" << endl;
-            cin >> numSucuMostrar;
+            numSucuMostrar = validarNumerosIngresados(); // ingreso valido numSucuMostrar como numero int
+            //cin >> numSucuMostrar;
             mostarCajeroSucursal(numSucuMostrar);
             system("pause");
             system("cls");

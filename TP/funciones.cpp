@@ -9,6 +9,7 @@
 #include "UsuarioLogin.h"
 #include <time.h>
 #include "Cuenta.h"
+#include "funcionesClientes.h"
 
 
 using namespace std;
@@ -36,6 +37,7 @@ void mostarSucursalesActivas()
             cout << "---------------------------------" << endl;
         }
     }
+    return;
 }
 void mostarSucursalesInactivas()
 {
@@ -49,6 +51,7 @@ void mostarSucursalesInactivas()
             cout << "---------------------------------" << endl;
         }
     }
+    return;
 }
 bool validarSucursalEstado(int sucEditar)///devuelve true si encuentra Sucursal
 {
@@ -93,6 +96,7 @@ void editarSucursal(int sucEditar)
             sucu.Cargar();
             posEdit=pos-1;
             sucu.editarEnDisco(posEdit);
+            return;
         }
     }
 }
@@ -125,6 +129,7 @@ void borrarSucursal(int numBorrarSucu)
             sucu.setEstadoSucursal(0);
             posEdit=pos-1;
             sucu.editarEnDisco(posEdit);
+            return;
         }
     }
 }
@@ -159,6 +164,7 @@ void darAltaSucursal(int numAltaSucu)
             sucu.setEstadoSucursal(1);
             posEdit=pos-1;
             sucu.editarEnDisco(posEdit);
+            return;
         }
     }
 }
@@ -201,6 +207,7 @@ bool validarCajeroEstado(int cajEditar) ///devuleve true si encuentra el Estado 
             return objcajero.getEstadoCajero();
         }
     }
+    return false;
 }
 void mostarCajeros()
 {
@@ -377,6 +384,7 @@ bool esPosibleCargarCajero(int idCajero, double montoACargar)
             }
         }
     }
+    return false;
 }
 
 void ustedPuedeCargar(int idCajero)
@@ -484,6 +492,7 @@ bool verificarSaldoDisplonible(int dni, int monto)
             }
         }
     }
+    return false;
 }
 bool verificarDineroEnCajero(int idCajero, int monto)
 {
@@ -503,6 +512,7 @@ bool verificarDineroEnCajero(int idCajero, int monto)
             }
         }
     }
+    return false;
 }
 
 /********** Le resto el dinero a la Cuenta del Cliente y al Cajero de la operacion ************/
@@ -552,23 +562,25 @@ int pedirleAlClienteNumSucursal()
 
     flagSucursal=false;
     validSucu = false;
-    while (validSucu == false)
+    do
     {
         if (flagSucursal==false)
         {
             cout << "Por favor ingrese el numero del sucursal al que desea ingresar:" << endl;
-            cin >> numSucusal;
+            numSucusal = validarNumerosIngresados(); // ingreso valido numSucusal como numero int
+            //cin >> numSucusal;
             flagSucursal=true;
         }
         else
         {
             cout << "El numero de sucursal ingresado no existe o esta temporalmente dada de baja:" << endl;
             cout << "Vuelva a ingresar otra sucursal:" << endl;
-            cin >> numSucusal;
+            numSucusal = validarNumerosIngresados(); // ingreso valido numSucusal como numero int
+            //cin >> numSucusal;
         }
         validSucu=validarSucursal(numSucusal);
         validSucuEstado=validarSucursalEstado(numSucusal);
-    }
+    }while (validSucu == false);
     if ((validSucu==true) && (validSucuEstado==true))
     {
         return numSucusal;
@@ -587,23 +599,25 @@ int pedirleAlClienteCajero(int numSucursal)
     mostarCajeroSucursalAlCliente(numSucursal);
     flagCajero=false;
     existeCajero= false;
-    while (existeCajero == false)
+    do
     {
         if (flagCajero==false)
         {
             cout << "Por favor ingrese el numero del Cajero:" << endl;
-            cin >> idCajero;
+            idCajero = validarNumerosIngresados(); // ingreso valido idCajero como numero int
+            //cin >> idCajero;
             flagCajero=true;
         }
         else
         {
             cout << "El ID del Cajero ingresado no existe:" << endl;
             cout << "Vuelva a ingresar el del cajero:" << endl;
-            cin >> idCajero;
+            idCajero = validarNumerosIngresados(); // ingreso valido idCajero como numero int
+            //cin >> idCajero;
         }
         existeCajero = validarCajeroID(idCajero);
         estadoCajero = validarCajeroEstado(idCajero);
-    }
+    }while (existeCajero == false);
     if ((existeCajero==true) && (estadoCajero==true))
     {
         return idCajero;

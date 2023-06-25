@@ -5,6 +5,7 @@
 #include "UsuarioLogin.h"
 #include "Cliente.h"
 #include <time.h>
+#include "funcionesClientes.h"
 
 using namespace std;
 /**
