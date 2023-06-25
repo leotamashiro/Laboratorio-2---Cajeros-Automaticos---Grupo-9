@@ -49,7 +49,7 @@ void menuCajeros()
             mostarCajerosActivos();
             flag=false;
             existeCajero= false;
-            do
+            while (existeCajero == false)
             {
                 if (flag==false)
                 {
@@ -67,8 +67,7 @@ void menuCajeros()
                 }
                 existeCajero = validarCajeroID(idCajeroEditar);
                 estadoCajero = validarCajeroEstado(numCajeroEstado);
-            }while (existeCajero == false);
-
+            }
             if ((existeCajero==true) && (estadoCajero==true))
             {
                 editarCajeroID(idCajeroEditar);
@@ -87,7 +86,7 @@ void menuCajeros()
             mostarCajerosActivos();
             flag=false;
             existeCajero= false;
-            do
+            while (existeCajero == false)
             {
                 if (flag==false)
                 {
@@ -105,7 +104,7 @@ void menuCajeros()
                 }
                 existeCajero = validarCajeroID(numCajeroEstado);
                 estadoCajero = validarCajeroEstado(numCajeroEstado);
-            }while (existeCajero == false);
+            }
             if ((existeCajero==true) && (estadoCajero==true))
             {
                 borrarCajero(numCajeroEstado);
@@ -124,7 +123,7 @@ void menuCajeros()
             mostarCajerosInactivos();
             flag=false;
             existeCajero= false;
-            do
+            while (existeCajero == false)
             {
                 if (flag==false)
                 {
@@ -143,7 +142,7 @@ void menuCajeros()
                 existeCajero = validarCajeroID(numCajeroEstado);
                 estadoCajero = validarCajeroEstado(numCajeroEstado);
 
-            }while (existeCajero == false);
+            }
             if ((existeCajero==true) && (estadoCajero==false))
             {
                 darAltaCajero(numCajeroEstado);

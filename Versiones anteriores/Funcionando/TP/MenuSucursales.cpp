@@ -13,7 +13,7 @@ using namespace std;
 
 void menuSucursales()
 {
-    int opcion, numSucEditar=0, numSucMostar=0, numSucuEstado=0;
+    int opcion, numSucEditar, numSucMostar, numSucuEstado;
     bool validSucu;
     bool validSucuEstado;
     bool flag;
@@ -51,7 +51,7 @@ void menuSucursales()
                     mostarSucursalesActivas();
                     flag=false;
                     validSucu == false;
-                    do
+                    while (validSucu == false)
                     {
                         if (flag==false)
                         {
@@ -70,9 +70,8 @@ void menuSucursales()
 
                         validSucu=validarSucursal(numSucEditar);
                         validSucuEstado=validarSucursalEstado(numSucEditar);
-                    }while(validSucu == false);
-
-                    if (validSucuEstado==true)
+                    }
+                    if ((validSucu==true) && (validSucuEstado==true))
                     {
                         editarSucursal(numSucEditar);
                     }
@@ -90,7 +89,7 @@ void menuSucursales()
                     mostarSucursalesActivas();
                     flag=false;
                     validSucu == false;
-                    do
+                    while (validSucu == false)
                     {
                         if (flag==false)
                         {
@@ -109,8 +108,8 @@ void menuSucursales()
 
                         validSucu=validarSucursal(numSucuEstado);
                         validSucuEstado=validarSucursalEstado(numSucEditar);
-                    }while (validSucu == false);
-                    if (validSucuEstado==true)
+                    }
+                    if ((validSucu==true) && (validSucuEstado==true))
                     {
                         borrarSucursal(numSucuEstado);
                         borrarCajerosXSucursal(numSucuEstado);
@@ -129,7 +128,7 @@ void menuSucursales()
                     mostarSucursalesInactivas();
                     flag=false;
                     validSucu == false;
-                    do
+                    while (validSucu == false)
                     {
                         if (flag==false)
                         {
@@ -148,8 +147,8 @@ void menuSucursales()
 
                         validSucu=validarSucursal(numSucuEstado);
                         validSucuEstado=validarSucursalEstado(numSucuEstado);
-                    }while (validSucu == false);
-                    if (validSucuEstado==false)
+                    }
+                    if ((validSucu==true) && (validSucuEstado==false))
                     {
                         darAltaSucursal(numSucuEstado);
                     }

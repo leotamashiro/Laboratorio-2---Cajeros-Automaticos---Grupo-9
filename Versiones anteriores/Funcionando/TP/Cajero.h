@@ -7,7 +7,7 @@
 #include "funcionesClientes.h"
 
 ///Ver el tema de la capacidad de Carga de los Cajeros
-const int CAP_MAX = 40000;
+
 
 using namespace std;
 class Cajero
@@ -23,6 +23,7 @@ class Cajero
         //Sucursal sucu;
 
     public:
+        const int CAP_MAX = 40000;
         ///gets
         int getIdCajero();
         int getNumeroSerie();
