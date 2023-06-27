@@ -105,10 +105,17 @@ void topSucursales()
     cout << "-------------------------------------" << endl;
     for (int t=0; t<3; t++)
     {
-        cout << "Puesto " << ":" << t+1 << "    ";
-        sucu.leerDeDisco(posicionArchivoSucursal[t]);
-        cout << "Sucursal numero: " << sucu.getNumeroSucursal() << "  ";
-        cout << "con: " << cantTranSucu[t] << " Visitas" << "\n";
+        if (cantTranSucu[t]!=0)
+        {
+            cout << "Puesto " << ":" << t+1 << "    ";
+            sucu.leerDeDisco(posicionArchivoSucursal[t]);
+            cout << "Sucursal numero: " << sucu.getNumeroSucursal() << "  ";
+            cout << "con: " << cantTranSucu[t] << " Visitas" << "\n";
+        }
+        else
+        {
+            cout << "El registro Sucursales no tiene 3 registros" << "\n";
+        }
     }
     delete cantTranSucu;
     delete posicionArchivoSucursal;
@@ -191,10 +198,18 @@ void topCajeros()
     cout << "-------------------------------------" << endl;
     for (int t=0; t<5; t++)
     {
-        cout << "Puesto " << ":" << t+1 << "    ";
-        objCajero.leerDeDisco(posicionArchivoCajero[t]);
-        cout << "ID Cajero: " << objCajero.getIdCajero() << "  ";
-        cout << "con: " << cantTran[t] << " Tranacciones" << "\n";
+        if (cantTran[t]!=0)
+        {
+            cout << "Puesto " << ":" << t+1 << "    ";
+            objCajero.leerDeDisco(posicionArchivoCajero[t]);
+            cout << "ID Cajero: " << objCajero.getIdCajero() << "  ";
+            cout << "con: " << cantTran[t] << " Tranacciones" << "\n";
+        }
+        else
+        {
+            cout << "El registro Cajeros no tiene 5 registros" << "\n";
+        }
+
     }
     delete cantTran;
     delete posicionArchivoCajero;
@@ -320,4 +335,36 @@ void cantidadDineroIngresadoClientesPorMes()
     cout<<"DATOS MENSUALES PARA EL MES "<<mes<<" Y EL ANIO "<<anio<<endl;
 }
 
+
+void porcetajeExtracionesPorAnio()
+{
+    int anioBuscado;
+    int vecMes[12]={0};
+    int contTrans=0;
+    float porcentajeMes[12]={0};
+    Transacciones regTrasacciones;
+    int tamTrans = regTrasacciones.contarRegistros();
+    cout<<"INGRESE EL ANIO "<<endl;
+    anioBuscado = validarNumerosIngresados(); // ingreso anioBuscado
+
+    for (int i=0; i<tamTrans; i++)
+    {
+        regTrasacciones.leerDeDisco(i);
+        if (anioBuscado==regTrasacciones.getFechaTranssacion().getAnio())
+        {
+            vecMes[regTrasacciones.getFechaTranssacion().getMes()-1]++;
+            contTrans++;
+        }
+    }
+    for (int t=0; t<12; t++)
+    {
+        porcentajeMes[t]=(vecMes[t]*100)/contTrans;
+    }
+    cout << "El porcentaje de extracion mensual del anio: " << anioBuscado << " es:\n";
+    for (int a=1; a<=12; a++)
+    {
+        cout << "Mes: " << a << "  " << porcentajeMes[a-1] << "%" << endl;
+    }
+
+}
 

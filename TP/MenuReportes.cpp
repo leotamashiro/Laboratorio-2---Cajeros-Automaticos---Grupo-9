@@ -19,6 +19,7 @@ void reportes()
         cout << "3. Transacciones realizadas en un Perido de Tiempo" << endl;
         cout << "4. Cantidad Total de Extracciones por un dia" << endl;
         cout << "5. Cantidad y Monto Mensual de Ingresos de los Clientes" << endl;
+        cout << "6. Porcentaje Mensual de Extraxiones en un a�o" << endl;
         cout << endl;
         cout << "0. Salir" << endl;
         cout << "--------------------------" << endl;
@@ -50,6 +51,11 @@ void reportes()
             break;
         case 5:
             cantidadDineroIngresadoClientesPorMes();
+            system("pause");
+            system("cls");
+            break;
+        case 6:
+            porcetajeExtracionesPorAnio();
             system("pause");
             system("cls");
             break;
