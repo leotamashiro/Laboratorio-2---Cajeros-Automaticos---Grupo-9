@@ -16,7 +16,7 @@ int ArchivoCliente::getCantidadRegistros()
         return 0;
     }
 
-    fseek(p, 0, SEEK_END);
+    fseek(p, 0, 2);
     int bytes = ftell(p);
     fclose(p);
 

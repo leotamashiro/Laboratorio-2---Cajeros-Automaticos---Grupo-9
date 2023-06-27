@@ -79,6 +79,7 @@ void Sucursal::Cargar()
 
     cin.getline(nombreSucursal,60);
 
+    cout<<"Ingrese la Direccion de la Sucursal"<<endl;
     direcSucursal.Cargar();
 
     cout << "Ingrese el Estado de la Sucursal: ";

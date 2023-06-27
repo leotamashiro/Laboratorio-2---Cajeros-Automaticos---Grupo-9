@@ -8,7 +8,7 @@ void menuCajeros();
 
 /// Funciones para Sucursales
 void mostarSucursales();
-void mostarSucursalesActivas();
+bool mostarSucursalesActivas();
 void mostarSucursalesInactivas();
 bool validarSucursal(int);
 void editarSucursal(int);
@@ -40,7 +40,7 @@ void ustedPuedeCargar(int);
 
 ///Transacciones
 int generarNumTransaccion();
-void operacionTransaccion(int, int, int, int, bool); ///Aca Guarda la transacciones que se hacen
+void operacionTransaccion(int, float, int, int, bool); ///Aca Guarda la transacciones que se hacen
 void mostrarTransacciones();
 void transaccionConfirmada(bool estaConfirmada);
 
@@ -51,7 +51,7 @@ bool verificarDineroEnCajero(int, int);
 ///Le saco dinero a la cuenta del Cliente
 void restarSaldoCuentaCliente(int, int);
 ///Le saco dinero al Cajero
-void restarDineroCajero(int, int);
+void restarDineroCajero(int, float);
 
 
 ///Login, diferencia admin de cliente,

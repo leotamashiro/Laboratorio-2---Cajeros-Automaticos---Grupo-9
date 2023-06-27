@@ -50,10 +50,17 @@ void menuClienteExterno(int dni)
             break;
         case 3:
             {
+                system("cls");
                 cout << "A continuacion Listaremos todas las sucursales disponibles:"<< endl << endl;
                 system ("pause");
-                mostarSucursalesActivas();
+                system("cls");
+                if (!mostarSucursalesActivas()) {
+                    cout<<"No existen sucursales activas en estos momentos"<<endl;
+                    system("pause");
+                    break;
+                };
                 Sucursal = pedirleAlClienteNumSucursal();
+                if(Sucursal == -1) break;
                 system("cls");
                 idCajero = pedirleAlClienteCajero(Sucursal);
                 system("cls");

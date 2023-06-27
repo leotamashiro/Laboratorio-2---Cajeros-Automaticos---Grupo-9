@@ -6,5 +6,9 @@ int desplazamientoDerecha(int [], int);
 
 void topSucursales();
 void topCajeros();
-
+void transaccionesPeriodoTiempo();
+void cantidadDineroIngresadoClientePorMes();
+void cantidadDineroExtraidoPorDia();
+void cantidadDineroIngresadoClientesPorMes();
+void porcetajeExtracionesPorAnio();
 #endif // FUNCIONESREPORTES_H_INCLUDED

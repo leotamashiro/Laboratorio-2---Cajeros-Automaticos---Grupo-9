@@ -1,7 +1,11 @@
 #include <cstdlib>
 #include <time.h>
+#include <iostream>
+#include <string>
+#include <cctype>
 #include "funcionesClientes.h"
 #include "UsuarioLogin.h"
+#include "funciones.h"
 
 int posCliente(int dni)
 {
@@ -212,22 +216,22 @@ bool eliminadoLogico()
 int validarCin()
 {
     int num;
-    cin>>num;
-    if(cin.fail())
-    {
-        cout<<"Por favor ingrese un numero entero"<<endl;
-        cin.clear();
-        cin.ignore(10000, '\n');
-        return -1;
+    string a;
+    cin>>a;
+    for (char c : a) {
+        if (!isdigit(c)) {
+            cout<<"Por favor ingrese un numero entero"<<endl;
+            return -1;
+        }
     }
-    return num;
+    return stoi(a);
 }
 
 int validarNumerosIngresados()
 {
     int num;
     bool flag = false;
-    cout<<"Ingrese un numero entero"<<endl;
+    cout<<"(Ingrese un numero entero)"<<endl;
     while(!flag)
     {
         num = validarCin();
@@ -254,12 +258,12 @@ void ingresarFondosCuenta(int dni)
     if(editoEnDisco)
     {
         cout<<"SU NUMERO DE CUENTA "<<cuenta.getNumeroCuenta()<<" TIENE UN TOTAL DE SALDO DE: "<<cuenta.getSaldo()<<endl;
-        operacionTransaccion(cuenta.getNumeroCuenta(), static_cast<int>(fondos), dni, 2, true);
+        operacionTransaccion(cuenta.getNumeroCuenta(), fondos, dni, 2, true);
     }
     else
     {
         cout<<"HA OCURRIDO UN ERROR, POR FAVOR INTENTE DE NUEVO"<<endl;
-        operacionTransaccion(cuenta.getNumeroCuenta(), static_cast<int>(fondos), dni, 2, false);
+        operacionTransaccion(cuenta.getNumeroCuenta(), fondos, dni, 2, false);
     }
 }
 

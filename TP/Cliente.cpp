@@ -82,7 +82,7 @@ void Cliente::CargarCliente()
 {
     Cuenta cuenta;
     UsuarioLogin userLogin;
-    int _dni, _nroTelefonico;
+    int _dni;
     bool existeDni;
     Fecha fecha;
     fecha.actualFecha();
@@ -115,8 +115,6 @@ void Cliente::CargarCliente()
 
 void Cliente::MostrarCliente()
 {
-    Cuenta cuenta;
-    UsuarioLogin userLogin;
     cout << "---------------------------------" << endl;
     cout<<"DATOS CLIENTE:"<<endl;
     cout<<"NOMBRE: "<<nombre<<endl;

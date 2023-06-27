@@ -21,7 +21,7 @@ int Transacciones::getDniCliente()
     return dniCliente;
 }
 
-int Transacciones::getMonto()
+float Transacciones::getMonto()
 {
     return monto;
 }
@@ -29,6 +29,10 @@ int Transacciones::getMonto()
 bool Transacciones::getConfirmada()
 {
     return confirmada;
+}
+
+int Transacciones::getTipoTransaccion() {
+    return tipoTransaccion;
 }
 ///sets
 void Transacciones::setNumTransaccion(int _numTransaccion)

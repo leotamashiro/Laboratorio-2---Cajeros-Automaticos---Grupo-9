@@ -20,14 +20,14 @@ void menuExtraxion(int dni, int idCajero)
     bool dineroCajero;
     bool montoPosible;
     bool estadoTransaccion;
-    int monto;
+    float monto;
     do
     {
         montoPosible=false;
         cout << "Por favor ingrese el monto que desea retirar del cajero: ";
-        monto = validarNumerosIngresados(); // ingreso monto y valido Monto como numero enteo
-        //cin >> monto;
-        if ((monto >= BILLETE) && (monto % BILLETE == 0))
+        cin >> monto;
+        int intMonto = static_cast<int>(monto);
+        if ((intMonto >= BILLETE) && (intMonto % BILLETE == 0))
         {
             montoPosible=true;
         }
