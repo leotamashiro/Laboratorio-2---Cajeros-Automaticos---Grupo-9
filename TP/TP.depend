@@ -368,7 +368,7 @@
 	"Fecha.h"
 	"funcionesClientes.h"
 
-1687728266 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\funciones.cpp
+1687825955 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\funciones.cpp
 	<iostream>
 	<string>
 	<cstring>
@@ -397,7 +397,7 @@
 	"UsuarioLogin.h"
 	"funciones.h"
 
-1687730396 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\main.cpp
+1687813332 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\main.cpp
 	<iostream>
 	<string>
 	<cstring>
@@ -463,7 +463,7 @@
 	"funciones.h"
 	"funcionesClientes.h"
 
-1687725080 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\sucursal.cpp
+1687818327 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\sucursal.cpp
 	"Sucursal.h"
 	<iostream>
 	<string>
@@ -479,7 +479,7 @@
 	"funcionesClientes.h"
 	"UsuarioLogin.h"
 
-1687728426 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\menuclienteexterno.cpp
+1687826049 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\menuclienteexterno.cpp
 	<iostream>
 	<string>
 	<cstring>

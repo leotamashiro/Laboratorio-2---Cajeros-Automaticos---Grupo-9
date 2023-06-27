@@ -32,10 +32,8 @@ bool mostarSucursalesActivas()
     bool flag = false;
     while (sucu.leerDeDisco(pos++))
     {
-        sucu.Mostrar();
         if (sucu.getEstadoSucursal()==1)
         {
-        cout<<"paso por aca"<<endl;
             sucu.Mostrar();
             flag = true;
             cout << "---------------------------------" << endl;
@@ -65,12 +63,10 @@ bool validarSucursalEstado(int sucEditar)///devuelve true si encuentra Sucursal
     {
         if(sucEditar == suc.getNumeroSucursal())
         {
-            cout << "el estado de la sucursal es: " << suc.getEstadoSucursal() << endl;
+//            cout << "el estado de la sucursal es : " << suc.getEstadoSucursal() << endl;
             return suc.getEstadoSucursal();
-            break;
         }
     }
-    cout << "sucursal no encontrada : " << suc.getEstadoSucursal() << endl;
     return suc.getEstadoSucursal();
 }
 bool validarSucursal(int SucEditar)///devuelve true si encuentra Sucursal
@@ -90,14 +86,32 @@ void editarSucursal(int sucEditar)
 {
     Sucursal sucu;
     int pos=0, posEdit;
+    int numSucursal;
+    bool flag;
+    char nombreSucursal[60];
+    Direccion dire;
     while(sucu.leerDeDisco(pos++))
     {
         if(sucEditar == sucu.getNumeroSucursal())
         {
             cout << "\n" << "\n";
-            cout << "INFORMACION A EDITAR" << endl;
-            sucu.Mostrar();
-            sucu.Cargar();
+            cout << "EDITAR DATOS DE LA SUCURSAL" << endl;
+            cout <<"Ingrese numero de Sucursal"<<endl;
+            numSucursal = validarNumerosIngresados();
+            if(numSucursal != sucu.getNumeroSucursal()) {
+                flag = validarSucursal(numSucursal);
+                if(flag) {
+                    cout<<"Numero de Sucursal esta tomado por otra Sucursal"<<endl;
+                    return;
+                }
+            }
+            sucu.setNumeroSucursal(numSucursal);
+            cout <<"Ingrese nuevo Nombre de la Sucursal"<<endl;
+            cargarCadena(nombreSucursal, 59);
+            sucu.setNombreSucursal(nombreSucursal);
+            cout<<"Ingrese nueva Direccion Sucursal"<<endl;
+            dire.Cargar();
+            sucu.setDirecSucursal(dire);
             posEdit=pos-1;
             sucu.editarEnDisco(posEdit);
             return;
@@ -128,7 +142,7 @@ void borrarSucursal(int numBorrarSucu)
         if(numBorrarSucu == sucu.getNumeroSucursal())
         {
             cout << "\n" << "\n";
-            cout << "INFORMACION A Borrar" << endl;
+            cout << "INFORMACION A BORRAR" << endl;
             sucu.Mostrar();
             sucu.setEstadoSucursal(0);
             posEdit=pos-1;
@@ -327,11 +341,6 @@ void mostarCajeroSucursal(int numSucuMostrar)
         if(numSucuMostrar == objcajero.getNumSucursal())
         {
             objcajero.Mostrar();
-        }
-        else
-        {
-            cout << "La Sucursal " << endl;
-            break;
         }
     }
 }
@@ -588,6 +597,10 @@ int pedirleAlClienteNumSucursal()
     if ((validSucu==true) && (validSucuEstado==true))
     {
         return numSucusal;
+    } else {
+        cout << "La Sucursal No se encuentra disponible"<<endl;
+        system("pause");
+        return -1;
     }
 }
 
