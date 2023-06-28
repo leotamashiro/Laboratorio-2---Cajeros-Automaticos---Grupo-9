@@ -27,12 +27,19 @@ bool validarDni(int dni)
 
 void cargarCadena(char *pal, int tam)
 {
-    int i;
+    int i, aux;
     fflush(stdin);
     for(i=0; i<tam; i++)
     {
         pal[i]=cin.get();
         if(pal[i]=='\n') break;
+        if(i == (tam-1)) {
+            cout<<"Haz alcanzado el limite de caracteres disponibles, ¿deseas ingresar de nuevo la palabra? (1. Si - 2. No)"<<endl;
+            aux = validarNumerosIngresados();
+            if(aux == 1) {
+                cargarCadena(pal, tam);
+            }
+        }
     }
     pal[i]='\0';
     fflush(stdin);

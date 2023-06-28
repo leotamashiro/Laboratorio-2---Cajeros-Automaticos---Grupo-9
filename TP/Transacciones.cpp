@@ -55,7 +55,7 @@ void Transacciones::setFechaTransaccion(Fecha _fechaTransaccion)
     fechaTransaccion=_fechaTransaccion;
 }
 
-void Transacciones::setMonto(int _monto)
+void Transacciones::setMonto(float _monto)
 {
     monto=_monto;
 }

@@ -30,7 +30,7 @@ class Transacciones
         void setIdProcedencia(int _id);
         void setDniCliente(int _dniCliente);
         void setFechaTransaccion(Fecha _fechaTransaccion);
-        void setMonto(int _monto);
+        void setMonto(float _monto);
         void setConfirmada (bool _confirmada);
         void setTipoTransaccion(int _tipoTransaccion);
         void Mostrar();

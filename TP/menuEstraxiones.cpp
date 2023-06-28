@@ -54,6 +54,7 @@ void menuExtraxion(int dni, int idCajero)
             estadoTransaccion =true;
             operacionTransaccion(idCajero, monto, dni, 1, estadoTransaccion); /// Aca me genera la transaccion y la guarda en transaccion.dat
             cout << "Por favor retire el dinero" << endl;
+            system("pause");
             system("cls");
         }
         else
@@ -62,10 +63,14 @@ void menuExtraxion(int dni, int idCajero)
             cout << "El cajero en el que usted esta no cuenta con esa cantidad de efectivo." << endl;
             cout << "Por favor dirijase a otro Cajero, o intene sacar menos dinero" << endl;
             operacionTransaccion(idCajero, monto, dni, 1, estadoTransaccion);
+            system("pause");
+            system("cls");
         }
     }
     else
     {
         cout << "Usted no cuenta con saldo suficiente" << endl;
+        system("pause");
+        system("cls");
     }
 }
