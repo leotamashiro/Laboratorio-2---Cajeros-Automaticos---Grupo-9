@@ -60,8 +60,8 @@ int main()
 //        }
 //    }
 
-//    reportes();
-    menuUsuario();
+    reportes();
+//    menuUsuario();
 
     return 0;
 }

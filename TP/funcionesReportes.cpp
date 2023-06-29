@@ -215,7 +215,8 @@ void topCajeros()
     delete posicionArchivoCajero;
 }
 
-Fecha ingresarMesAnio() {
+Fecha ingresarMesAnio()
+{
     int mes, anio;
     cout<<"Ingrese el MES que desea consultar"<<endl;
     mes = validarNumerosIngresados();
@@ -230,7 +231,8 @@ Fecha ingresarMesAnio() {
     return fechaDeMes;
 }
 
-bool validarFechas(Fecha fechaInicio, Fecha fechaFinal, Fecha fechaTransaccion) {
+bool validarFechas(Fecha fechaInicio, Fecha fechaFinal, Fecha fechaTransaccion)
+{
     int anioInicial, mesInicial, anioFinal, mesFinal;
     int anioTransaccion, mesTransaccion;
 
@@ -241,12 +243,10 @@ bool validarFechas(Fecha fechaInicio, Fecha fechaFinal, Fecha fechaTransaccion) 
     mesTransaccion = fechaTransaccion.getMes();
     anioTransaccion = fechaTransaccion.getAnio();
 
-    if(anioFinal == anioInicial) {
-        if(mesTransaccion >= mesInicial && mesTransaccion <= mesFinal) {
-                return true;
-            }
-        } else if (anioFinal > anioInicial) {
-        if(fechaTransaccion.toString() >= fechaInicio.toString() && fechaTransaccion.toString() <= fechaFinal.toString()) {
+    if(anioTransaccion >= anioInicial && anioTransaccion <= anioFinal)
+    {
+        if(mesTransaccion >= mesInicial && mesTransaccion <= mesFinal)
+        {
             return true;
         }
     }
@@ -267,6 +267,11 @@ void transaccionesPeriodoTiempo()
     cout<<"Ingrese el final: "<<endl;
     fechaFinal = ingresarMesAnio();
 
+    if(fechaFinal.getAnio() != fechaInicial.getAnio()) {
+        cout<<"El anio del periodo de tiempo debe ser el mismo"<<endl;
+        return;
+    }
+
     cout<<"---------------------"<<endl;
     system("cls");
 
@@ -274,7 +279,8 @@ void transaccionesPeriodoTiempo()
     {
         transacciones.leerDeDisco(i);
         estaEnRango = validarFechas(fechaInicial, fechaFinal, transacciones.getFechaTranssacion());
-        if(estaEnRango) {
+        if(estaEnRango)
+        {
             transacciones.Mostrar();
             contador++;
         }
@@ -384,7 +390,8 @@ void porcetajeExtracionesPorAnio()
     }
     for (int t=0; t<12; t++)
     {
-        if(vecMes[t] != 0) {
+        if(vecMes[t] != 0)
+        {
             porcentajeMes[t]=(vecMes[t]*100)/contTrans;
         }
     }
