@@ -302,8 +302,6 @@ void cantidadDineroIngresadoClientesPorMes()
     system("pause");
     system("cls");
 
-    cout<<"TOTAL CLIENTES: "<<totalClientes<<endl;
-
     for(int i = 0; i < totalClientes; i++)
     {
         acumulado = 0;
