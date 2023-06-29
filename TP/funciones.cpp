@@ -608,11 +608,12 @@ int pedirleAlClienteCajero(int numSucursal)
     int idCajero;
     bool flagCajero=false;
     bool existeCajero= false;
-    bool estadoCajero;
+    bool estadoCajero, existeCajeros;
     cout << "Ustedes se encuentra en:" << "\n";
     listarSucuNumeroAlCliente(numSucursal);
     cout << "\n" << "Cuenta con los siguiente Cajeros Automaticos:"<< "\n" << endl;
-    mostarCajeroSucursalAlCliente(numSucursal);
+    existeCajeros = mostarCajeroSucursalAlCliente(numSucursal);
+    if(!existeCajeros) return -1;
     flagCajero=false;
     existeCajero= false;
     do
@@ -655,10 +656,11 @@ void listarSucuNumeroAlCliente(int numSucMostar)
     cout << "La sucursal que desea mostrar no esta registrada" << endl;
 }
 
-void mostarCajeroSucursalAlCliente(int numSucuMostrar)
+bool mostarCajeroSucursalAlCliente(int numSucuMostrar)
 {
     Cajero objcajero;
     int pos=0;
+    bool flag = false;
     cout << "Numero sucursal: " << numSucuMostrar << endl;
     while(objcajero.leerDeDisco(pos++))
     {
@@ -666,8 +668,10 @@ void mostarCajeroSucursalAlCliente(int numSucuMostrar)
         {
             objcajero.MostarAlCliente();
             cout << endl;
+            flag = true;
         }
     }
+    return flag;
 }
 
 bool cajeroEsdeSucursal(int sucursal,int idCajero)

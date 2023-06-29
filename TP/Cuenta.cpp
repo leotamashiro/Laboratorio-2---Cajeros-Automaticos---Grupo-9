@@ -26,6 +26,10 @@ bool Cuenta::getActivo()
     return activo;
 }
 
+void Cuenta::setSaldo(float cantidad) {
+    saldo = cantidad;
+}
+
 void Cuenta::setSaldoAumentar(float cantidad)
 {
     saldo += cantidad;

@@ -215,37 +215,71 @@ void topCajeros()
     delete posicionArchivoCajero;
 }
 
+Fecha ingresarMesAnio() {
+    int mes, anio;
+    cout<<"Ingrese el MES que desea consultar"<<endl;
+    mes = validarNumerosIngresados();
+    while(mes <= 0 || mes > 12)
+    {
+        cout<<"Ingrese un mes valido"<<endl;
+        mes = validarNumerosIngresados();
+    }
+    cout<<"Ingrese el ANIO que desea consultar"<<endl;
+    anio = validarNumerosIngresados();
+    Fecha fechaDeMes(1, mes, anio);
+    return fechaDeMes;
+}
+
+bool validarFechas(Fecha fechaInicio, Fecha fechaFinal, Fecha fechaTransaccion) {
+    int anioInicial, mesInicial, anioFinal, mesFinal;
+    int anioTransaccion, mesTransaccion;
+
+    anioInicial = fechaInicio.getAnio();
+    mesInicial = fechaInicio.getMes();
+    anioFinal = fechaFinal.getAnio();
+    mesFinal = fechaFinal.getMes();
+    mesTransaccion = fechaTransaccion.getMes();
+    anioTransaccion = fechaTransaccion.getAnio();
+
+    if(anioFinal == anioInicial) {
+        if(mesTransaccion >= mesInicial && mesTransaccion <= mesFinal) {
+                return true;
+            }
+        } else if (anioFinal > anioInicial) {
+        if(fechaTransaccion.toString() >= fechaInicio.toString() && fechaTransaccion.toString() <= fechaFinal.toString()) {
+            return true;
+        }
+    }
+    return false;
+}
+
 void transaccionesPeriodoTiempo()
 {
     Transacciones transacciones;
     Fecha fechaInicial, fechaFinal;
     int totalTransacciones = transacciones.contarRegistros();
-    string fechaTransaccion, fechaPeriodoInicial, fechaPeriodoFinal;
     int contador = 0;
+    bool estaEnRango;
 
     cout<<"INGRESE EL PERIODO DE TIEMPO "<<endl;
     cout<<"Ingrese el comienzo: "<<endl;
-    fechaInicial.Cargar();
+    fechaInicial = ingresarMesAnio();
     cout<<"Ingrese el final: "<<endl;
-    fechaFinal.Cargar();
+    fechaFinal = ingresarMesAnio();
 
     cout<<"---------------------"<<endl;
     system("cls");
 
-    fechaPeriodoInicial = fechaInicial.toString();
-    fechaPeriodoFinal = fechaFinal.toString();
-
     for(int i = 0; i < totalTransacciones; i++)
     {
         transacciones.leerDeDisco(i);
-        fechaTransaccion = transacciones.getFechaTranssacion().toString();
-        if(fechaTransaccion >= fechaPeriodoInicial && fechaTransaccion <= fechaPeriodoFinal)
-        {
+        estaEnRango = validarFechas(fechaInicial, fechaFinal, transacciones.getFechaTranssacion());
+        if(estaEnRango) {
             transacciones.Mostrar();
             contador++;
         }
     }
-    cout<<"Para el periodo de tiempo desde "<<fechaPeriodoInicial<<" hasta "<<fechaPeriodoFinal;
+    cout<<"Para el periodo de tiempo desde "<<fechaInicial.toString()<<" hasta "<<fechaFinal.toString();
     cout<<", se obtuvieron "<<contador<<" transacciones."<<endl;
 }
 
@@ -280,24 +314,16 @@ void cantidadDineroExtraidoPorDia()
 
 void cantidadDineroIngresadoClientesPorMes()
 {
-    int mes, anio, contador;
+    int contador;
     float acumulado;
     Transacciones transacciones;
     Cliente cliente;
+    Fecha fechaMes;
     ArchivoCliente arcCliente("clientes.dat");
     int totalClientes = arcCliente.getCantidadRegistros();
     int totalTransacciones = transacciones.contarRegistros();
 
-    cout<<"Ingrese el MES que desea consultar"<<endl;
-    mes = validarNumerosIngresados();
-    if(mes <= 0 || mes > 12)
-    {
-        cout<<"Ingrese un mes valido"<<endl;
-        return;
-    }
-    cout<<"Ingrese el ANIO que desea consultar"<<endl;
-    anio = validarNumerosIngresados();
-    Fecha fechaDeMes(1, mes, anio);
+    fechaMes = ingresarMesAnio();
 
     system("pause");
     system("cls");
@@ -310,7 +336,9 @@ void cantidadDineroIngresadoClientesPorMes()
         for(int j = 0; j < totalTransacciones; j++)
         {
             transacciones.leerDeDisco(j);
-            if(cliente.getDni() == transacciones.getDniCliente() && transacciones.getTipoTransaccion() == 2 && transacciones.getConfirmada() && cliente.getActivo())
+            if(cliente.getDni() == transacciones.getDniCliente() && transacciones.getFechaTranssacion().getMes() == fechaMes.getMes() &&
+                    transacciones.getFechaTranssacion().getAnio() == fechaMes.getAnio() && transacciones.getTipoTransaccion() == 2 &&
+                    transacciones.getConfirmada() && cliente.getActivo())
             {
                 acumulado += transacciones.getMonto();
                 contador++;
@@ -330,16 +358,16 @@ void cantidadDineroIngresadoClientesPorMes()
         }
     }
 
-    cout<<"DATOS MENSUALES PARA EL MES "<<mes<<" Y EL ANIO "<<anio<<endl;
+    cout<<"DATOS MENSUALES PARA EL MES "<<fechaMes.getMes()<<" Y EL ANIO "<<fechaMes.getAnio()<<endl;
 }
 
 
 void porcetajeExtracionesPorAnio()
 {
     int anioBuscado;
-    int vecMes[12]={0};
+    int vecMes[12]= {0};
     int contTrans=0;
-    float porcentajeMes[12]={0};
+    float porcentajeMes[12]= {0};
     Transacciones regTrasacciones;
     int tamTrans = regTrasacciones.contarRegistros();
     cout<<"INGRESE EL ANIO "<<endl;
@@ -356,7 +384,9 @@ void porcetajeExtracionesPorAnio()
     }
     for (int t=0; t<12; t++)
     {
-        porcentajeMes[t]=(vecMes[t]*100)/contTrans;
+        if(vecMes[t] != 0) {
+            porcentajeMes[t]=(vecMes[t]*100)/contTrans;
+        }
     }
     cout << "El porcentaje de extracion mensual del anio: " << anioBuscado << " es:\n";
     for (int a=1; a<=12; a++)

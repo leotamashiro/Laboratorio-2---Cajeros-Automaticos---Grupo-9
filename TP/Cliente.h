@@ -35,7 +35,7 @@ class Cliente
         void setActivo(bool flag);
         void setDireccion();
 
-        void CargarCliente();
+        bool CargarCliente();
         void MostrarCliente();
 };
 

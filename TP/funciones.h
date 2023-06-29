@@ -62,7 +62,7 @@ int leerLogin (int, char, char);
 int pedirleAlClienteNumSucursal();
 void listarSucuNumeroAlCliente(int);
 int pedirleAlClienteCajero(int);
-void mostarCajeroSucursalAlCliente(int);
+bool mostarCajeroSucursalAlCliente(int);
 bool cajeroEsdeSucursal(int ,int );
 
 float traerMontoCuenta(int);

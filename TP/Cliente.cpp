@@ -78,7 +78,7 @@ void Cliente::setDireccion() {
     direccion.Cargar();
 }
 
-void Cliente::CargarCliente()
+bool Cliente::CargarCliente()
 {
     Cuenta cuenta;
     UsuarioLogin userLogin;
@@ -92,7 +92,7 @@ void Cliente::CargarCliente()
     if(existeDni)
     {
         cout<<"DNI INGRESADO YA EXISTENTE, POR FAVOR INGRESE UN DNI NO EXISTENTE"<<endl;
-        return;
+        return false;
     }
     dni = _dni;
     cout << "INGRESE NOMBRE: " <<endl;
@@ -111,6 +111,7 @@ void Cliente::CargarCliente()
     direccion.Cargar();
 
     activo = true;
+    return true;
 }
 
 void Cliente::MostrarCliente()

@@ -66,6 +66,11 @@ void menuClienteExterno(int dni)
                 do
                 {
                     idCajero = pedirleAlClienteCajero(sucursal);
+                    if(idCajero == -1) {
+                        cout<<"En estos momentos esta Sucursal no contiene cajeros activos. Intente con otra sucursal"<<endl;
+                        system("pause");
+                        break;
+                    }
                     perteceASucursal=cajeroEsdeSucursal(sucursal,idCajero);
 
                 }while(perteceASucursal==false);

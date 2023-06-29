@@ -33,10 +33,13 @@ void cargarCadena(char *pal, int tam)
     {
         pal[i]=cin.get();
         if(pal[i]=='\n') break;
-        if(i == (tam-1)) {
-            cout<<"Haz alcanzado el limite de caracteres disponibles, ¿deseas ingresar de nuevo la palabra? (1. Si - 2. No)"<<endl;
+        if(i+1 == (tam))
+        {
+            cout<<"Haz alcanzado el limite de caracteres disponibles, estas seguro que ingresaste correctamente la palabra? (1. NO - 2. SI)"<<endl;
             aux = validarNumerosIngresados();
-            if(aux == 1) {
+            if(aux == 1)
+            {
+                cout<<"Ingrese palabra: "<<endl;
                 cargarCadena(pal, tam);
             }
         }
@@ -74,10 +77,14 @@ int generarNumeros(int desde, int hasta)
 
 int persistirCliente()
 {
+    bool flag;
     ArchivoCliente arcCli("clientes.dat");
     Cliente cliente;
 
-    cliente.CargarCliente();
+    flag = cliente.CargarCliente();
+    if(!flag) {
+        return -1;
+    }
     arcCli.guardarCliente(cliente);
     cout<<"-------------------------------"<<endl;
 }
@@ -225,8 +232,10 @@ int validarCin()
     int num;
     string a;
     cin>>a;
-    for (char c : a) {
-        if (!isdigit(c)) {
+    for (char c : a)
+    {
+        if (!isdigit(c))
+        {
             cout<<"Por favor ingrese un numero entero"<<endl;
             return -1;
         }
@@ -260,6 +269,12 @@ void ingresarFondosCuenta(int dni)
     cuenta.leerDeDisco(pos);
     cout<<"INGRESE LA CANTIDAD DE FONDOS A INGRESAR A SU NUMERO DE CUENTA "<<cuenta.getNumeroCuenta()<<endl;
     cin>>fondos;
+    if(cin.fail() || fondos < 0){
+        cout<<"Ingrese un monto valido: "<<endl;
+        cin.clear();
+        cin.ignore(10000, '\n');
+        return;
+    }
     cuenta.setSaldoAumentar(fondos);
     editoEnDisco = cuenta.editarEnDisco(pos);
     if(editoEnDisco)
@@ -408,9 +423,12 @@ void editarUserCliente(int dni)
         cout<<"INGRESE EL NUEVO NOMBRE DE USER"<<endl;
         cargarCadena(nuevoUser, 29);
         existeUser = validarUser(nuevoUser);
-        if(existeUser) {
+        if(existeUser)
+        {
             cout<<"EL USER INGRESADO YA EXISTE. POR FAVOR INGRESE UNO NUEVO"<<endl;
-        } else {
+        }
+        else
+        {
             login.setUser(nuevoUser);
             clienteEditado = login.editarEnDisco(pos);
         }
@@ -535,16 +553,19 @@ void editarPermisosCliente()
     }
 }
 
-void mostrarTransaccionesCliente(int dni) {
+void mostrarTransaccionesCliente(int dni)
+{
     Transacciones transacciones;
     bool flag = false;
     int totalTransacciones = transacciones.contarRegistros();
-    for(int i = 0; i < totalTransacciones; i++) {
+    for(int i = 0; i < totalTransacciones; i++)
+    {
         transacciones.leerDeDisco(i);
-        if(transacciones.getDniCliente() == dni) {
-           transacciones.Mostrar();
-           transaccionConfirmada(transacciones.getConfirmada());
-           flag = true;
+        if(transacciones.getDniCliente() == dni)
+        {
+            transacciones.Mostrar();
+            transaccionConfirmada(transacciones.getConfirmada());
+            flag = true;
         }
     }
     if(!flag) cout<<"No posee ninguna Transaccion realizada"<<endl;

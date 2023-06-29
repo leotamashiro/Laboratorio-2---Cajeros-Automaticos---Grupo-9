@@ -21,6 +21,9 @@ void menuExtraxion(int dni, int idCajero)
     bool montoPosible;
     bool estadoTransaccion;
     float monto;
+    if(idCajero == -1) {
+        return;
+    }
     do
     {
         montoPosible=false;
