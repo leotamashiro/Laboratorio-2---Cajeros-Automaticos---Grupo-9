@@ -296,7 +296,7 @@
 	"Fecha.h"
 	"Direccion.h"
 
-1688047258 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\cuenta.h
+1688064203 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\cuenta.h
 
 1687621117 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\fecha.h
 	<string>
@@ -316,7 +316,7 @@
 
 1688047598 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\funciones.h
 
-1687725080 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\cajero.h
+1688064195 c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\cajero.h
 	<iostream>
 	"Fecha.h"
 	"Sucursal.h"
@@ -373,7 +373,7 @@
 	"Fecha.h"
 	"funcionesClientes.h"
 
-1688047668 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\funciones.cpp
+1688064350 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\funciones.cpp
 	<iostream>
 	<string>
 	<cstring>
@@ -392,7 +392,7 @@
 	"Fecha.h"
 	"funciones.h"
 
-1688049294 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\funcionesclientes.cpp
+1688064336 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\funcionesclientes.cpp
 	<cstdlib>
 	<time.h>
 	<iostream>
@@ -402,7 +402,7 @@
 	"UsuarioLogin.h"
 	"funciones.h"
 
-1688055792 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\main.cpp
+1688067509 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\main.cpp
 	<iostream>
 	<string>
 	<cstring>
@@ -536,7 +536,7 @@
 
 1687907346 c:\users\leota\onedrive\escritorio\utn leo\pacheco\pacheco\laboratorio 2\practico\tp\funcionesreportes.h
 
-1688055984 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\funcionesreportes.cpp
+1688067760 source:c:\users\pgalindez\onedrive - exolgan s.a\escritorio\codeblocks\tp-labpro2\laboratorio-2---cajeros-automaticos---grupo-9\tp\funcionesreportes.cpp
 	<iostream>
 	<string>
 	<cstring>

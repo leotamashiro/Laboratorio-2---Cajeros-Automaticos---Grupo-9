@@ -1,6 +1,5 @@
 #ifndef CUENTA_H
 #define CUENTA_H
-//#include "Tarjeta.h"
 
 class Cuenta
 {

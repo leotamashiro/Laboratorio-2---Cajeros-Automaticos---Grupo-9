@@ -20,7 +20,6 @@ class Cajero
         bool estadoCajero;
         int capacidadMaxima=CAP_MAX;
         int capacidad=0;
-        //Sucursal sucu;
 
     public:
         ///gets

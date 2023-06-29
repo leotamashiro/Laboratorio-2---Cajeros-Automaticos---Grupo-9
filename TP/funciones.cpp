@@ -630,7 +630,6 @@ int pedirleAlClienteCajero(int numSucursal)
             cout << "El ID del Cajero ingresado no existe:" << endl;
             cout << "Vuelva a ingresar el del cajero:" << endl;
             idCajero = validarNumerosIngresados(); // ingreso valido idCajero como numero int
-            //cin >> idCajero;
         }
         existeCajero = validarCajeroID(idCajero);
         estadoCajero = validarCajeroEstado(idCajero);

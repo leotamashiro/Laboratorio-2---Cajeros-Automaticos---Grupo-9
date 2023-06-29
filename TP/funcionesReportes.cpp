@@ -203,7 +203,7 @@ void topCajeros()
             cout << "Puesto " << ":" << t+1 << "    ";
             objCajero.leerDeDisco(posicionArchivoCajero[t]);
             cout << "ID Cajero: " << objCajero.getIdCajero() << "  ";
-            cout << "con: " << cantTran[t] << " Tranacciones" << "\n";
+            cout << "con: " << cantTran[t] << " Transacciones" << "\n";
         }
         else
         {

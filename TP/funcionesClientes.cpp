@@ -12,7 +12,7 @@ int posCliente(int dni)
     ArchivoCliente aux("clientes.dat");
     int encontroCliente;
     encontroCliente = aux.buscarClientePorId(dni);
-    encontroCliente;
+    return encontroCliente;
 }
 
 bool validarDni(int dni)
@@ -87,6 +87,7 @@ int persistirCliente()
     }
     arcCli.guardarCliente(cliente);
     cout<<"-------------------------------"<<endl;
+    return 1;
 }
 
 void mostrarClientes(int pos, Cliente &cliente)
@@ -175,6 +176,7 @@ bool buscarClientePorDni()
 
     cliente = arcCli.leerCliente(pos);
     mostrarClientes(pos, cliente);
+    return 1;
 }
 
 bool buscarClientePorDni(int dni)
@@ -186,6 +188,7 @@ bool buscarClientePorDni(int dni)
 
     cliente = arcCli.leerCliente(pos);
     mostrarClientes(pos, cliente);
+    return 1;
 }
 
 bool eliminadoLogico()
@@ -229,7 +232,6 @@ bool eliminadoLogico()
 
 int validarCin()
 {
-    int num;
     string a;
     cin>>a;
     for (char c : a)
@@ -292,7 +294,6 @@ void ingresarFondosCuenta(int dni)
 int posDniUsarioLogin()
 {
     UsuarioLogin login;
-    int totalLogin = login.getCantidadRegistros();
     int pos, dni;
 
     cout<<"INGRESE DNI"<<endl;
@@ -313,7 +314,6 @@ int posDniUsarioLogin()
 int posDniUsarioLogin(int dni)
 {
     UsuarioLogin login;
-    int totalLogin = login.getCantidadRegistros();
     int pos;
 
     pos = login.buscarClientePorDni(dni);
@@ -534,7 +534,6 @@ void editarPermisosCliente()
 {
     UsuarioLogin login;
     int pos, permiso;
-    bool clienteEditado;
 
     pos = posDniUsarioLogin();
     if(pos == -1) return;
