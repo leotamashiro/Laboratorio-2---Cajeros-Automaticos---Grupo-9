@@ -12,7 +12,7 @@ using namespace std;
 void menuClienteExterno(int dni)
 {
     int opcion;
-    int Sucursal;
+    int sucursal;
     int idCajero;
     do
     {
@@ -50,6 +50,7 @@ void menuClienteExterno(int dni)
             break;
         case 3:
             {
+                bool perteceASucursal=false;
                 system("cls");
                 cout << "A continuacion Listaremos todas las sucursales disponibles:"<< endl << endl;
                 system ("pause");
@@ -59,10 +60,15 @@ void menuClienteExterno(int dni)
                     system("pause");
                     break;
                 };
-                Sucursal = pedirleAlClienteNumSucursal();
-                if(Sucursal == -1) break;
+                sucursal = pedirleAlClienteNumSucursal();
+                if(sucursal == -1) break;
                 system("cls");
-                idCajero = pedirleAlClienteCajero(Sucursal);
+                do
+                {
+                    idCajero = pedirleAlClienteCajero(sucursal);
+                    perteceASucursal=cajeroEsdeSucursal(sucursal,idCajero);
+
+                }while(perteceASucursal==false);
                 system("cls");
                 ///Ya empizo a extraer el dinero
                 menuExtraxion(dni, idCajero);

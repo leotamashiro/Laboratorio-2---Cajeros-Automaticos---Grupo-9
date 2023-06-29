@@ -66,7 +66,7 @@ void menuCajeros()
                     //cin >> idCajeroEditar;
                 }
                 existeCajero = validarCajeroID(idCajeroEditar);
-                estadoCajero = validarCajeroEstado(numCajeroEstado);
+                estadoCajero = validarCajeroEstado(idCajeroEditar);
             }while (existeCajero == false);
 
             if ((existeCajero==true) && (estadoCajero==true))

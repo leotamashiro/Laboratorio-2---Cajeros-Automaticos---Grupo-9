@@ -225,7 +225,6 @@ bool validarCajeroEstado(int cajEditar) ///devuleve true si encuentra el Estado 
             return objcajero.getEstadoCajero();
         }
     }
-    return false;
 }
 void mostarCajeros()
 {
@@ -669,4 +668,27 @@ void mostarCajeroSucursalAlCliente(int numSucuMostrar)
             cout << endl;
         }
     }
+}
+
+bool cajeroEsdeSucursal(int sucursal,int idCajero)
+{
+    Cajero regCajero;
+    int pos=0;
+    while(regCajero.leerDeDisco(pos++))
+    {
+        if (idCajero==regCajero.getIdCajero())
+        {
+            if (sucursal==regCajero.getNumSucursal())
+            {
+                return true;
+            }
+            else
+            {
+                cout << "El Cajero Ingresado no pertenece a esta Sucursal" << "\n";
+                return false;
+            }
+        }
+    }
+    cout << "El Cajero Ingresado no pertenece a esta Sucursal" << "\n";
+    return false;
 }

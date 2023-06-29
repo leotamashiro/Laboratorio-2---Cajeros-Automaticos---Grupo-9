@@ -63,6 +63,7 @@ int pedirleAlClienteNumSucursal();
 void listarSucuNumeroAlCliente(int);
 int pedirleAlClienteCajero(int);
 void mostarCajeroSucursalAlCliente(int);
+bool cajeroEsdeSucursal(int ,int );
 
 float traerMontoCuenta(int);
 #endif // FUNCIONES_H_INCLUDED
